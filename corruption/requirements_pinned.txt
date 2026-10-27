@@ -1,0 +1,6 @@
+# LIBERO-plus 4976dc3 requirements.txt pins numpy==1.22.4; scikit-image is unpinned upstream (0.21.0 = last release
+# supporting numpy 1.22; 0.25.2 gives bit-identical gaussian / glass / zoom outputs in our check). Python 3.10.
+numpy==1.22.4
+scipy==1.10.1
+scikit-image==0.21.0
+pillow==10.4.0

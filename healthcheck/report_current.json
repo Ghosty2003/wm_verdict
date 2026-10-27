@@ -1,0 +1,37 @@
+{
+ "mode": "current",
+ "numpy": "2.2.6",
+ "source_sha256": "e91d7b7b35cc3ad2b073606c99860def6b3ac43b66eba00ef0ddb6bfd8f39c3c",
+ "function_sha256": {
+  "gaussian_blur": "07c7491b4febca4650bffb0e1f0f5f55ce9dc3717a6fb8b708643e7dd2ec1fc4",
+  "plasma_fractal": "717104abb36ccb467a77f923888ef9fda3afba334ed24699413700e43b0662ec",
+  "fog": "81ec1b7189c9fdc2f80c0b7be2e7427538f1bdfd86c6bfbe863d4f52aee9324c",
+  "glass_blur": "ea1b44eb3f87b145cab3e70d1b196db29b444a8914e72d5e28814561e52c5a25"
+ },
+ "frames": [
+  "t5_f0",
+  "t5_f120",
+  "t5_f239",
+  "t3_f0",
+  "t3_f144",
+  "t3_f287"
+ ],
+ "checks": {
+  "cross_version": {
+   "gaussian_blur": {
+    "runs": true,
+    "identical_to_pinned": "18/18"
+   },
+   "fog": {
+    "runs": false,
+    "error": "AttributeError: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead."
+   },
+   "glass_blur": {
+    "runs": true,
+    "identical_to_pinned": "18/18"
+   }
+  }
+ },
+ "skimage": "0.25.2",
+ "scipy": "1.15.3"
+}

@@ -1,0 +1,167 @@
+{
+ "mode": "pinned",
+ "numpy": "1.22.4",
+ "source_sha256": "e91d7b7b35cc3ad2b073606c99860def6b3ac43b66eba00ef0ddb6bfd8f39c3c",
+ "function_sha256": {
+  "gaussian_blur": "07c7491b4febca4650bffb0e1f0f5f55ce9dc3717a6fb8b708643e7dd2ec1fc4",
+  "clipped_zoom": "ed12c22078722318b0c57ad94c33b1dfd451edaafff892f8f92acef2d6915c0f",
+  "zoom_blur": "c371f455a8e67b3ddf94ac06260ce15211e05d6b64e1fbd94f5e3aafc2a8aff5",
+  "plasma_fractal": "717104abb36ccb467a77f923888ef9fda3afba334ed24699413700e43b0662ec",
+  "fog": "81ec1b7189c9fdc2f80c0b7be2e7427538f1bdfd86c6bfbe863d4f52aee9324c",
+  "glass_blur": "ea1b44eb3f87b145cab3e70d1b196db29b444a8914e72d5e28814561e52c5a25"
+ },
+ "frames": [
+  "t5_f0",
+  "t5_f120",
+  "t5_f239",
+  "t3_f0",
+  "t3_f144",
+  "t3_f287"
+ ],
+ "checks": {
+  "1_determinism": {
+   "zoom_blur": {
+    "same_seed_identical": "60/60",
+    "other_seed_differs": "0/60",
+    "consumes_global_numpy_rng": false
+   }
+  },
+  "2_validity": {
+   "zoom_blur": {
+    "float_dtype": [
+     "float32"
+    ],
+    "nan": 0,
+    "below0": 0,
+    "above255": 0,
+    "shape_ok": "60/60",
+    "n": 60,
+    "trunc_bias_mean": 0.496,
+    "border_vs_interior": {
+     "1": 0.877,
+     "2": 0.873,
+     "3": 0.852,
+     "4": 0.843,
+     "5": 0.835,
+     "6": 0.84,
+     "7": 0.845,
+     "8": 0.849,
+     "9": 0.864,
+     "10": 0.879
+    },
+    "border_dark_px_added": 0
+   }
+  },
+  "3_dose": {
+   "zoom_blur": {
+    "psnr_mean_by_level": {
+     "1": 23.06,
+     "2": 21.67,
+     "3": 21.01,
+     "4": 20.31,
+     "5": 19.86,
+     "6": 18.66,
+     "7": 18.36,
+     "8": 18.37,
+     "9": 18.01,
+     "10": 18.0
+    },
+    "mean_monotone_decreasing": false,
+    "non_decreasing_steps_mean": [
+     7
+    ],
+    "non_decreasing_steps_per_image": [
+     [
+      "t5_f0",
+      [
+       7
+      ]
+     ],
+     [
+      "t5_f239",
+      [
+       7
+      ]
+     ],
+     [
+      "t3_f0",
+      [
+       9
+      ]
+     ],
+     [
+      "t3_f144",
+      [
+       9
+      ]
+     ]
+    ],
+    "psnr_2_5_9": [
+     21.67,
+     19.86,
+     18.01
+    ],
+    "gap_2_5_db": 1.82,
+    "gap_5_9_db": 1.84
+   }
+  },
+  "seconds_per_call_ms_median": {
+   "zoom_blur": 17.4
+  },
+  "4_small_resolution": {
+   "zoom_blur": {
+    "2": {
+     "psnr_at_128": 21.67,
+     "psnr_same_frame_at_256": 21.87
+    },
+    "5": {
+     "psnr_at_128": 19.86,
+     "psnr_same_frame_at_256": 20.01
+    },
+    "9": {
+     "psnr_at_128": 18.01,
+     "psnr_same_frame_at_256": 18.11
+    }
+   },
+   "glass_blur_global_shift_vs_gaussian": {
+    "2": {
+     "mean_shift_rows_cols": [
+      -0.062,
+      -0.043
+     ],
+     "sd": [
+      0.044,
+      0.036
+     ]
+    },
+    "5": {
+     "mean_shift_rows_cols": [
+      -0.013,
+      0.002
+     ],
+     "sd": [
+      0.022,
+      0.009
+     ]
+    },
+    "9": {
+     "mean_shift_rows_cols": [
+      -0.025,
+      -0.008
+     ],
+     "sd": [
+      0.025,
+      0.026
+     ]
+    }
+   },
+   "glass_swap_statement": {
+    "unique_pixels_before": 16384,
+    "unique_pixels_after_one_pass": 11301,
+    "randint_range": "np.random.randint(-d, d) draws from [-d, d-1]"
+   }
+  }
+ },
+ "skimage": "0.21.0",
+ "scipy": "1.10.1"
+}
