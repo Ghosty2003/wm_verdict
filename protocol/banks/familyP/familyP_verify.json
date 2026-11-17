@@ -1,0 +1,4344 @@
+{
+ "all_pass": true,
+ "coverage_stop": [],
+ "tolerance": 0.0,
+ "replay_steps": 120,
+ "results": [
+  {
+   "anchor_id": "libero10_t5_fp0_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": null,
+   "trajectory_sha256": "c2c2d99353ce570271d78a9f7aafbb72219032b59b18e65c165c17e43794fc4c",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40827,
+      -0.13875
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21582,
+      0.14451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10203,
+      0.00035
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.02137
+  },
+  {
+   "anchor_id": "libero10_t5_fp1_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "c2039b17fda8c48d97003fde9355cbd3209e1b64fd35ecdf6eaa103dba3c8d53",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40803,
+      -0.14574
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.2016,
+      0.17199
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10889,
+      -0.02243
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.044420000000000015
+  },
+  {
+   "anchor_id": "libero10_t5_fp2_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "8a74c05e93eed5dda9c51a3b1c986c6473b4bdfe5bf1124353ca16a3dc2c1263",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39265,
+      -0.14815
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.20221,
+      0.16067
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.12113,
+      0.02299
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.044120000000000006
+  },
+  {
+   "anchor_id": "libero10_t5_fp3_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "6d19bb6786b22e9102a60edc8e9a6a1c5121e77a4d3d341d8108a686de882573",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40385,
+      -0.13259
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21507,
+      0.12584
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.0849,
+      -0.01267
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.02488
+  },
+  {
+   "anchor_id": "libero10_t5_fp4_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "b6a0e700bfd9f1869750004e446b2f9c8dab72e779f61bacba440558b5a38f94",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39556,
+      -0.14242
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21935,
+      0.14161
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.09937,
+      0.01163
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.012480000000000019
+  },
+  {
+   "anchor_id": "libero10_t5_fp0_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "312b85593ac455b5fc1388412b8b7284609834f8da285584a1dcc1355ab846ae",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40827,
+      -0.13875
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21582,
+      0.14451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10203,
+      0.00035
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.019045373154895663,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp1_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "e4725b15c5eb698d097180a0ce1f21b7c49c6727f8b27cce01a92467f3563cd4",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40803,
+      -0.14574
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.2016,
+      0.17199
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10889,
+      -0.02243
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0198798054093694,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp2_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "bedab5764d21242f88d3c5322609bde9329eb2ecea3b37d2f4ac41753b801b05",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39265,
+      -0.14815
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.20221,
+      0.16067
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.12113,
+      0.02299
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.017199777049358572,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp3_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "14a9433fe77580144bdee620be89da584c614b2dcb0f6894e11dfa31c0fdf214",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40385,
+      -0.13259
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21507,
+      0.12584
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.0849,
+      -0.01267
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.019735926772795676,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp4_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "cd61db7819992281cadcbf97328adfae8af55e6123fb3fb3590b594b7d5cd87c",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39556,
+      -0.14242
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21935,
+      0.14161
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.09937,
+      0.01163
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.015564910242241919,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp0_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "3e31283d9bc5e1ea5a362e6ab1f97c445b62b71e471a12fc86b6cffa66f1cb84",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40827,
+      -0.13875
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21582,
+      0.14451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10203,
+      0.00035
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.05713611946468699,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp1_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "94377a2d3e71ea4c16ecd9ce92eb8515c99a370da6b76e7c7a361322871a3dfa",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40803,
+      -0.14574
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.2016,
+      0.17199
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10889,
+      -0.02243
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0596394162281082,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp2_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "0567ba2b87f9b1ba07a6dbd2228ac6dbf0cda6f97ce6ce1b27084d15a3d37e11",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39265,
+      -0.14815
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.20221,
+      0.16067
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.12113,
+      0.02299
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.05159933114807572,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp3_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "d7f91b373acbbed4ab729b30e91d54bd3b3ce3b7f1f285be7fd2cd2f98a14584",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40385,
+      -0.13259
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21507,
+      0.12584
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.0849,
+      -0.01267
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.05920778031838747,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp4_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "bf9dc0093deca4ff1254393daf1b55e94015770a1bb3aec05d2fc1fad9241f94",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39556,
+      -0.14242
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21935,
+      0.14161
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.09937,
+      0.01163
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.04669473072672575,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp0_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "72fbce294dbac8e272bb9c4a2139ba3ad823a40613429163183ce59bf06e4580",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40827,
+      -0.13875
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21582,
+      0.14451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10203,
+      0.00035
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.11427223892937398,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp1_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "cc7226c0a7fa90a0d35c75837f75cda2faeb9d0264caff17e7e1bafb5f40db76",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40803,
+      -0.14574
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.2016,
+      0.17199
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10889,
+      -0.02243
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.11927883245621684,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp2_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "def325eb143333ef451e75391eef1ca2c75c196c3e66c84c8552ef36824c1569",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39265,
+      -0.14815
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.20221,
+      0.16067
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.12113,
+      0.02299
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.10319866229615143,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp3_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "eea5da84eca4bb22a623dd5ca5e030733a2901eb78c1d8d40d3b51c64d847f2b",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40385,
+      -0.13259
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21507,
+      0.12584
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.0849,
+      -0.01267
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.11841556063677539,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp4_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "c1738c869453bdb8c04d874bb075f8a71ed9dca0a050b05189ef5f1f66b42035",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39556,
+      -0.14242
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21935,
+      0.14161
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.09937,
+      0.01163
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0933894614534515,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp0_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "2b219509ffd07316e0a1d6949ca859706cb9b565f5165e89063a5119782779fb",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40827,
+      -0.13875
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21582,
+      0.14451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10203,
+      0.00035
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.22854447785874796,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp1_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "d5d1211b6304e0f7a608b23eb229e3278ae8f0d41b5e8aae2f3bb93acb52e2ef",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40803,
+      -0.14574
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.2016,
+      0.17199
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.10889,
+      -0.02243
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.2385576649124337,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp2_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "ac1ba4c23ef28bafee5486d3a49233fa46d646cdaa23b0472642edd0cc305359",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39265,
+      -0.14815
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.20221,
+      0.16067
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.12113,
+      0.02299
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.20639732459230287,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp3_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "a25d03e8e1c149605b6f4af62f95f9e6a9b63cdc74baf5d1734af270b984161e",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.40385,
+      -0.13259
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21507,
+      0.12584
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.0849,
+      -0.01267
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.23683112127355033,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t5_fp4_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "e436f15778f3c4009010bc8d352b237dc87ca6f66133807c2770fe1dd6e3d707",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "desk_caddy_1": {
+     "xy": [
+      -0.39556,
+      -0.14242
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.41,
+       -0.15,
+       -0.39,
+       -0.13
+      ]
+     ]
+    },
+    "black_book_1": {
+     "xy": [
+      -0.21935,
+      0.14161
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.225,
+       0.125,
+       -0.175,
+       0.175
+      ]
+     ]
+    },
+    "white_yellow_mug_1": {
+     "xy": [
+      -0.09937,
+      0.01163
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.125,
+       -0.025,
+       -0.075,
+       0.025
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.186778922906903,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp0_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "a80ea54ac6a281494894f30a04ae7dfe0ae411c690b2dea30fe683ab1eb6182b",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.05499,
+      -0.04507
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15882,
+      0.05525
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.00337,
+      0.302
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09918,
+      -0.30296
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.03380999999999999
+  },
+  {
+   "anchor_id": "libero10_t3_fp1_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "a0b8d81c126313b5b0a9222db442529b95e4e854ae04b69a3c1d16c47da5147c",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.04887,
+      -0.05377
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15616,
+      0.04773
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.0084,
+      0.29718
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10297,
+      -0.30969
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.02717
+  },
+  {
+   "anchor_id": "libero10_t3_fp2_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "d5de1d566996b165aa372ce78be2c8086af96ec3ddf675b77f005f7c918c8fe8",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03313,
+      -0.06738
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16335,
+      0.05577
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00253,
+      0.29209
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09656,
+      -0.29781
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.02643999999999999
+  },
+  {
+   "anchor_id": "libero10_t3_fp3_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "64ac99d58a18e88a6c071399f499fe6aa38c8fb938a3158fe7a3cf5d29faef06",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03741,
+      -0.05198
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.17264,
+      0.04013
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00996,
+      0.305
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10273,
+      -0.29546
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.01424
+  },
+  {
+   "anchor_id": "libero10_t3_fp4_P0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "de242b402b00b7560ba765d6213a8341153e0f4228a370fdda0ed1287cb9751c",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03629,
+      -0.06451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16509,
+      0.0279
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00463,
+      0.30981
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10874,
+      -0.29822
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.0,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": [],
+   "sham_selfconsistent": true,
+   "artifact_P0_vs_native_layout_maxdiff_m": 0.02889
+  },
+  {
+   "anchor_id": "libero10_t3_fp0_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "45f44238f76320a9077f4eb16703e53ddea108585b97d8a5a4c248c843fd436e",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.05499,
+      -0.04507
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15882,
+      0.05525
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.00337,
+      0.302
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09918,
+      -0.30296
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.014531958514805265,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp1_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "941cfab4fdba0f244701bfbf0245e6e23297905eb8eaf64ea75c2d688036b78a",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.04887,
+      -0.05377
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15616,
+      0.04773
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.0084,
+      0.29718
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10297,
+      -0.30969
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.019258527641154544,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp2_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "ed6df7e1d4450e78190181e8778342788b1ddb62a2738b816c0e2a149dbd31bb",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03313,
+      -0.06738
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16335,
+      0.05577
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00253,
+      0.29209
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09656,
+      -0.29781
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.018541216617138114,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp3_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "47f11f51ca5951cc86f685ced33ff564663df6735c20c6bee11228fedad515ec",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03741,
+      -0.05198
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.17264,
+      0.04013
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00996,
+      0.305
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10273,
+      -0.29546
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.019079029793380112,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp4_P1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "a0e588d2e64f14b496093ec87b75b81820bc466f338c40ea697b3218fef98980",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03629,
+      -0.06451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16509,
+      0.0279
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00463,
+      0.30981
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10874,
+      -0.29822
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.017150439311842087,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp0_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "98608fe145cba7927f7e25037be9f57aa9665881f2662e37c9f2238efd3fa23b",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.05499,
+      -0.04507
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15882,
+      0.05525
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.00337,
+      0.302
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09918,
+      -0.30296
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.043595875544415796,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp1_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "4f8e5b0d407b397b0fcd9868f6c5730896552743884ddc2f258207603906e10f",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.04887,
+      -0.05377
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15616,
+      0.04773
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.0084,
+      0.29718
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10297,
+      -0.30969
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.057775582923464075,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp2_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "7e54ea37c9d39f0189aeb897a5b7f01ee928d86657e3414519c98d1a96999e30",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03313,
+      -0.06738
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16335,
+      0.05577
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00253,
+      0.29209
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09656,
+      -0.29781
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.05562364985141434,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp3_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "c647099967c521e183f3044fdee396d20e5907250ae47e90fbef11be1d8e57cc",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03741,
+      -0.05198
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.17264,
+      0.04013
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00996,
+      0.305
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10273,
+      -0.29546
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.057237089380140334,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp4_P2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "3105e96ea234acaca0f9bf11ca57f7cc3e993634645b5ba1f3a7883ea16ac88b",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03629,
+      -0.06451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16509,
+      0.0279
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00463,
+      0.30981
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10874,
+      -0.29822
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.05145131793552625,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp0_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "e5d34e96e08e610b5457c84a2fb733beeffaa82bb92f9f79856b390a1d83d258",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.05499,
+      -0.04507
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15882,
+      0.05525
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.00337,
+      0.302
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09918,
+      -0.30296
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.08719175108883159,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp1_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "4ca9beb14325a17618ef1e8b76f204df6b2bad23dc35e54adad02b53725e2ebd",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.04887,
+      -0.05377
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15616,
+      0.04773
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.0084,
+      0.29718
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10297,
+      -0.30969
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.1155511658469286,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp2_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "d63873185d2e642232920d947032d697f25981eb408a69b439f30764501a8243",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03313,
+      -0.06738
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16335,
+      0.05577
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00253,
+      0.29209
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09656,
+      -0.29781
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.11124729970282868,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp3_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "aecccbe78577cb12a8286be92430e3edea947604092b285b7b23b3c2df9ef5b4",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03741,
+      -0.05198
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.17264,
+      0.04013
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00996,
+      0.305
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10273,
+      -0.29546
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.11447417876028067,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp4_P3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "0c66b54e4e9fdd0c55b94fa6ec3bad392bc9ee46649571def79d5f1de27f8963",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03629,
+      -0.06451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16509,
+      0.0279
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00463,
+      0.30981
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10874,
+      -0.29822
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.1029026358710525,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp0_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "e71c92bf283391e623bde99c4f6555a61a1607e07bbe0f58d554b85e8a5f2d5c",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.05499,
+      -0.04507
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15882,
+      0.05525
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.00337,
+      0.302
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09918,
+      -0.30296
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.17438350217766319,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp1_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "3d780be29be7524d68c72936d0272e07780119cb39b065a95b9bb9d64c1eddd8",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.04887,
+      -0.05377
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.15616,
+      0.04773
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      0.0084,
+      0.29718
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10297,
+      -0.30969
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.23110233169385674,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp2_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "4dc7b2ddd998511683de0e0186a4e35d0bdf50cf95f82f0b534a2f2e2b968662",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03313,
+      -0.06738
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16335,
+      0.05577
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00253,
+      0.29209
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.09656,
+      -0.29781
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.22249459940565736,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp3_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "5f6668435352c15be9e0908910d0f81db544b5a13b13a9d58cfa67f331ccbaf2",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03741,
+      -0.05198
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.17264,
+      0.04013
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00996,
+      0.305
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10273,
+      -0.29546
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.22894835752056134,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  },
+  {
+   "anchor_id": "libero10_t3_fp4_P4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "trajectory_sha256": "771ee764fc2130db7913a4261b5af99d4ae5ac5d6576bcd2378ae5d6c0252905",
+   "coverage_all_inside": true,
+   "coverage_violations": [],
+   "layout": {
+    "akita_black_bowl_1": {
+     "xy": [
+      0.03629,
+      -0.06451
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       0.005,
+       -0.075,
+       0.055,
+       -0.025
+      ]
+     ]
+    },
+    "wine_bottle_1": {
+     "xy": [
+      -0.16509,
+      0.0279
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.175,
+       0.025,
+       -0.125,
+       0.075
+      ]
+     ]
+    },
+    "white_cabinet_1": {
+     "xy": [
+      -0.00463,
+      0.30981
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.01,
+       0.29,
+       0.01,
+       0.31
+      ]
+     ]
+    },
+    "wine_rack_1": {
+     "xy": [
+      -0.10874,
+      -0.29822
+     ],
+     "inside": true,
+     "boxes": [
+      [
+       -0.11,
+       -0.31,
+       -0.09,
+       -0.29
+      ]
+     ]
+    }
+   },
+   "robot_abs_dq_max": 0.205805271742105,
+   "robot_dq_within_magnitude": true,
+   "robot_object_contacts_at_reset": []
+  }
+ ],
+ "bank_sha256": "64fa63cc9c02fa9dadcb621de44d21661993b5157867abc5a948c2c911208e95"
+}

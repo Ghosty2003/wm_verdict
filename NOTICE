@@ -1,0 +1,12 @@
+WM-Verdict
+Copyright 2026 The WM-Verdict authors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It does not vendor third-party code. The files under patches/ are modifications of third-party files and are
+distributed under the licenses of the projects they patch:
+  - patches/robosuite-1.4.0_log_utils.patch       robosuite 1.4.0 (MIT License)
+  - patches/openwam-1e103e1_wan22_model_path.patch OpenWAM @ 1e103e1 (see that repository's LICENSE)
+The B-family image corruptions call functions of LIBERO-plus (github.com/sylvestf/LIBERO-plus @ 4976dc30) that are
+downloaded at install time by third_party/fetch_libero_plus.sh and are not redistributed here.
+Files under protocol/banks/**/bddl are derived from LIBERO BDDL task files (hf-libero 0.1.4, MIT License).

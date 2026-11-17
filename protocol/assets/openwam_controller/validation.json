@@ -1,0 +1,49 @@
+{
+ "held_out_units": 30,
+ "block": 32,
+ "error_at_block_end": {
+  "calibrated": {
+   "pos": {
+    "median": 0.0499,
+    "p90": 0.0989
+   },
+   "rot": {
+    "median": 3.1539,
+    "p90": 8.4466
+   },
+   "grip": {
+    "median": 0.1336,
+    "p90": 0.5989
+   }
+  },
+  "naive": {
+   "pos": {
+    "median": 0.5283,
+    "p90": 0.9711
+   },
+   "rot": {
+    "median": 34.3631,
+    "p90": 92.584
+   },
+   "grip": {
+    "median": 0.1105,
+    "p90": 0.7858
+   }
+  },
+  "reuse": {
+   "pos": {
+    "median": 0.0633,
+    "p90": 0.1801
+   },
+   "rot": {
+    "median": 9.0706,
+    "p90": 29.2533
+   },
+   "grip": {
+    "median": 0.0436,
+    "p90": 0.9537
+   }
+  }
+ },
+ "units": "pos m, rot deg, grip open-scale"
+}

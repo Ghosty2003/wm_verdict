@@ -1,0 +1,66 @@
+{
+ "suite": "libero_10",
+ "master_seed": 20261103,
+ "anchors_per_task": 5,
+ "settle_steps": 10,
+ "resolution": 128,
+ "restore_recipe": "LeRobot LiberoEnv(hard_reset=True, init_states=True): seed -> hard reset -> set_init_state(init[init_index]) -> settle_steps x dummy action",
+ "seed_rule": "rs = RandomState(20261103); idx = rs.choice(50, 5, replace=False); seeds = rs.randint(0, 2**31-1, 5)",
+ "anchors": [
+  {
+   "anchor_id": "libero10_t2_a0",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "init_index": 15,
+   "seed": 1180447817,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t2_a1",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "init_index": 11,
+   "seed": 658137052,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t2_a2",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "init_index": 21,
+   "seed": 803079016,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t2_a3",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "init_index": 45,
+   "seed": 1549072871,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t2_a4",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "init_index": 4,
+   "seed": 684891301,
+   "settle_steps": 10,
+   "resolution": 128
+  }
+ ]
+}

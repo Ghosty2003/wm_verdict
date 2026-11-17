@@ -1,0 +1,37 @@
+{
+ "note": "per-task entry list for verify_run (s0_id = anchor_id, bank order); derived from the frozen bank",
+ "source": "libero/out/bank/libero_anchors.json",
+ "source_sha256": "4c4cc503e692b35bf710fe25b08d85ff916e9fee78a584094a0c1dfb7e9ac5d7",
+ "entries": [
+  {
+   "s0_id": "libero10_t5_a0",
+   "task_id": 5,
+   "init_index": 26,
+   "seed": 1874462777
+  },
+  {
+   "s0_id": "libero10_t5_a1",
+   "task_id": 5,
+   "init_index": 25,
+   "seed": 293586042
+  },
+  {
+   "s0_id": "libero10_t5_a2",
+   "task_id": 5,
+   "init_index": 3,
+   "seed": 32327436
+  },
+  {
+   "s0_id": "libero10_t5_a3",
+   "task_id": 5,
+   "init_index": 48,
+   "seed": 567134708
+  },
+  {
+   "s0_id": "libero10_t5_a4",
+   "task_id": 5,
+   "init_index": 18,
+   "seed": 1973823337
+  }
+ ]
+}

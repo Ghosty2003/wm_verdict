@@ -1,0 +1,2112 @@
+{
+ "family": "A_obj",
+ "suite": "libero_10",
+ "master_seed": 20261030,
+ "anchors_per_task": 5,
+ "settle_steps": 10,
+ "resolution": 128,
+ "restore_recipe": "native_env.NativeLiberoEnv(init_states=False, bddl_file=<level BDDL>, hard_reset=True): new env per restore -> reset(seed) [native placement sampler] -> settle_steps x dummy action",
+ "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+ "levels": {
+  "5": {
+   "A0": null,
+   "A1": 0.0,
+   "A2": 0.02,
+   "A3": 0.05,
+   "A4": 0.1
+  },
+  "3": {
+   "A0": null,
+   "A1": 0.0,
+   "A2": 0.02,
+   "A3": 0.05,
+   "A4": 0.07
+  }
+ },
+ "directions": {
+  "5": "+y",
+  "3": "+x"
+ },
+ "bddl": {
+  "t5_A0": {
+   "path": "libero/out/bank/familyA/bddl/t5_A0.bddl",
+   "sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+   "identical_to_original": true
+  },
+  "t5_A1": {
+   "path": "libero/out/bank/familyA/bddl/t5_A1.bddl",
+   "sha256": "697d9ade9ab3c23a2d54f7e97b00508109aa66cb054b7c6cfdedc54485262f6d",
+   "identical_to_original": false
+  },
+  "t5_A2": {
+   "path": "libero/out/bank/familyA/bddl/t5_A2.bddl",
+   "sha256": "ad6e46b8c140e617e710f98eff07094839e2092b59cc11a0c665c7c8e9f10181",
+   "identical_to_original": false
+  },
+  "t5_A3": {
+   "path": "libero/out/bank/familyA/bddl/t5_A3.bddl",
+   "sha256": "31cb4a6a0c684ed659a70371015a7af7283735a8749a94ada1e139a87fdd499b",
+   "identical_to_original": false
+  },
+  "t5_A4": {
+   "path": "libero/out/bank/familyA/bddl/t5_A4.bddl",
+   "sha256": "f1a91db8f02e908d77408681c54a8f4d23b9fab64824d07b44ec696f4fc9ede4",
+   "identical_to_original": false
+  },
+  "t5_original": {
+   "path": "$CONDA_ROOT/envs/lerobot_libero/lib/python3.12/site-packages/libero/libero/bddl_files/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy.bddl",
+   "sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f"
+  },
+  "t3_A0": {
+   "path": "libero/out/bank/familyA/bddl/t3_A0.bddl",
+   "sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+   "identical_to_original": true
+  },
+  "t3_A1": {
+   "path": "libero/out/bank/familyA/bddl/t3_A1.bddl",
+   "sha256": "abef9aa4d40d96ce22dc28fad121e48e55ab7ddce405fa7555ec02ca4a393fb1",
+   "identical_to_original": false
+  },
+  "t3_A2": {
+   "path": "libero/out/bank/familyA/bddl/t3_A2.bddl",
+   "sha256": "6791650f82701a2a00bd0800713fb20620a56456e7a25d133afb061aacb4ca9e",
+   "identical_to_original": false
+  },
+  "t3_A3": {
+   "path": "libero/out/bank/familyA/bddl/t3_A3.bddl",
+   "sha256": "5b55aa2bbc8bf9c47027df34293c91f72bcdf95154cfb9ecfb49bd3513a6f385",
+   "identical_to_original": false
+  },
+  "t3_A4": {
+   "path": "libero/out/bank/familyA/bddl/t3_A4.bddl",
+   "sha256": "2a734a7e586b6ecb5ce1173316249a149d3dbe3a12ef9c44ecfb2908219e111f",
+   "identical_to_original": false
+  },
+  "t3_original": {
+   "path": "$CONDA_ROOT/envs/lerobot_libero/lib/python3.12/site-packages/libero/libero/bddl_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.bddl",
+   "sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8"
+  }
+ },
+ "anchors": [
+  {
+   "anchor_id": "libero10_t5_fa0_A0",
+   "base_id": "libero10_t5_fa0",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1087504251,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A0.bddl",
+   "bddl_sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa1_A0",
+   "base_id": "libero10_t5_fa1",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1228377686,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A0.bddl",
+   "bddl_sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa2_A0",
+   "base_id": "libero10_t5_fa2",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1773972578,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A0.bddl",
+   "bddl_sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa3_A0",
+   "base_id": "libero10_t5_fa3",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1249235938,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A0.bddl",
+   "bddl_sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa4_A0",
+   "base_id": "libero10_t5_fa4",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 112760671,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A0.bddl",
+   "bddl_sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa0_A1",
+   "base_id": "libero10_t5_fa0",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1087504251,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A1.bddl",
+   "bddl_sha256": "697d9ade9ab3c23a2d54f7e97b00508109aa66cb054b7c6cfdedc54485262f6d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.174,
+     0.001,
+     0.176
+    ],
+    "target_region_xy": [
+     0.0,
+     0.175
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa1_A1",
+   "base_id": "libero10_t5_fa1",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1228377686,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A1.bddl",
+   "bddl_sha256": "697d9ade9ab3c23a2d54f7e97b00508109aa66cb054b7c6cfdedc54485262f6d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.174,
+     0.001,
+     0.176
+    ],
+    "target_region_xy": [
+     0.0,
+     0.175
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa2_A1",
+   "base_id": "libero10_t5_fa2",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1773972578,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A1.bddl",
+   "bddl_sha256": "697d9ade9ab3c23a2d54f7e97b00508109aa66cb054b7c6cfdedc54485262f6d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.174,
+     0.001,
+     0.176
+    ],
+    "target_region_xy": [
+     0.0,
+     0.175
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa3_A1",
+   "base_id": "libero10_t5_fa3",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1249235938,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A1.bddl",
+   "bddl_sha256": "697d9ade9ab3c23a2d54f7e97b00508109aa66cb054b7c6cfdedc54485262f6d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.174,
+     0.001,
+     0.176
+    ],
+    "target_region_xy": [
+     0.0,
+     0.175
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa4_A1",
+   "base_id": "libero10_t5_fa4",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 112760671,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A1.bddl",
+   "bddl_sha256": "697d9ade9ab3c23a2d54f7e97b00508109aa66cb054b7c6cfdedc54485262f6d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.174,
+     0.001,
+     0.176
+    ],
+    "target_region_xy": [
+     0.0,
+     0.175
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa0_A2",
+   "base_id": "libero10_t5_fa0",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1087504251,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A2.bddl",
+   "bddl_sha256": "ad6e46b8c140e617e710f98eff07094839e2092b59cc11a0c665c7c8e9f10181",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.19399999999999998,
+     0.001,
+     0.19599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.19499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa1_A2",
+   "base_id": "libero10_t5_fa1",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1228377686,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A2.bddl",
+   "bddl_sha256": "ad6e46b8c140e617e710f98eff07094839e2092b59cc11a0c665c7c8e9f10181",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.19399999999999998,
+     0.001,
+     0.19599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.19499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa2_A2",
+   "base_id": "libero10_t5_fa2",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1773972578,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A2.bddl",
+   "bddl_sha256": "ad6e46b8c140e617e710f98eff07094839e2092b59cc11a0c665c7c8e9f10181",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.19399999999999998,
+     0.001,
+     0.19599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.19499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa3_A2",
+   "base_id": "libero10_t5_fa3",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1249235938,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A2.bddl",
+   "bddl_sha256": "ad6e46b8c140e617e710f98eff07094839e2092b59cc11a0c665c7c8e9f10181",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.19399999999999998,
+     0.001,
+     0.19599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.19499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa4_A2",
+   "base_id": "libero10_t5_fa4",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 112760671,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A2.bddl",
+   "bddl_sha256": "ad6e46b8c140e617e710f98eff07094839e2092b59cc11a0c665c7c8e9f10181",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.19399999999999998,
+     0.001,
+     0.19599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.19499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa0_A3",
+   "base_id": "libero10_t5_fa0",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1087504251,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A3.bddl",
+   "bddl_sha256": "31cb4a6a0c684ed659a70371015a7af7283735a8749a94ada1e139a87fdd499b",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.22399999999999998,
+     0.001,
+     0.22599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.22499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa1_A3",
+   "base_id": "libero10_t5_fa1",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1228377686,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A3.bddl",
+   "bddl_sha256": "31cb4a6a0c684ed659a70371015a7af7283735a8749a94ada1e139a87fdd499b",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.22399999999999998,
+     0.001,
+     0.22599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.22499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa2_A3",
+   "base_id": "libero10_t5_fa2",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1773972578,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A3.bddl",
+   "bddl_sha256": "31cb4a6a0c684ed659a70371015a7af7283735a8749a94ada1e139a87fdd499b",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.22399999999999998,
+     0.001,
+     0.22599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.22499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa3_A3",
+   "base_id": "libero10_t5_fa3",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1249235938,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A3.bddl",
+   "bddl_sha256": "31cb4a6a0c684ed659a70371015a7af7283735a8749a94ada1e139a87fdd499b",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.22399999999999998,
+     0.001,
+     0.22599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.22499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa4_A3",
+   "base_id": "libero10_t5_fa4",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 112760671,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A3.bddl",
+   "bddl_sha256": "31cb4a6a0c684ed659a70371015a7af7283735a8749a94ada1e139a87fdd499b",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.22399999999999998,
+     0.001,
+     0.22599999999999998
+    ],
+    "target_region_xy": [
+     0.0,
+     0.22499999999999998
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa0_A4",
+   "base_id": "libero10_t5_fa0",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1087504251,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A4.bddl",
+   "bddl_sha256": "f1a91db8f02e908d77408681c54a8f4d23b9fab64824d07b44ec696f4fc9ede4",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.274,
+     0.001,
+     0.276
+    ],
+    "target_region_xy": [
+     0.0,
+     0.275
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa1_A4",
+   "base_id": "libero10_t5_fa1",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1228377686,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A4.bddl",
+   "bddl_sha256": "f1a91db8f02e908d77408681c54a8f4d23b9fab64824d07b44ec696f4fc9ede4",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.274,
+     0.001,
+     0.276
+    ],
+    "target_region_xy": [
+     0.0,
+     0.275
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa2_A4",
+   "base_id": "libero10_t5_fa2",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1773972578,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A4.bddl",
+   "bddl_sha256": "f1a91db8f02e908d77408681c54a8f4d23b9fab64824d07b44ec696f4fc9ede4",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.274,
+     0.001,
+     0.276
+    ],
+    "target_region_xy": [
+     0.0,
+     0.275
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa3_A4",
+   "base_id": "libero10_t5_fa3",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 1249235938,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A4.bddl",
+   "bddl_sha256": "f1a91db8f02e908d77408681c54a8f4d23b9fab64824d07b44ec696f4fc9ede4",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.274,
+     0.001,
+     0.276
+    ],
+    "target_region_xy": [
+     0.0,
+     0.275
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t5_fa4_A4",
+   "base_id": "libero10_t5_fa4",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "seed": 112760671,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t5_A4.bddl",
+   "bddl_sha256": "f1a91db8f02e908d77408681c54a8f4d23b9fab64824d07b44ec696f4fc9ede4",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "black_book_1",
+    "region": "black_book_init_region",
+    "direction": "+y",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.025,
+     0.125,
+     0.025,
+     0.175
+    ],
+    "rewritten_ranges": [
+     -0.001,
+     0.274,
+     0.001,
+     0.276
+    ],
+    "target_region_xy": [
+     0.0,
+     0.275
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa0_A0",
+   "base_id": "libero10_t3_fa0",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 1419749939,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A0.bddl",
+   "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa1_A0",
+   "base_id": "libero10_t3_fa1",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 516230517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A0.bddl",
+   "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa2_A0",
+   "base_id": "libero10_t3_fa2",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 255508059,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A0.bddl",
+   "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa3_A0",
+   "base_id": "libero10_t3_fa3",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 762069192,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A0.bddl",
+   "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa4_A0",
+   "base_id": "libero10_t3_fa4",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 2034299719,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A0.bddl",
+   "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa0_A1",
+   "base_id": "libero10_t3_fa0",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 1419749939,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A1.bddl",
+   "bddl_sha256": "abef9aa4d40d96ce22dc28fad121e48e55ab7ddce405fa7555ec02ca4a393fb1",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.054,
+     -0.051000000000000004,
+     0.056,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.055,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa1_A1",
+   "base_id": "libero10_t3_fa1",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 516230517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A1.bddl",
+   "bddl_sha256": "abef9aa4d40d96ce22dc28fad121e48e55ab7ddce405fa7555ec02ca4a393fb1",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.054,
+     -0.051000000000000004,
+     0.056,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.055,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa2_A1",
+   "base_id": "libero10_t3_fa2",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 255508059,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A1.bddl",
+   "bddl_sha256": "abef9aa4d40d96ce22dc28fad121e48e55ab7ddce405fa7555ec02ca4a393fb1",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.054,
+     -0.051000000000000004,
+     0.056,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.055,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa3_A1",
+   "base_id": "libero10_t3_fa3",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 762069192,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A1.bddl",
+   "bddl_sha256": "abef9aa4d40d96ce22dc28fad121e48e55ab7ddce405fa7555ec02ca4a393fb1",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.054,
+     -0.051000000000000004,
+     0.056,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.055,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa4_A1",
+   "base_id": "libero10_t3_fa4",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 2034299719,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A1.bddl",
+   "bddl_sha256": "abef9aa4d40d96ce22dc28fad121e48e55ab7ddce405fa7555ec02ca4a393fb1",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.054,
+     -0.051000000000000004,
+     0.056,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.055,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa0_A2",
+   "base_id": "libero10_t3_fa0",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 1419749939,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A2.bddl",
+   "bddl_sha256": "6791650f82701a2a00bd0800713fb20620a56456e7a25d133afb061aacb4ca9e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.074,
+     -0.051000000000000004,
+     0.076,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.075,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa1_A2",
+   "base_id": "libero10_t3_fa1",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 516230517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A2.bddl",
+   "bddl_sha256": "6791650f82701a2a00bd0800713fb20620a56456e7a25d133afb061aacb4ca9e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.074,
+     -0.051000000000000004,
+     0.076,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.075,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa2_A2",
+   "base_id": "libero10_t3_fa2",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 255508059,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A2.bddl",
+   "bddl_sha256": "6791650f82701a2a00bd0800713fb20620a56456e7a25d133afb061aacb4ca9e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.074,
+     -0.051000000000000004,
+     0.076,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.075,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa3_A2",
+   "base_id": "libero10_t3_fa3",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 762069192,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A2.bddl",
+   "bddl_sha256": "6791650f82701a2a00bd0800713fb20620a56456e7a25d133afb061aacb4ca9e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.074,
+     -0.051000000000000004,
+     0.076,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.075,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa4_A2",
+   "base_id": "libero10_t3_fa4",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 2034299719,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A2.bddl",
+   "bddl_sha256": "6791650f82701a2a00bd0800713fb20620a56456e7a25d133afb061aacb4ca9e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.074,
+     -0.051000000000000004,
+     0.076,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.075,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa0_A3",
+   "base_id": "libero10_t3_fa0",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 1419749939,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A3.bddl",
+   "bddl_sha256": "5b55aa2bbc8bf9c47027df34293c91f72bcdf95154cfb9ecfb49bd3513a6f385",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.10400000000000001,
+     -0.051000000000000004,
+     0.10600000000000001,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.10500000000000001,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa1_A3",
+   "base_id": "libero10_t3_fa1",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 516230517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A3.bddl",
+   "bddl_sha256": "5b55aa2bbc8bf9c47027df34293c91f72bcdf95154cfb9ecfb49bd3513a6f385",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.10400000000000001,
+     -0.051000000000000004,
+     0.10600000000000001,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.10500000000000001,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa2_A3",
+   "base_id": "libero10_t3_fa2",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 255508059,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A3.bddl",
+   "bddl_sha256": "5b55aa2bbc8bf9c47027df34293c91f72bcdf95154cfb9ecfb49bd3513a6f385",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.10400000000000001,
+     -0.051000000000000004,
+     0.10600000000000001,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.10500000000000001,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa3_A3",
+   "base_id": "libero10_t3_fa3",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 762069192,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A3.bddl",
+   "bddl_sha256": "5b55aa2bbc8bf9c47027df34293c91f72bcdf95154cfb9ecfb49bd3513a6f385",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.10400000000000001,
+     -0.051000000000000004,
+     0.10600000000000001,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.10500000000000001,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa4_A3",
+   "base_id": "libero10_t3_fa4",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 2034299719,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A3.bddl",
+   "bddl_sha256": "5b55aa2bbc8bf9c47027df34293c91f72bcdf95154cfb9ecfb49bd3513a6f385",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.10400000000000001,
+     -0.051000000000000004,
+     0.10600000000000001,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.10500000000000001,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa0_A4",
+   "base_id": "libero10_t3_fa0",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 1419749939,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A4.bddl",
+   "bddl_sha256": "2a734a7e586b6ecb5ce1173316249a149d3dbe3a12ef9c44ecfb2908219e111f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.07,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.051000000000000004,
+     0.126,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.125,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa1_A4",
+   "base_id": "libero10_t3_fa1",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 516230517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A4.bddl",
+   "bddl_sha256": "2a734a7e586b6ecb5ce1173316249a149d3dbe3a12ef9c44ecfb2908219e111f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.07,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.051000000000000004,
+     0.126,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.125,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa2_A4",
+   "base_id": "libero10_t3_fa2",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 255508059,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A4.bddl",
+   "bddl_sha256": "2a734a7e586b6ecb5ce1173316249a149d3dbe3a12ef9c44ecfb2908219e111f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.07,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.051000000000000004,
+     0.126,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.125,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa3_A4",
+   "base_id": "libero10_t3_fa3",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 762069192,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A4.bddl",
+   "bddl_sha256": "2a734a7e586b6ecb5ce1173316249a149d3dbe3a12ef9c44ecfb2908219e111f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.07,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.051000000000000004,
+     0.126,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.125,
+     -0.05
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t3_fa4_A4",
+   "base_id": "libero10_t3_fa4",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "seed": 2034299719,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA/bddl/t3_A4.bddl",
+   "bddl_sha256": "2a734a7e586b6ecb5ce1173316249a149d3dbe3a12ef9c44ecfb2908219e111f",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "akita_black_bowl_1",
+    "region": "akita_black_bowl_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.07,
+    "native_ranges": [
+     0.0049999999999999975,
+     -0.07500000000000001,
+     0.055,
+     -0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.051000000000000004,
+     0.126,
+     -0.049
+    ],
+    "target_region_xy": [
+     0.125,
+     -0.05
+    ],
+    "sham": false
+   }
+  }
+ ]
+}

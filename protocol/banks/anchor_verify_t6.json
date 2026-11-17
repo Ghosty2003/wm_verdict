@@ -1,0 +1,143 @@
+{
+ "all_pass": true,
+ "tolerance": 0.0,
+ "replay_steps": 120,
+ "results": [
+  {
+   "anchor_id": "libero10_t6_a0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": null,
+   "steps": 120,
+   "init_success": false,
+   "trajectory_sha256": "64af0baefabc01376ffeaac14fb7538c2aec4b2d0920f75470e5e1d42ede3504"
+  },
+  {
+   "anchor_id": "libero10_t6_a1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "steps": 120,
+   "init_success": false,
+   "trajectory_sha256": "b46efffa553ed2d52f1139db54b022c7e3ca43f0ea6cea4677d3bb41ab31ffb8"
+  },
+  {
+   "anchor_id": "libero10_t6_a2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "steps": 120,
+   "init_success": false,
+   "trajectory_sha256": "dd3b6608759b626923e9973aa9255beac98e9a0ec1d8f5bec37a92e17c3482d1"
+  },
+  {
+   "anchor_id": "libero10_t6_a3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "steps": 120,
+   "init_success": false,
+   "trajectory_sha256": "874d2b5812bea799ad4668cd91e35b1427506064297c947d4f066fe842d6fc36"
+  },
+  {
+   "anchor_id": "libero10_t6_a4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "steps": 120,
+   "init_success": false,
+   "trajectory_sha256": "725c0ccdbba20ee51ce47b7632517ae63f5161e5fc7545b1bb21da4f0f86f59e"
+  }
+ ],
+ "bank_sha256": "554de53792aa89b88eb9d70813559709d42bf8df5921a7a7222fc503ab54b702"
+}

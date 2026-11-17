@@ -1,0 +1,11 @@
+--- a/robosuite/utils/log_utils.py
++++ b/robosuite/utils/log_utils.py
+@@ -68,7 +68,7 @@
+         logger = logging.getLogger(self.logger_name)
+ 
+         if file_logging_level is not None:
+-            fh = logging.FileHandler("/tmp/robosuite.log")
++            fh = logging.FileHandler(__import__("os").path.expanduser("~/robosuite.log"))
+             fh.setLevel(logging.getLevelName(file_logging_level))
+             file_formatter = FileFormatter()
+             fh.setFormatter(file_formatter)

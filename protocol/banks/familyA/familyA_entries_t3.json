@@ -1,0 +1,22 @@
+{
+ "note": "family A base anchor ids (s0_id); the level is the setting",
+ "source": "libero/out/bank/familyA/familyA_anchors.json",
+ "source_sha256": "06c861441398d96ab9e2860f037d4a0294b9bf946f2196c26eb9ae0ea5558d28",
+ "entries": [
+  {
+   "s0_id": "libero10_t3_fa0"
+  },
+  {
+   "s0_id": "libero10_t3_fa1"
+  },
+  {
+   "s0_id": "libero10_t3_fa2"
+  },
+  {
+   "s0_id": "libero10_t3_fa3"
+  },
+  {
+   "s0_id": "libero10_t3_fa4"
+  }
+ ]
+}

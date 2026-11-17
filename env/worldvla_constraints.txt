@@ -1,0 +1,12 @@
+torch==2.7.1+cu128
+torchvision==0.22.1+cu128
+numpy==1.26.3
+transformers==4.48.0
+tokenizers==0.21.0
+huggingface-hub==0.27.1
+accelerate==1.2.1
+safetensors==0.5.2
+sentencepiece==0.2.0
+pillow==10.2.0
+mujoco==3.2.7
+robosuite==1.4.0
