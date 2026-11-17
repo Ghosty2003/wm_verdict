@@ -1,0 +1,59 @@
+# WM-Verdict release hashes (2026-11-16)
+#
+# Hierarchy:
+#  1. authoritative_original: the sha256 of the ORIGINAL files (run archive). These equal the values in
+#     protocol.yaml and remain the protocol's authoritative values.
+#  2. release_copy: 发布副本（仅路径/用户名占位符替换），与原件的差异仅限清洗规则所列模式
+#     (release copy: only path / user-name placeholders substituted; differences to the original are limited
+#     to the patterns listed in the sanitization rules).
+#  3. release_copy_with_path_module: release copies of code files that, in addition to the placeholder
+#     substitution, were rewritten to read paths through wmv_paths.py (pathify_log.tsv lists every edit).
+# Both hash sets are kept; nothing overwrites protocol.yaml. verify_run.py check 1 accepts a file whose sha256 is
+# the release-copy hash of the same path only if the protocol's value equals authoritative_original.
+authoritative_original:
+  libero/openwam/fit_controller.py: 327ad3255f9ff813a46f95a771a50d2b3d93bd2c8706a3154ae22501e03365ff
+  libero/openwam/openwam_unit.py: 497dcbe811627c822a63f99c05b3b115789879ed0c041422880575c1399de97a
+  libero/out/bank/familyA/familyA_anchors.json: 06c861441398d96ab9e2860f037d4a0294b9bf946f2196c26eb9ae0ea5558d28
+  libero/out/bank/familyA_t2/familyA_t2_anchors.json: a725d91ad6303e6e0dde3d39bbffede462a4d059984cf0e4ce03478708bb2f62
+  libero/out/bank/familyA_t4/familyA_t4_anchors.json: 7f1351f5bf443ff4573f91bc10a5dcf1b67a815d41df93b350a92942c65f9799
+  libero/out/bank/familyA_t6/familyA_t6_anchors.json: a6dbb1ba47822a93616d19f10704a174c4114950c1ba7a61651c69d36b08083a
+  libero/out/bank/familyP/familyP_anchors.json: 64fa63cc9c02fa9dadcb621de44d21661993b5157867abc5a948c2c911208e95
+  libero/out/bank/familyP_t2/familyP_t2_anchors.json: a4c2a03473b4f676d3a1649a3af090ecb572cf6c771e2e2ee4c22269f6ecd555
+  libero/out/bank/familyP_t4/familyP_t4_anchors.json: bd0b49ff747fd7053d5f213d739540c3f7823d9ee38ccbe159134c4bc14c291e
+  libero/out/bank/familyP_t6/familyP_t6_anchors.json: a8ee3292d1ea7d161a6184b306ef882e85826600df237e6b466b520eb961e027
+  libero/recal_v4_t3.py: 34eccd88d201195a8bbbdbcb2417e45e2bab9d7705e0baf388bf482a65d2757c
+release_copy:
+  libero/out/bank/familyA/familyA_anchors.json:
+    release_path: protocol/banks/familyA/familyA_anchors.json
+    sha256: 822fe4bd5d690f8425940565e39ea4f31d8d1bc60d08861bac0c9626c75b305e
+  libero/out/bank/familyA_t2/familyA_t2_anchors.json:
+    release_path: protocol/banks/familyA_t2/familyA_t2_anchors.json
+    sha256: 0f6d02a2febf78b8285de7c30b1eaecc9f75b49ad89b649efefd41ed70fb9c12
+  libero/out/bank/familyA_t4/familyA_t4_anchors.json:
+    release_path: protocol/banks/familyA_t4/familyA_t4_anchors.json
+    sha256: 0b1d2b08ca6d298b9fc3c3bca5de3f137c286070c9ce42caef371546ee398a49
+  libero/out/bank/familyA_t6/familyA_t6_anchors.json:
+    release_path: protocol/banks/familyA_t6/familyA_t6_anchors.json
+    sha256: 8bd80808e0f985dc5a8a00ff7d88748f221b96f4811da247b3fd23a94bc17ee4
+  libero/out/bank/familyP/familyP_anchors.json:
+    release_path: protocol/banks/familyP/familyP_anchors.json
+    sha256: 3e58742afb43b402add2ebe38b2f99fb525fc6079b77fc398796b0a5c106e0dd
+  libero/out/bank/familyP_t2/familyP_t2_anchors.json:
+    release_path: protocol/banks/familyP_t2/familyP_t2_anchors.json
+    sha256: 9f48e7870487a5dd42de5fdb7b0d2bb54cf4c8511c7d9aadcfcd00abd6b61769
+  libero/out/bank/familyP_t4/familyP_t4_anchors.json:
+    release_path: protocol/banks/familyP_t4/familyP_t4_anchors.json
+    sha256: 588c187dc84362e773677739693c239d152e547cc592454044614bed5f93eb85
+  libero/out/bank/familyP_t6/familyP_t6_anchors.json:
+    release_path: protocol/banks/familyP_t6/familyP_t6_anchors.json
+    sha256: 37a67050bc327cff84ce8704eba55a6f42e597b3a2e50db733c7636c81fcc370
+release_copy_with_path_module:
+  libero/openwam/fit_controller.py:
+    release_path: protocol/runners/openwam/fit_controller.py
+    sha256: 1769befe20b73ffc91b88fea046628548cf18da9263cff96ea07bd20ed3c4778
+  libero/openwam/openwam_unit.py:
+    release_path: protocol/runners/openwam/openwam_unit.py
+    sha256: 5a2f391795f58dfbfa051bdc44f9fc0f1db546e8e69cf0551dd6d27db365c349
+  libero/recal_v4_t3.py:
+    release_path: predicates/lingbot/recal_v4_t3.py
+    sha256: 9687d104b5a0ced78d279fbdc9f0fbaf18dca59227e86eac5497d7b6158bc7a7

@@ -1,0 +1,1062 @@
+{
+ "family": "A_obj",
+ "suite": "libero_10",
+ "master_seed": 20261113,
+ "anchors_per_task": 5,
+ "settle_steps": 10,
+ "resolution": 128,
+ "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+ "levels": {
+  "A0": null,
+  "A1": 0.0,
+  "A2": 0.02,
+  "A3": 0.05,
+  "A4": 0.1
+ },
+ "direction": "+x",
+ "object": "porcelain_mug_1",
+ "object_rule": "first-subgoal object (ruling 2026-11-02)",
+ "bddl": {
+  "t4_A0": {
+   "path": "libero/out/bank/familyA_t4/bddl/t4_A0.bddl",
+   "sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+   "identical_to_original": true
+  },
+  "t4_A1": {
+   "path": "libero/out/bank/familyA_t4/bddl/t4_A1.bddl",
+   "sha256": "a0308dc7a36052d7353fed06e0cc91b7700fd7afef36c9fc0f6cc58d32bf714e",
+   "identical_to_original": false
+  },
+  "t4_A2": {
+   "path": "libero/out/bank/familyA_t4/bddl/t4_A2.bddl",
+   "sha256": "08a92e1bd229b2f833df31de6d319a58ece6d593ba45cac430351dd2df092971",
+   "identical_to_original": false
+  },
+  "t4_A3": {
+   "path": "libero/out/bank/familyA_t4/bddl/t4_A3.bddl",
+   "sha256": "1da709bfeca1b3d77081c3994e8a66b076e212d5a2263ccc76779920440d070c",
+   "identical_to_original": false
+  },
+  "t4_A4": {
+   "path": "libero/out/bank/familyA_t4/bddl/t4_A4.bddl",
+   "sha256": "a77b48a23c08a440bc844047baed87014543ffb28cf57b8fbadf1c39574d3d61",
+   "identical_to_original": false
+  },
+  "t4_original": {
+   "path": "$CONDA_ROOT/envs/lerobot_libero/lib/python3.12/site-packages/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate.bddl",
+   "sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865"
+  }
+ },
+ "anchors": [
+  {
+   "anchor_id": "libero10_t4_fa0_A0",
+   "base_id": "libero10_t4_fa0",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1585199910,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A0.bddl",
+   "bddl_sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A0",
+   "base_id": "libero10_t4_fa1",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 849444058,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A0.bddl",
+   "bddl_sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A0",
+   "base_id": "libero10_t4_fa2",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1398694034,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A0.bddl",
+   "bddl_sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A0",
+   "base_id": "libero10_t4_fa3",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1671192364,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A0.bddl",
+   "bddl_sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A0",
+   "base_id": "libero10_t4_fa4",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 488748377,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A0.bddl",
+   "bddl_sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa0_A1",
+   "base_id": "libero10_t4_fa0",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1585199910,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A1.bddl",
+   "bddl_sha256": "a0308dc7a36052d7353fed06e0cc91b7700fd7afef36c9fc0f6cc58d32bf714e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.07600000000000001,
+     -0.151,
+     -0.07400000000000001,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.07500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A1",
+   "base_id": "libero10_t4_fa1",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 849444058,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A1.bddl",
+   "bddl_sha256": "a0308dc7a36052d7353fed06e0cc91b7700fd7afef36c9fc0f6cc58d32bf714e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.07600000000000001,
+     -0.151,
+     -0.07400000000000001,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.07500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A1",
+   "base_id": "libero10_t4_fa2",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1398694034,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A1.bddl",
+   "bddl_sha256": "a0308dc7a36052d7353fed06e0cc91b7700fd7afef36c9fc0f6cc58d32bf714e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.07600000000000001,
+     -0.151,
+     -0.07400000000000001,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.07500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A1",
+   "base_id": "libero10_t4_fa3",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1671192364,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A1.bddl",
+   "bddl_sha256": "a0308dc7a36052d7353fed06e0cc91b7700fd7afef36c9fc0f6cc58d32bf714e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.07600000000000001,
+     -0.151,
+     -0.07400000000000001,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.07500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A1",
+   "base_id": "libero10_t4_fa4",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 488748377,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A1.bddl",
+   "bddl_sha256": "a0308dc7a36052d7353fed06e0cc91b7700fd7afef36c9fc0f6cc58d32bf714e",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.07600000000000001,
+     -0.151,
+     -0.07400000000000001,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.07500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa0_A2",
+   "base_id": "libero10_t4_fa0",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1585199910,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A2.bddl",
+   "bddl_sha256": "08a92e1bd229b2f833df31de6d319a58ece6d593ba45cac430351dd2df092971",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.05600000000000001,
+     -0.151,
+     -0.054000000000000006,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.05500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A2",
+   "base_id": "libero10_t4_fa1",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 849444058,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A2.bddl",
+   "bddl_sha256": "08a92e1bd229b2f833df31de6d319a58ece6d593ba45cac430351dd2df092971",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.05600000000000001,
+     -0.151,
+     -0.054000000000000006,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.05500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A2",
+   "base_id": "libero10_t4_fa2",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1398694034,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A2.bddl",
+   "bddl_sha256": "08a92e1bd229b2f833df31de6d319a58ece6d593ba45cac430351dd2df092971",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.05600000000000001,
+     -0.151,
+     -0.054000000000000006,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.05500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A2",
+   "base_id": "libero10_t4_fa3",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1671192364,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A2.bddl",
+   "bddl_sha256": "08a92e1bd229b2f833df31de6d319a58ece6d593ba45cac430351dd2df092971",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.05600000000000001,
+     -0.151,
+     -0.054000000000000006,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.05500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A2",
+   "base_id": "libero10_t4_fa4",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 488748377,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A2.bddl",
+   "bddl_sha256": "08a92e1bd229b2f833df31de6d319a58ece6d593ba45cac430351dd2df092971",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.05600000000000001,
+     -0.151,
+     -0.054000000000000006,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.05500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa0_A3",
+   "base_id": "libero10_t4_fa0",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1585199910,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A3.bddl",
+   "bddl_sha256": "1da709bfeca1b3d77081c3994e8a66b076e212d5a2263ccc76779920440d070c",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.02600000000000001,
+     -0.151,
+     -0.024000000000000007,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.02500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A3",
+   "base_id": "libero10_t4_fa1",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 849444058,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A3.bddl",
+   "bddl_sha256": "1da709bfeca1b3d77081c3994e8a66b076e212d5a2263ccc76779920440d070c",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.02600000000000001,
+     -0.151,
+     -0.024000000000000007,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.02500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A3",
+   "base_id": "libero10_t4_fa2",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1398694034,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A3.bddl",
+   "bddl_sha256": "1da709bfeca1b3d77081c3994e8a66b076e212d5a2263ccc76779920440d070c",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.02600000000000001,
+     -0.151,
+     -0.024000000000000007,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.02500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A3",
+   "base_id": "libero10_t4_fa3",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1671192364,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A3.bddl",
+   "bddl_sha256": "1da709bfeca1b3d77081c3994e8a66b076e212d5a2263ccc76779920440d070c",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.02600000000000001,
+     -0.151,
+     -0.024000000000000007,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.02500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A3",
+   "base_id": "libero10_t4_fa4",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 488748377,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A3.bddl",
+   "bddl_sha256": "1da709bfeca1b3d77081c3994e8a66b076e212d5a2263ccc76779920440d070c",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     -0.02600000000000001,
+     -0.151,
+     -0.024000000000000007,
+     -0.149
+    ],
+    "target_region_xy": [
+     -0.02500000000000001,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa0_A4",
+   "base_id": "libero10_t4_fa0",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1585199910,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A4.bddl",
+   "bddl_sha256": "a77b48a23c08a440bc844047baed87014543ffb28cf57b8fbadf1c39574d3d61",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     0.023999999999999994,
+     -0.151,
+     0.025999999999999995,
+     -0.149
+    ],
+    "target_region_xy": [
+     0.024999999999999994,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A4",
+   "base_id": "libero10_t4_fa1",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 849444058,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A4.bddl",
+   "bddl_sha256": "a77b48a23c08a440bc844047baed87014543ffb28cf57b8fbadf1c39574d3d61",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     0.023999999999999994,
+     -0.151,
+     0.025999999999999995,
+     -0.149
+    ],
+    "target_region_xy": [
+     0.024999999999999994,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A4",
+   "base_id": "libero10_t4_fa2",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1398694034,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A4.bddl",
+   "bddl_sha256": "a77b48a23c08a440bc844047baed87014543ffb28cf57b8fbadf1c39574d3d61",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     0.023999999999999994,
+     -0.151,
+     0.025999999999999995,
+     -0.149
+    ],
+    "target_region_xy": [
+     0.024999999999999994,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A4",
+   "base_id": "libero10_t4_fa3",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 1671192364,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A4.bddl",
+   "bddl_sha256": "a77b48a23c08a440bc844047baed87014543ffb28cf57b8fbadf1c39574d3d61",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     0.023999999999999994,
+     -0.151,
+     0.025999999999999995,
+     -0.149
+    ],
+    "target_region_xy": [
+     0.024999999999999994,
+     -0.15
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A4",
+   "base_id": "libero10_t4_fa4",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 4,
+   "task": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+   "stage_kind": "multi-stage",
+   "seed": 488748377,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t4/bddl/t4_A4.bddl",
+   "bddl_sha256": "a77b48a23c08a440bc844047baed87014543ffb28cf57b8fbadf1c39574d3d61",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "porcelain_mug_1",
+    "region": "porcelain_mug_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     -0.125,
+     -0.175,
+     -0.07500000000000001,
+     -0.125
+    ],
+    "rewritten_ranges": [
+     0.023999999999999994,
+     -0.151,
+     0.025999999999999995,
+     -0.149
+    ],
+    "target_region_xy": [
+     0.024999999999999994,
+     -0.15
+    ],
+    "sham": false
+   }
+  }
+ ]
+}

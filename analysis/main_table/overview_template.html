@@ -1,0 +1,191 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WM-Verdict 闭环鲁棒性总览 · __DATE__</title>
+<style>
+body{margin:0;background:#fafafa;color:#1c1e21;font:14px/1.5 system-ui,"Noto Sans SC",sans-serif;padding:24px}
+h1{font-size:22px;margin:0 0 4px} .lede{color:#555;max-width:72em}
+.bar{display:flex;gap:14px;align-items:center;margin:14px 0;flex-wrap:wrap}
+select{font:inherit;padding:4px 8px}
+.legend{display:flex;gap:8px;align-items:center;font-size:12px;color:#555}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+h2{font-size:16px;margin:22px 0 6px} h2 small{color:#777;font-weight:400}
+.scroll{overflow-x:auto;border:1px solid #ddd;border-radius:8px;background:#fff;position:relative}
+table{border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+th{color:#666;font-weight:600;padding:3px 4px;text-align:center;white-space:nowrap}
+th.fam{border-bottom:1px solid #ddd} th.model{text-align:left;padding-left:10px;position:sticky;left:0;background:#fff;z-index:1}
+td{min-width:38px;height:30px;text-align:center;padding:0 2px;border-left:1px solid #fafafa}
+td.gap{min-width:7px;background:#fff!important} td.pending{color:#999}
+td.partial{outline:2px dashed #d97706;outline-offset:-2px}
+td.noted{background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.28) 0 3px,transparent 3px 7px)!important}
+.mnotes{color:#555;font-size:12.5px;max-width:80em;margin:6px 0 0;padding-left:18px}
+.tip{position:absolute;pointer-events:none;background:#fff;border:1px solid #ccc;box-shadow:0 4px 14px rgba(0,0,0,.15);
+ border-radius:6px;padding:6px 10px;font-size:12px;white-space:nowrap;z-index:5}
+.tip .k{color:#777} .foot{color:#777;font-size:12px;margin-top:20px;max-width:80em}
+.gloss{max-width:80em;margin-top:28px}.gloss h3{font-size:14px;margin:16px 0 6px}.gt{border-collapse:collapse;background:#fff;font-size:12.5px;width:100%;margin-bottom:6px}.gt td,.gt th{border:1px solid #ddd;padding:5px 8px;text-align:left;vertical-align:top;white-space:normal;height:auto;min-width:0}.gt th{background:#f2f2f2;color:#333}.gt td:first-child{font-weight:600;white-space:nowrap}.gnote{color:#555;font-size:12.5px}
+.ct th.model{position:static}.ct td{min-width:84px;height:44px;line-height:1.25;font-size:12.5px}.ct td small{font-size:10.5px;opacity:.9}.ct th.tk{text-align:left;padding:4px 10px;background:#fff;border-top:2px solid #ccc;white-space:nowrap}.ct th.tk small{color:#777;font-weight:400}.ct tr.tfirst td,.ct tr.tfirst th.model{border-top:2px solid #ccc}
+@media print{.scroll{overflow:visible;border:none}}
+</style></head><body>
+<h1>WM-Verdict 闭环鲁棒性总览</h1>
+<p class="lede">__NMODELS__模型 × 五任务 × 全扰动档闭环部署结果（__DATE__ 快照）。虚线框 = 样本未满 50 在跑；斜纹 = 该模型数据带口径说明（悬停查看）；悬停格子看 n / 95%CI / 步数。</p>
+<section class="cat" id="six-cat">
+<h2>六类扰动汇总 <small>· 每个模型在每个任务上，按六类扰动（环境 / 物理 / 信息 × 一次性 / 持续）合并的闭环成功率</small></h2>
+<p class="gnote">分类（按扰动注册表，2026-11-15 修正 P、O 归类）：环境 · 一次性 = A、P、K；环境 · 持续 = Em、Ef；物理 · 一次性 = N1；物理 · 持续 = G、NR、NL、NLw；信息 · 一次性 = O（只遮第一帧）、F（单次全帧置黑）；信息 · 持续 = Bg/Bf/Bz。<br>每格 = 这一类所有扰动档（不含基线 / 对照档 none、A0、P0、B0）的闭环成功单元数 ÷ 单元数合并计算，下方小字为 k/n。
+<b>带斜纹的格子缺档或有裁决排除的档</b>（格内“缺”= 该模型没跑；“排除”= 有数据但按裁决不进合并，例如 UVA T0/T1 的 Ef 是旧版摩擦实现），与其他模型不完全可比；悬停看 95%CI 与所含档位。</p>
+<div class="scroll"><table class="ct" id="catTable"></table><div class="tip" hidden></div></div>
+</section>
+<script>
+(function(){
+const CAT=__CAT__;
+const GROUPS=[["基线",["base"]],["环境",["env_once","env_always"]],["物理",["phys_once","phys_always"]],["信息",["info_once","info_always"]]];
+const SUB={base:"无扰动",env_once:"一次性",env_always:"持续",phys_once:"一次性",phys_always:"持续",info_once:"一次性",info_always:"持续"};
+const DESC=Object.fromEntries(CAT.cats.map(c=>[c.key,c]));
+const TN={T0:"t5 书入收纳盒",T1:"t3 碗入抽屉并关",T2:"t2 开炉灶放壶",T3:"t4 双杯上盘",T4:"t6 杯子与布丁"};
+const mix=(a,b,t)=>{const p=i=>Math.round(a[i]+(b[i]-a[i])*t);return `rgb(${p(0)},${p(1)},${p(2)})`};
+const ramp=t=>t<0.5?mix([192,57,43],[217,161,6],t*2):mix([217,161,6],[31,138,76],(t-0.5)*2);
+const txt=c=>{const m=c.match(/\d+/g);return (0.299*m[0]+0.587*m[1]+0.114*m[2])<140?"#fff":"#111"};
+const esc=s=>String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+let h='<thead><tr><th class="model" rowspan="2">任务</th><th class="model" rowspan="2">模型</th>';
+GROUPS.forEach(([g,ks])=>h+='<th class="fam" colspan="'+ks.length+'">'+g+'</th>');
+h+='</tr><tr>';GROUPS.forEach(([,ks])=>ks.forEach(k=>h+='<th title="'+esc(DESC[k].desc)+'">'+SUB[k]+'</th>'));h+='</tr></thead><tbody>';
+const tasks=[...new Set(CAT.rows.map(r=>r.task))].sort();
+tasks.forEach(T=>{
+ const ms=[...new Set(CAT.rows.filter(r=>r.task===T).map(r=>r.model))];
+ ms.forEach((m,i)=>{
+  h+='<tr class="'+(i===0?'tfirst':'')+'">'+(i===0?'<th class="tk" rowspan="'+ms.length+'">'+T+'<br><small>'+TN[T]+'</small></th>':'')+'<th class="model">'+esc(m)+'</th>';
+  GROUPS.forEach(([,ks])=>ks.forEach(k=>{
+   const r=CAT.rows.find(x=>x.task===T&&x.model===m&&x.category===k);
+   if(!r||!r.n){h+='<td class="pending">'+'无<br><small>未跑</small>'+'</td>';return}
+   const v=+r.success_rate,bg=ramp(v),miss=r.levels_missing?'缺 '+[...new Set(r.levels_missing.split(" ").map(l=>l.replace(/\d+$/,"")))].join("/"):'';const ex=r.levels_excluded?'排除 '+[...new Set(r.levels_excluded.split(" ").map(l=>l.replace(/\d+$/,"")))].join("/"):'';
+   h+='<td class="'+(miss||ex?'noted':'')+'" style="background:'+bg+';color:'+txt(bg)+'" data-t="'+T+'" data-m="'+esc(m)+'" data-k="'+k+'"><b>'+Math.round(v*100)+'%</b><br><small>'+r.n_success+'/'+r.n+(miss?' · '+miss:'')+(ex?' · '+ex:'')+'</small></td>'}));
+  h+='</tr>'})});
+h+='</tbody>';
+const tb=document.getElementById("catTable");tb.innerHTML=h;
+const box=tb.closest(".scroll"),tip=box.querySelector(".tip");
+tb.querySelectorAll("td[data-k]").forEach(td=>{
+ td.onpointerenter=()=>{
+  const r=CAT.rows.find(x=>x.task===td.dataset.t&&x.model===td.dataset.m&&x.category===td.dataset.k);
+  tip.innerHTML='<b>'+esc(r.model)+' · '+r.task+' · '+esc(r.category_name)+'</b><br><span class="k">成功率</span> '+Math.round(r.success_rate*100)+'% ('+r.n_success+'/'+r.n+')'+
+   '<br><span class="k">95%CI</span> '+Math.round(r.ci95_lo*100)+'–'+Math.round(r.ci95_hi*100)+'%'+
+   '<br><span class="k">包含档位</span> '+esc(r.levels_used)+(r.levels_missing?'<br><span class="k">缺档</span> '+esc(r.levels_missing):'')+(r.levels_excluded?'<br><span class="k">裁决排除</span> '+esc(r.levels_excluded)+'（旧版摩擦实现，不进跨模型对比）':'')+
+   (r.noted?'<br><span class="k">口径</span> 该模型数据带口径说明（见页底模型说明）':'');
+  tip.hidden=false;const er=box.getBoundingClientRect(),tr=td.getBoundingClientRect();
+  tip.style.top=(tr.top-er.top-8)+"px";tip.style.transform="translate(-50%,-100%)";
+  tip.style.left=Math.max(110,(tr.left-er.left+box.scrollLeft+tr.width/2))+"px"};
+ td.onpointerleave=()=>{tip.hidden=true}});
+})();
+</script>
+<h2 style="margin-top:28px">逐档明细</h2>
+<div class="bar">
+ <select id="metric"><option value="rate" selected>闭环成功率</option><option value="steps">完成步数中位（相对基线变慢）</option></select>
+ <span class="legend"><span class="sw" style="background:#c0392b"></span>低/慢 <span class="sw" style="background:#d9a106"></span>中 <span class="sw" style="background:#1f8a4c"></span>高/快</span>
+</div>
+<div id="app"></div>
+<p class="foot">口径：成功率 = 闭环首次运行 success 比例，每格目标 n=50；O 族仅含 famO 修正批；步数视图颜色 = 成功档步数中位相对本模型本任务基线（无扰动/B0）的变慢比例。
+A/P 锚与位姿 · O 遮挡 · Em/Ef 质量摩擦 · G 动作增益 · K 外力 · N1/NR/NL/NLw 动作噪声丢帧延迟 · Bg/Bf/Bz 图像腐蚀。“无”= 该模型没有跑这一档（不是在跑）。</p>
+<ul class="mnotes" id="mnotes"></ul>
+<section class="gloss" id="glossary">
+<h2>缩写注释</h2>
+<h3>任务（T0–T4）</h3>
+<table class="gt"><thead><tr><th>缩写</th><th>LIBERO-10 编号</th><th>任务内容</th><th>扰动作用的目标物体（Em/Ef/K）</th></tr></thead><tbody>
+<tr><td>T0</td><td>t5</td><td>把黑色书放进收纳盒的后格</td><td>黑色书</td></tr>
+<tr><td>T1</td><td>t3</td><td>把黑碗放进柜子底层抽屉，并把抽屉关上</td><td>黑碗</td></tr>
+<tr><td>T2</td><td>t2</td><td>打开炉灶，把摩卡壶放到炉灶上</td><td>摩卡壶</td></tr>
+<tr><td>T3</td><td>t4</td><td>白色杯子放左盘，黄白杯子放右盘</td><td>白色杯子</td></tr>
+<tr><td>T4</td><td>t6</td><td>白色杯子放到盘子上，巧克力布丁放到盘子右边</td><td>白色杯子</td></tr>
+</tbody></table>
+
+<h3>扰动族与档位</h3>
+<table class="gt"><thead><tr><th>缩写</th><th>全称</th><th>具体做法</th><th>各档数值</th></tr></thead><tbody>
+<tr><td>none</td><td>无扰动基线</td><td>主锚库起点，不加任何扰动</td><td>—</td></tr>
+<tr><td>A</td><td>物体初始位置偏移（Anchor / displacement）</td><td>把目标物体的初始摆放区域改成边界外的一个点再采样；A 族用自己的一套原生采样起点，表内与 A0 比较。偏移方向：T0 书 +y，T1 碗 +x，T2 摩卡壶 +x，T3 白杯 +x，T4 白杯 −y</td><td>A0 = 原生区域（零偏移，A 族自身基线）；A1 = 正好在原生区域边界；A2 / A3 / A4 = 超出边界 2 / 5 / 10 cm（T1 的 A4 降为 7 cm：10 cm 已到机械臂可达极限）</td></tr>
+<tr><td>P</td><td>机器人初始位姿（Pose）</td><td>机器人初始关节角加均匀噪声；P 族用自己的起点，表内与 P0 比较。原生分布约 ±0.06 rad</td><td>每个关节噪声幅度 P0 / P1 / P2 / P3 / P4 = 0 / 0.02 / 0.06 / 0.12 / 0.24 rad（P0 = P 族自身基线；P1、P2 在原生范围内，P3、P4 超出）</td></tr>
+<tr><td>O</td><td>遮挡（Occlusion）</td><td>在模型读入的第一帧主视角画面中央贴一个黑色正方形（腕部相机不动）；只改模型输入，不改物理</td><td>正方形边长占画面边长 O1 / O2 / O3 / O4 / O5 = 1/16、1/8、3/16、1/4、5/16</td></tr>
+<tr><td>Em</td><td>目标物体质量（Mass）</td><td>目标物体及其子部件的质量、惯量同乘系数</td><td>Em1 / Em2 / Em3 / Em4 = ×1.5 / ×2 / ×4 / ×8</td></tr>
+<tr><td>Ef</td><td>接触摩擦（Friction）</td><td>目标物体、夹爪指垫、桌面三者的摩擦系数同乘系数（MuJoCo 取接触双方较大值，所以三者一起缩放）</td><td>Ef1 / Ef2 / Ef3 / Ef4 = ×0.8 / ×0.6 / ×0.4 / ×0.2</td></tr>
+<tr><td>G</td><td>机械臂控制器增益（Gain）</td><td>操作空间控制器刚度 kp 乘系数 f、阻尼 kd 乘 √f（阻尼比不变）；机械臂跟随指令变软、变慢</td><td>G1 / G2 / G3 / G4 = f 取 0.9 / 0.75 / 0.55 / 0.4</td></tr>
+<tr><td>K</td><td>外力推动（Kick / push）</td><td>在第 t 个环境步之后，把目标物体沿 A 族的方向推开 d；只在闭环中做</td><td>K1–K3：t = 60，d = 2 / 5 / 10 cm；K4–K6：t = 160，d = 2 / 5 / 10 cm；K7–K9：t = 260，d = 2 / 5 / 10 cm</td></tr>
+<tr><td>F</td><td>单次全帧置黑（blackout）</td><td>名义时刻 t 之后（含 t）模型第一次规划时读入的那一帧主视角画面整帧置黑（腕部相机、想象帧不动），其余各步正常；只改模型输入，只在闭环中做。与 K 族同一起始网格</td><td>F60 / F160 / F260：t = 60 / 160 / 260；实际置黑步由各模型的重规划节奏决定：LingBot-VA 60 / 172 / 268，OpenWAM-α 64 / 160 / 288__COSMOS_F_GLOSS__</td></tr>
+<tr><td>N1</td><td>单次丢动作</td><td>第 50 个环境步执行零动作（保持不动），之后恢复</td><td>只有一档</td></tr>
+<tr><td>NR</td><td>随机丢动作（Random drop）</td><td>每一步独立以概率 p 被替换为零动作；同一单元两遍用同一掩码</td><td>NR1–NR5：p = 5% / 10% / 20% / 30% / 40%</td></tr>
+<tr><td>NL</td><td>短延迟（Latency）</td><td>每一步执行的是 d 步之前发出的指令；历史不够时执行零动作</td><td>NL1–NL5：d = 1 / 2 / 3 / 4 / 5 步（0.05–0.25 秒）</td></tr>
+<tr><td>NLw</td><td>长延迟（Latency, wide）</td><td>同 NL，延迟更长，跨过两个模型的重规划间隔（LingBot-VA 每 16 步、OpenWAM-α 每 32 步重规划一次）</td><td>NLw1–NLw5：d = 4 / 8 / 16 / 32 / 64 步（0.2–3.2 秒）</td></tr>
+<tr><td>B0</td><td>图像腐蚀族的对照</td><td>走 B 族的 128 px 渲染路径，但不加腐蚀；B 族的基线</td><td>—</td></tr>
+<tr><td>Bg</td><td>高斯模糊（gaussian blur）</td><td rowspan="3">闭环中模型读入的每一帧主视角画面都被腐蚀（腕部不动），用 LIBERO-plus 的原版腐蚀函数，只改模型输入</td><td rowspan="3">数字是 LIBERO-plus 的强度参数：2 / 5 / 9，越大越重（例：Bf5 = 雾，强度 5）</td></tr>
+<tr><td>Bf</td><td>雾（fog）</td></tr>
+<tr><td>Bz</td><td>缩放模糊（zoom blur）</td></tr>
+</tbody></table>
+<p class="gnote">环境步频 20 Hz：1 步 = 0.05 秒。上面的档位定义对四个模型相同；Cosmos Policy 与 UVA 的原始档位值已按同一张表换算成这里的缩写。</p>
+
+<h3>表中的其他符号</h3>
+<table class="gt"><tbody>
+<tr><td>n</td><td>该格的单元数；目标 50 = 5 个起点 × 10 个随机种子</td></tr>
+<tr><td>95%CI</td><td>成功率的 Wilson 95% 置信区间</td></tr>
+<tr><td>步数中位</td><td>成功单元第一次达成任务时的环境步数的中位数</td></tr>
+<tr><td>H = 400</td><td>闭环预算：每个单元最多 400 个环境步（20 秒），超过即算失败</td></tr>
+<tr><td>famO</td><td>O 族的修正批次：修好了"第一帧没加遮挡"的缺陷后重跑的那一批，表中 O 族只用这一批</td></tr>
+<tr><td>待出 / 无</td><td>待出 = 我们的模型这一档还在跑；无 = 队友的模型没有跑这一档</td></tr>
+<tr><td>不跑</td><td>LingBot-VA 的 B0：B 族空跑核验（10-29，T0/T1 各 2 个锚点）已证明 128 px 渲染路径与无扰动（none）逐位相同，所以不单独跑 B0；B 族各档与该任务的 none 对照（裁决 2026-11-14：不补跑）</td></tr>
+<tr><td>虚线框 / 斜纹</td><td>虚线框 = 样本未满 50；斜纹 = 该格数据有口径说明（悬停或见上面的模型说明）</td></tr>
+</tbody></table>
+</section>
+
+<script>
+const DATA=__DATA__;
+const TASKS={T0:"t5 书入收纳盒",T1:"t3 碗入抽屉并关",T2:"t2 开炉灶放壶",T3:"t4 双杯上盘",T4:"t6 杯子与布丁"};
+const FAMS=[["基线",["none","B0"]],["A",["A0","A1","A2","A3","A4"]],["P",["P0","P1","P2","P3","P4"]],
+ ["O",["O1","O2","O3","O4","O5"]],["Em",["Em1","Em2","Em3","Em4"]],["Ef",["Ef1","Ef2","Ef3","Ef4"]],
+ ["G",["G1","G2","G3","G4"]],["K",["K1","K2","K3","K4","K5","K6","K7","K8","K9"]],["F",["F60","F160","F260"]],
+ ["N",["N1_1","NR1","NR2","NR3","NR4","NR5","NL1","NL2","NL3","NL4","NL5"]],
+ ["NLw",["NLw1","NLw2","NLw3","NLw4","NLw5"]],["B",["Bg2","Bg5","Bg9","Bf2","Bf5","Bf9","Bz2","Bz5","Bz9"]]];
+const MODELS=__MODELS__;
+const EXT=__EXT__;
+const MNOTES=__MNOTES__;
+const R=DATA.map(r=>({m:r.model,t:r.task,l:r.level,n:+r.n,rate:+r.success_rate,lo:+r.ci95_lo,hi:+r.ci95_hi,
+ med:r.median_first_success_step===""?null:+r.median_first_success_step,partial:r.complete!=="y",note:r.note||""}));
+function mix(a,b,t){const p=i=>Math.round(a[i]+(b[i]-a[i])*t);return `rgb(${p(0)},${p(1)},${p(2)})`}
+const BAD=[192,57,43],WARN=[217,161,6],OK=[31,138,76];
+const ramp=t=>t<0.5?mix(BAD,WARN,t*2):mix(WARN,OK,(t-0.5)*2);
+const txt=c=>{const m=c.match(/\d+/g);return (0.299*m[0]+0.587*m[1]+0.114*m[2])<140?"#fff":"#111"};
+const base=(m,t)=>{const b=R.find(r=>r.m===m&&r.t===t&&(r.l==="none"||r.l==="B0")&&r.med);return b?b.med:null};
+function render(){
+ const metric=document.getElementById("metric").value;
+ const app=document.getElementById("app");app.innerHTML="";
+ for(const T in TASKS){
+  const sub=R.filter(r=>r.t===T);
+  const fams=FAMS.map(([f,ls])=>[f,ls.filter(l=>sub.some(r=>r.l===l))]).filter(([,ls])=>ls.length);
+  let h='<h2>'+T+' <small>· '+TASKS[T]+'</small></h2><div class="scroll"><table><thead><tr><th class="model"></th>';
+  fams.forEach(([f,ls],i)=>{h+='<th class="fam" colspan="'+ls.length+'">'+f+'</th>'+(i<fams.length-1?'<th class="gap"></th>':'')});
+  h+='</tr><tr><th class="model"></th>';
+  fams.forEach(([,ls],i)=>{ls.forEach(l=>h+='<th>'+l.replace("N1_1","N1")+'</th>');if(i<fams.length-1)h+='<th class="gap"></th>'});
+  h+='</tr></thead><tbody>';
+  MODELS.forEach(m=>{
+   h+='<tr><th class="model">'+m+'</th>';const bm=base(m,T);
+   fams.forEach(([,ls],i)=>{ls.forEach(l=>{
+     const r=sub.find(x=>x.m===m&&x.l===l);
+     if(!r){h+='<td class="pending">'+(EXT.includes(m)?'无':(m==="LingBot-VA"&&l==="B0"?'不跑':'待出'))+'</td>';return}
+     let bg,label;
+     if(metric==="rate"){bg=ramp(r.rate);label=Math.round(r.rate*100)+"%"}
+     else{if(r.med==null||!bm){h+='<td class="pending">—</td>';return}
+       const slow=r.med/bm-1;bg=ramp(1-Math.min(Math.max(slow,0)/0.4,1));label=r.med}
+     h+='<td class="'+(r.partial?'partial ':'')+(r.note?'noted':'')+'" style="background:'+bg+';color:'+txt(bg)+'" data-m="'+m+'" data-l="'+l+'" data-t="'+T+'">'+label+'</td>'});
+    if(i<fams.length-1)h+='<td class="gap"></td>'});
+   h+='</tr>'});
+  h+='</tbody></table><div class="tip" hidden></div></div>';
+  app.insertAdjacentHTML("beforeend",h)}
+ document.querySelectorAll("td[data-l]").forEach(td=>{
+  td.onpointerenter=()=>{
+   const box=td.closest(".scroll"),tip=box.querySelector(".tip");
+   const r=R.find(x=>x.m===td.dataset.m&&x.t===td.dataset.t&&x.l===td.dataset.l);if(!r)return;
+   const bm=base(r.m,r.t);
+   tip.innerHTML='<b>'+r.m+' · '+r.l+'</b><br><span class="k">成功率</span> '+Math.round(r.rate*100)+'% ('+Math.round(r.rate*r.n)+'/'+r.n+')'+
+    '<br><span class="k">95%CI</span> '+Math.round(r.lo*100)+'–'+Math.round(r.hi*100)+'%'+
+    '<br><span class="k">步数中位</span> '+(r.med??'—')+(bm&&r.med?' <span class="k">(基线 '+bm+')</span>':'')+
+    (r.partial?'<br><span class="k">样本未满 50，在跑</span>':'')+(r.note?'<br><span class="k">口径</span> '+r.note:'');
+   tip.hidden=false;
+   const er=box.getBoundingClientRect(),tr=td.getBoundingClientRect();
+   tip.style.top=(tr.top-er.top-8)+"px";tip.style.transform="translate(-50%,-100%)";
+   tip.style.left=Math.max(70,(tr.left-er.left+box.scrollLeft+tr.width/2))+"px"};
+  td.onpointerleave=()=>{const t=td.closest(".scroll").querySelector(".tip");if(t)t.hidden=true}})}
+document.getElementById("mnotes").innerHTML=Object.entries(MNOTES).map(([m,t])=>'<li><b>'+m+'</b>：'+t+'</li>').join('');
+document.getElementById("metric").onchange=render;render();
+</script></body></html>

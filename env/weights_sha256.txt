@@ -1,0 +1,50 @@
+# WM-Verdict 集群在用的 OpenWAM 权重与 LIBERO 缓存 SHA256 清单（2026-11-14，作业 1974 在 $NODE_A 上对 NAS 原件逐文件计算）
+# 格式同 sha256sum：<sha256>  <相对路径>。核对：grep -v '^#' weights_sha256.txt | sha256sum -c
+# 路径相对于各自的下载目录的父目录（OpenWAM-Alpha-Sim-LIBERO/、Wan2.2-TI2V-5B/），caches.tar 相对于其所在目录。
+# 交叉核对：下列 HF LFS 文件的 SHA256 与集群下载时 HF 记录的 etag（.cache/huggingface/download/*.metadata）逐一相同。
+
+# [1] OpenWAM checkpoint — HF OpenWAM/OpenWAM-Alpha-Sim-LIBERO @ revision 110b07e4d5581c81520a77419cbb0e9371df231b
+#     集群路径 libero/openwam/third_party/OpenWAM/assets/openwam_ckpt/openwam_alpha/OpenWAM-Alpha-Sim-LIBERO/
+#     主文件：
+34c9a6c9af67dda9aaffa2edc0efa29b28eeee1c26dea419f98065c80508c96a  OpenWAM-Alpha-Sim-LIBERO/checkpoint_step_10690.safetensors
+#     同目录其余文件（配置、归一化统计、tokenizer 等）：
+6c9b746263df936b5ec492d926ff8660b8dfa24b56c2a337ce16d22e42f81c22  OpenWAM-Alpha-Sim-LIBERO/.gitattributes
+6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b  OpenWAM-Alpha-Sim-LIBERO/tokenizer/google/umt5-xxl/tokenizer.json
+71fb648cefd62dcd1ea04b67cd758b8d48fbb7486e9c4d62cef64502c808b7ed  OpenWAM-Alpha-Sim-LIBERO/README.md
+7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d  OpenWAM-Alpha-Sim-LIBERO/tokenizer/google/umt5-xxl/special_tokens_map.json
+7e9045ef6e7cde073bc432ab7c66fbfaefa8e362b436cc5b702f042f1f721236  OpenWAM-Alpha-Sim-LIBERO/config.yaml
+e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458  OpenWAM-Alpha-Sim-LIBERO/tokenizer/google/umt5-xxl/spiece.model
+ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05  OpenWAM-Alpha-Sim-LIBERO/tokenizer/google/umt5-xxl/tokenizer_config.json
+f3fd7daa340ee6cbcb0d6a489a130f1e866c2688fcc40ffd98cae506b4d0cc8e  OpenWAM-Alpha-Sim-LIBERO/normalization_stats.npy
+
+# [2] Wan2.2-TI2V-5B video backbone — HF Wan-AI/Wan2.2-TI2V-5B @ revision 921dbaf3f1674a56f47e83fb80a34bac8a8f203e
+#     集群路径 libero/openwam/third_party/OpenWAM/assets/video_backbone_ckpt/Wan2.2-TI2V-5B/
+#     权重文件（DiT 3 个分片 + VAE + T5 文本编码器）：
+09ec5ef720d8396f6cfa51fbdcbdb2327e37722afd6e89fd38f1e7e5e782c283  Wan2.2-TI2V-5B/diffusion_pytorch_model-00002-of-00003.safetensors
+20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36  Wan2.2-TI2V-5B/Wan2.2_VAE.pth
+6306f7894c345de9093ad588771c2abfaeb668a81f7a6d9a918bd26ba3568e49  Wan2.2-TI2V-5B/diffusion_pytorch_model-00003-of-00003.safetensors
+720b06c4ade5e87c1246bba8ac95b664c638749cd9b102cf84d823bb44c026a1  Wan2.2-TI2V-5B/diffusion_pytorch_model-00001-of-00003.safetensors
+7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d  Wan2.2-TI2V-5B/models_t5_umt5-xxl-enc-bf16.pth
+#     同目录其余文件（配置、分片索引、tokenizer、README 图片等）：
+077e3d965090c9028c69c00931675f42e1acc815c6eb450ab291b3b72d211a8e  Wan2.2-TI2V-5B/examples/i2v_input.JPG
+2b49c3a970f900cd3e1cbd1c68ca5efccaba49cdb121eeca5c51b53173558895  Wan2.2-TI2V-5B/.mv
+4aaea5e187f1c5908e15ade5bef24c9fb59882986bc3d2ad75f7fe820f3d772f  Wan2.2-TI2V-5B/assets/vae.png
+4ea471ccb64349bd08bc9a78f336ae000e9ca3b40da9a652b8028b214a8c6093  Wan2.2-TI2V-5B/assets/moe_2.png
+6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b  Wan2.2-TI2V-5B/google/umt5-xxl/tokenizer.json
+709510625af90bad3f9509c8c9bb6dc779576cd7f80b9bc95d75fe33f2755079  Wan2.2-TI2V-5B/assets/moe_arch.png
+75ee012dcfb08365bec67a3ec7afc126fc2817f79b9f80e38711792d4770e32b  Wan2.2-TI2V-5B/assets/comp_effic.png
+7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d  Wan2.2-TI2V-5B/google/umt5-xxl/special_tokens_map.json
+96cddc0f667293436d0b9f92a299b6346b65b231d38ee49719a33d46c91fe1e3  Wan2.2-TI2V-5B/assets/logo.png
+97ef99c13c8ae717a8a11c8d8ec927b69077c647cc6689755d08fc38e7fbb830  Wan2.2-TI2V-5B/assets/performance.png
+9d367d6e3a691a377ca16b3dd3d6467afb83ee36be612cfe1858985c7733f62b  Wan2.2-TI2V-5B/.gitattributes
+a6b66993e9da0feaba8d42d06b21ad9cfaf7d8b591f32fd639ae35b7f5d2d859  Wan2.2-TI2V-5B/configuration.json
+bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe  Wan2.2-TI2V-5B/diffusion_pytorch_model.safetensors.index.json
+d1fea36899d00c2501b836c13ad65af56e2f9529ba622e50886d3f5c3e6c02bc  Wan2.2-TI2V-5B/config.json
+e08718041f55dc3bfa49e18e8228c49bb760c477f2501214361326327e2f8c4f  Wan2.2-TI2V-5B/.msc
+e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69  Wan2.2-TI2V-5B/README.md
+e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458  Wan2.2-TI2V-5B/google/umt5-xxl/spiece.model
+ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05  Wan2.2-TI2V-5B/google/umt5-xxl/tokenizer_config.json
+
+# [3] caches.tar — 集群节点 home 下的 LIBERO 资源 + HF 缓存元数据（node_sync/caches.tar，2026-10-26 打包；与打包时记录的 caches.tar.sha256 相同）
+#     注意：tar 内 LingBot-VA 三个 HF 仓库的大权重是悬空符号链接（blob 未打包），LingBot 权重需另行从 HF 下载。
+c072f2dc4ff18e889143437d01159ed1b0134d9bf7a788f21f6728c8a341676a  caches.tar

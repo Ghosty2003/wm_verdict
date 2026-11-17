@@ -1,0 +1,121 @@
+{
+ "suite": "libero_10",
+ "master_seed": 20261025,
+ "anchors_per_task": 5,
+ "settle_steps": 10,
+ "resolution": 128,
+ "restore_recipe": "LeRobot LiberoEnv(hard_reset=True, init_states=True): seed -> hard reset -> set_init_state(init[init_index]) -> settle_steps x dummy action",
+ "seed_rule": "rs = RandomState(master); per task in order (3, 5): idx = rs.choice(50, 5, replace=False); seeds = rs.randint(0, 2**31-1, 5)",
+ "anchors": [
+  {
+   "anchor_id": "libero10_t3_a0",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "init_index": 19,
+   "seed": 1601271739,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t3_a1",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "init_index": 33,
+   "seed": 237905466,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t3_a2",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "init_index": 44,
+   "seed": 1062691382,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t3_a3",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "init_index": 8,
+   "seed": 310539380,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t3_a4",
+   "suite": "libero_10",
+   "task_id": 3,
+   "task": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+   "stage_kind": "multi-stage",
+   "init_index": 20,
+   "seed": 1479945364,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t5_a0",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "init_index": 26,
+   "seed": 1874462777,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t5_a1",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "init_index": 25,
+   "seed": 293586042,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t5_a2",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "init_index": 3,
+   "seed": 32327436,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t5_a3",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "init_index": 48,
+   "seed": 567134708,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t5_a4",
+   "suite": "libero_10",
+   "task_id": 5,
+   "task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+   "stage_kind": "single-stage",
+   "init_index": 18,
+   "seed": 1973823337,
+   "settle_steps": 10,
+   "resolution": 128
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "suite": "libero_10",
+ "master_seed": 20261108,
+ "anchors_per_task": 5,
+ "settle_steps": 10,
+ "resolution": 128,
+ "restore_recipe": "LeRobot LiberoEnv(hard_reset=True, init_states=True): seed -> hard reset -> set_init_state(init[init_index]) -> settle_steps x dummy action",
+ "seed_rule": "rs = RandomState(20261108); idx = rs.choice(50, 5, replace=False); seeds = rs.randint(0, 2**31-1, 5)",
+ "anchors": [
+  {
+   "anchor_id": "libero10_t6_a0",
+   "suite": "libero_10",
+   "task_id": 6,
+   "task": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+   "stage_kind": "multi-stage",
+   "init_index": 15,
+   "seed": 675028968,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t6_a1",
+   "suite": "libero_10",
+   "task_id": 6,
+   "task": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+   "stage_kind": "multi-stage",
+   "init_index": 30,
+   "seed": 734309992,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t6_a2",
+   "suite": "libero_10",
+   "task_id": 6,
+   "task": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+   "stage_kind": "multi-stage",
+   "init_index": 34,
+   "seed": 793839337,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t6_a3",
+   "suite": "libero_10",
+   "task_id": 6,
+   "task": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+   "stage_kind": "multi-stage",
+   "init_index": 14,
+   "seed": 1712122834,
+   "settle_steps": 10,
+   "resolution": 128
+  },
+  {
+   "anchor_id": "libero10_t6_a4",
+   "suite": "libero_10",
+   "task_id": 6,
+   "task": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+   "stage_kind": "multi-stage",
+   "init_index": 12,
+   "seed": 1754953056,
+   "settle_steps": 10,
+   "resolution": 128
+  }
+ ]
+}

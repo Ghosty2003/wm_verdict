@@ -1,0 +1,1061 @@
+{
+ "family": "A_obj",
+ "suite": "libero_10",
+ "master_seed": 20261105,
+ "anchors_per_task": 5,
+ "settle_steps": 10,
+ "resolution": 128,
+ "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+ "levels": {
+  "A0": null,
+  "A1": 0.0,
+  "A2": 0.02,
+  "A3": 0.05,
+  "A4": 0.1
+ },
+ "direction": "+x",
+ "direction_reason": "away from the robot, the stove (x ~ -0.2) and the frypan (x ~ -0.05, y ~ -0.25); -y would approach the frypan",
+ "bddl": {
+  "t2_A0": {
+   "path": "libero/out/bank/familyA_t2/bddl/t2_A0.bddl",
+   "sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+   "identical_to_original": true
+  },
+  "t2_A1": {
+   "path": "libero/out/bank/familyA_t2/bddl/t2_A1.bddl",
+   "sha256": "510fabc215bdadae95fd485310280e90cfdcb914cc0ea8deca2583c2bb7443ce",
+   "identical_to_original": false
+  },
+  "t2_A2": {
+   "path": "libero/out/bank/familyA_t2/bddl/t2_A2.bddl",
+   "sha256": "1763cb4b54fd39de016de1634a262cc9a2eb3adc84f26d2fde9f6f13c2b49a0a",
+   "identical_to_original": false
+  },
+  "t2_A3": {
+   "path": "libero/out/bank/familyA_t2/bddl/t2_A3.bddl",
+   "sha256": "ef4a4f0fe9e02576c750806c8df07a2dae792d685696792753ca8bdf20d349ae",
+   "identical_to_original": false
+  },
+  "t2_A4": {
+   "path": "libero/out/bank/familyA_t2/bddl/t2_A4.bddl",
+   "sha256": "4be65cf15a114cba6be3a76e17d67bb3d4ffebce858fb9208c6b4762d53c6a78",
+   "identical_to_original": false
+  },
+  "t2_original": {
+   "path": "$CONDA_ROOT/envs/lerobot_libero/lib/python3.12/site-packages/libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.bddl",
+   "sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d"
+  }
+ },
+ "anchors": [
+  {
+   "anchor_id": "libero10_t2_fa0_A0",
+   "base_id": "libero10_t2_fa0",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1870355541,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A0.bddl",
+   "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa1_A0",
+   "base_id": "libero10_t2_fa1",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 2116972517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A0.bddl",
+   "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa2_A0",
+   "base_id": "libero10_t2_fa2",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1691025249,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A0.bddl",
+   "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa3_A0",
+   "base_id": "libero10_t2_fa3",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 456601410,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A0.bddl",
+   "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa4_A0",
+   "base_id": "libero10_t2_fa4",
+   "level": "A0",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 362685466,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A0.bddl",
+   "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": null,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "target_region_xy": null,
+    "sham": true
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa0_A1",
+   "base_id": "libero10_t2_fa0",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1870355541,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A1.bddl",
+   "bddl_sha256": "510fabc215bdadae95fd485310280e90cfdcb914cc0ea8deca2583c2bb7443ce",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.07400000000000001,
+     -0.001,
+     0.07600000000000001,
+     0.001
+    ],
+    "target_region_xy": [
+     0.07500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa1_A1",
+   "base_id": "libero10_t2_fa1",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 2116972517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A1.bddl",
+   "bddl_sha256": "510fabc215bdadae95fd485310280e90cfdcb914cc0ea8deca2583c2bb7443ce",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.07400000000000001,
+     -0.001,
+     0.07600000000000001,
+     0.001
+    ],
+    "target_region_xy": [
+     0.07500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa2_A1",
+   "base_id": "libero10_t2_fa2",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1691025249,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A1.bddl",
+   "bddl_sha256": "510fabc215bdadae95fd485310280e90cfdcb914cc0ea8deca2583c2bb7443ce",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.07400000000000001,
+     -0.001,
+     0.07600000000000001,
+     0.001
+    ],
+    "target_region_xy": [
+     0.07500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa3_A1",
+   "base_id": "libero10_t2_fa3",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 456601410,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A1.bddl",
+   "bddl_sha256": "510fabc215bdadae95fd485310280e90cfdcb914cc0ea8deca2583c2bb7443ce",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.07400000000000001,
+     -0.001,
+     0.07600000000000001,
+     0.001
+    ],
+    "target_region_xy": [
+     0.07500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa4_A1",
+   "base_id": "libero10_t2_fa4",
+   "level": "A1",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 362685466,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A1.bddl",
+   "bddl_sha256": "510fabc215bdadae95fd485310280e90cfdcb914cc0ea8deca2583c2bb7443ce",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.0,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.07400000000000001,
+     -0.001,
+     0.07600000000000001,
+     0.001
+    ],
+    "target_region_xy": [
+     0.07500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa0_A2",
+   "base_id": "libero10_t2_fa0",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1870355541,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A2.bddl",
+   "bddl_sha256": "1763cb4b54fd39de016de1634a262cc9a2eb3adc84f26d2fde9f6f13c2b49a0a",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.09400000000000001,
+     -0.001,
+     0.09600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.09500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa1_A2",
+   "base_id": "libero10_t2_fa1",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 2116972517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A2.bddl",
+   "bddl_sha256": "1763cb4b54fd39de016de1634a262cc9a2eb3adc84f26d2fde9f6f13c2b49a0a",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.09400000000000001,
+     -0.001,
+     0.09600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.09500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa2_A2",
+   "base_id": "libero10_t2_fa2",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1691025249,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A2.bddl",
+   "bddl_sha256": "1763cb4b54fd39de016de1634a262cc9a2eb3adc84f26d2fde9f6f13c2b49a0a",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.09400000000000001,
+     -0.001,
+     0.09600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.09500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa3_A2",
+   "base_id": "libero10_t2_fa3",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 456601410,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A2.bddl",
+   "bddl_sha256": "1763cb4b54fd39de016de1634a262cc9a2eb3adc84f26d2fde9f6f13c2b49a0a",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.09400000000000001,
+     -0.001,
+     0.09600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.09500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa4_A2",
+   "base_id": "libero10_t2_fa4",
+   "level": "A2",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 362685466,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A2.bddl",
+   "bddl_sha256": "1763cb4b54fd39de016de1634a262cc9a2eb3adc84f26d2fde9f6f13c2b49a0a",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.02,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.09400000000000001,
+     -0.001,
+     0.09600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.09500000000000001,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa0_A3",
+   "base_id": "libero10_t2_fa0",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1870355541,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A3.bddl",
+   "bddl_sha256": "ef4a4f0fe9e02576c750806c8df07a2dae792d685696792753ca8bdf20d349ae",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.001,
+     0.126,
+     0.001
+    ],
+    "target_region_xy": [
+     0.125,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa1_A3",
+   "base_id": "libero10_t2_fa1",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 2116972517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A3.bddl",
+   "bddl_sha256": "ef4a4f0fe9e02576c750806c8df07a2dae792d685696792753ca8bdf20d349ae",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.001,
+     0.126,
+     0.001
+    ],
+    "target_region_xy": [
+     0.125,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa2_A3",
+   "base_id": "libero10_t2_fa2",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1691025249,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A3.bddl",
+   "bddl_sha256": "ef4a4f0fe9e02576c750806c8df07a2dae792d685696792753ca8bdf20d349ae",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.001,
+     0.126,
+     0.001
+    ],
+    "target_region_xy": [
+     0.125,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa3_A3",
+   "base_id": "libero10_t2_fa3",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 456601410,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A3.bddl",
+   "bddl_sha256": "ef4a4f0fe9e02576c750806c8df07a2dae792d685696792753ca8bdf20d349ae",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.001,
+     0.126,
+     0.001
+    ],
+    "target_region_xy": [
+     0.125,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa4_A3",
+   "base_id": "libero10_t2_fa4",
+   "level": "A3",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 362685466,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A3.bddl",
+   "bddl_sha256": "ef4a4f0fe9e02576c750806c8df07a2dae792d685696792753ca8bdf20d349ae",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.05,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.124,
+     -0.001,
+     0.126,
+     0.001
+    ],
+    "target_region_xy": [
+     0.125,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa0_A4",
+   "base_id": "libero10_t2_fa0",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1870355541,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A4.bddl",
+   "bddl_sha256": "4be65cf15a114cba6be3a76e17d67bb3d4ffebce858fb9208c6b4762d53c6a78",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.17400000000000002,
+     -0.001,
+     0.17600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.17500000000000002,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa1_A4",
+   "base_id": "libero10_t2_fa1",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 2116972517,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A4.bddl",
+   "bddl_sha256": "4be65cf15a114cba6be3a76e17d67bb3d4ffebce858fb9208c6b4762d53c6a78",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.17400000000000002,
+     -0.001,
+     0.17600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.17500000000000002,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa2_A4",
+   "base_id": "libero10_t2_fa2",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 1691025249,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A4.bddl",
+   "bddl_sha256": "4be65cf15a114cba6be3a76e17d67bb3d4ffebce858fb9208c6b4762d53c6a78",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.17400000000000002,
+     -0.001,
+     0.17600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.17500000000000002,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa3_A4",
+   "base_id": "libero10_t2_fa3",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 456601410,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A4.bddl",
+   "bddl_sha256": "4be65cf15a114cba6be3a76e17d67bb3d4ffebce858fb9208c6b4762d53c6a78",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.17400000000000002,
+     -0.001,
+     0.17600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.17500000000000002,
+     0.0
+    ],
+    "sham": false
+   }
+  },
+  {
+   "anchor_id": "libero10_t2_fa4_A4",
+   "base_id": "libero10_t2_fa4",
+   "level": "A4",
+   "family": "A_obj",
+   "suite": "libero_10",
+   "task_id": 2,
+   "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+   "stage_kind": "multi-stage",
+   "seed": 362685466,
+   "settle_steps": 10,
+   "resolution": 128,
+   "native": true,
+   "init_index": null,
+   "bddl_file": "libero/out/bank/familyA_t2/bddl/t2_A4.bddl",
+   "bddl_sha256": "4be65cf15a114cba6be3a76e17d67bb3d4ffebce858fb9208c6b4762d53c6a78",
+   "hook": "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+   "displacement": {
+    "object": "moka_pot_1",
+    "region": "moka_pot_init_region",
+    "direction": "+x",
+    "beyond_boundary_m": 0.1,
+    "native_ranges": [
+     0.025,
+     -0.025,
+     0.07500000000000001,
+     0.025
+    ],
+    "rewritten_ranges": [
+     0.17400000000000002,
+     -0.001,
+     0.17600000000000002,
+     0.001
+    ],
+    "target_region_xy": [
+     0.17500000000000002,
+     0.0
+    ],
+    "sham": false
+   }
+  }
+ ]
+}

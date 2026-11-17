@@ -1,0 +1,1785 @@
+{
+ "all_pass": true,
+ "direction": "+x",
+ "direction_suspect": [],
+ "tolerance": 0.0,
+ "replay_steps": 120,
+ "results": [
+  {
+   "anchor_id": "libero10_t4_fa0_A0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": null,
+   "init_success": false,
+   "trajectory_sha256": "035c3cd4017ba22d57017e949d3bf52b48a52be4c2f0c3d2755d265e15303488",
+   "sham_vs_untouched_native": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "sham_pass": true,
+   "placement": {
+    "placed_xyz": [
+     -0.1141,
+     -0.1732,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.1141,
+     -0.1732,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.432,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 1.83,
+     "grasp_2cm": 5.03
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.18945,
+      0.00612,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.03081,
+      0.11846,
+      0.43686
+     ],
+     "plate_1": [
+      0.00316,
+      -0.31283,
+      0.43927
+     ],
+     "plate_2": [
+      0.01396,
+      0.31652,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "f2ab2ef2dc95fe2af50c8be2ed81fb1e1348e5f9c62716e5679ac1d3ff4c1d3c",
+   "sham_vs_untouched_native": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "sham_pass": true,
+   "placement": {
+    "placed_xyz": [
+     -0.119,
+     -0.1604,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.119,
+     -0.1604,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.423,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.05,
+     "grasp_2cm": 5.38
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.19224,
+      0.01076,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.06908,
+      0.07632,
+      0.43686
+     ],
+     "plate_1": [
+      -1e-05,
+      -0.28688,
+      0.43927
+     ],
+     "plate_2": [
+      0.00055,
+      0.29775,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "7978562924d06150ae2969f79672bc59c898ecd1f884c96b642c67c6599a1b64",
+   "sham_vs_untouched_native": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "sham_pass": true,
+   "placement": {
+    "placed_xyz": [
+     -0.0894,
+     -0.1318,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0894,
+     -0.1318,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.441,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 3.02,
+     "grasp_2cm": 6.63
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21748,
+      0.01206,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.02994,
+      0.11716,
+      0.43686
+     ],
+     "plate_1": [
+      -0.01126,
+      -0.2814,
+      0.43927
+     ],
+     "plate_2": [
+      0.02411,
+      0.29966,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "36dc5c41a5eee5f6580f6bc95fa0f3a45977c395b8bdb9a1eefbe0689a121de8",
+   "sham_vs_untouched_native": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "sham_pass": true,
+   "placement": {
+    "placed_xyz": [
+     -0.0934,
+     -0.1635,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0934,
+     -0.1635,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.447,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.74,
+     "grasp_2cm": 6.14
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21917,
+      0.01741,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.04474,
+      0.11925,
+      0.43686
+     ],
+     "plate_1": [
+      -0.0022,
+      -0.2759,
+      0.43927
+     ],
+     "plate_2": [
+      -0.02305,
+      0.28494,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A0",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "2720539679b77eeeab86df8edbb89a9bcad7d02f967de43de635cf1f71c9f2b8",
+   "sham_vs_untouched_native": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "sham_pass": true,
+   "placement": {
+    "placed_xyz": [
+     -0.1062,
+     -0.165,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.1062,
+     -0.165,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.436,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.78,
+     "grasp_2cm": 4.86
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.1823,
+      0.01057,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.0524,
+      0.11386,
+      0.43686
+     ],
+     "plate_1": [
+      -0.00328,
+      -0.31735,
+      0.43927
+     ],
+     "plate_2": [
+      0.0153,
+      0.31443,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa0_A1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "00882c9684aa9cb18b57dbb5369314b7e2107981d1cb366b6a9a8bc589cc62db",
+   "placement": {
+    "placed_xyz": [
+     -0.0756,
+     -0.1509,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0756,
+     -0.1509,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.46,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.87,
+     "grasp_2cm": 6.37
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.18945,
+      0.00612,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.03081,
+      0.11846,
+      0.43686
+     ],
+     "plate_1": [
+      0.00316,
+      -0.31283,
+      0.43927
+     ],
+     "plate_2": [
+      0.01396,
+      0.31652,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "176351eab4a3b465f6caf75bb3ffdd22be9610853e76ae7d94e1bdd48d51b7e5",
+   "placement": {
+    "placed_xyz": [
+     -0.0758,
+     -0.1504,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0758,
+     -0.1504,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.46,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.87,
+     "grasp_2cm": 6.38
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.19224,
+      0.01076,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.06908,
+      0.07632,
+      0.43686
+     ],
+     "plate_1": [
+      -1e-05,
+      -0.28688,
+      0.43927
+     ],
+     "plate_2": [
+      0.00055,
+      0.29775,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "afba2caf76b4b54e31294bd09619a6156123f0e584dd1c10d2af7842ade564f5",
+   "placement": {
+    "placed_xyz": [
+     -0.0746,
+     -0.1493,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0746,
+     -0.1493,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.46,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.86,
+     "grasp_2cm": 6.41
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21748,
+      0.01206,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.02994,
+      0.11716,
+      0.43686
+     ],
+     "plate_1": [
+      -0.01126,
+      -0.2814,
+      0.43927
+     ],
+     "plate_2": [
+      0.02411,
+      0.29966,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "afa37df0c9b9c214cbbed6ab1598ec59e443640df7f641ad4d5529168c5fbc9c",
+   "placement": {
+    "placed_xyz": [
+     -0.0747,
+     -0.1506,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0747,
+     -0.1506,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.461,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.86,
+     "grasp_2cm": 6.38
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21917,
+      0.01741,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.04474,
+      0.11925,
+      0.43686
+     ],
+     "plate_1": [
+      -0.0022,
+      -0.2759,
+      0.43927
+     ],
+     "plate_2": [
+      -0.02305,
+      0.28494,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A1",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "a781a708ee54225f184803e9b0c057358f302eb4785f248984caedbdb2c24ccc",
+   "placement": {
+    "placed_xyz": [
+     -0.0752,
+     -0.1506,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0752,
+     -0.1506,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.46,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.87,
+     "grasp_2cm": 6.38
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.1823,
+      0.01057,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.0524,
+      0.11386,
+      0.43686
+     ],
+     "plate_1": [
+      -0.00328,
+      -0.31735,
+      0.43927
+     ],
+     "plate_2": [
+      0.0153,
+      0.31443,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa0_A2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "d613099bcee7dfa6afe0456b0c289cf5e4191ff051ffe15a80aca67be40f65f8",
+   "placement": {
+    "placed_xyz": [
+     -0.0556,
+     -0.1509,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0556,
+     -0.1509,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.479,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.79,
+     "grasp_2cm": 6.46
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.18945,
+      0.00612,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.03081,
+      0.11846,
+      0.43686
+     ],
+     "plate_1": [
+      0.00316,
+      -0.31283,
+      0.43927
+     ],
+     "plate_2": [
+      0.01396,
+      0.31652,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "266ddf88907fcf63ed9daed244f92d9864a995a45c961a11b6d726ef8e6025d6",
+   "placement": {
+    "placed_xyz": [
+     -0.0558,
+     -0.1504,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0558,
+     -0.1504,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.479,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.8,
+     "grasp_2cm": 6.46
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.19224,
+      0.01076,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.06908,
+      0.07632,
+      0.43686
+     ],
+     "plate_1": [
+      -1e-05,
+      -0.28688,
+      0.43927
+     ],
+     "plate_2": [
+      0.00055,
+      0.29775,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "5bef2cfe243951f1acfe72a5ecf59c77020bffb26c3cba0936f379f3c9c8aa31",
+   "placement": {
+    "placed_xyz": [
+     -0.0546,
+     -0.1493,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0546,
+     -0.1493,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.479,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.8,
+     "grasp_2cm": 6.48
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21748,
+      0.01206,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.02994,
+      0.11716,
+      0.43686
+     ],
+     "plate_1": [
+      -0.01126,
+      -0.2814,
+      0.43927
+     ],
+     "plate_2": [
+      0.02411,
+      0.29966,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "d9ea382e4bef2c4ab2e7a7769f6cad667c97b08348e9a32e74b4a83317b9cd57",
+   "placement": {
+    "placed_xyz": [
+     -0.0547,
+     -0.1506,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0547,
+     -0.1506,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.48,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.79,
+     "grasp_2cm": 6.46
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21917,
+      0.01741,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.04474,
+      0.11925,
+      0.43686
+     ],
+     "plate_1": [
+      -0.0022,
+      -0.2759,
+      0.43927
+     ],
+     "plate_2": [
+      -0.02305,
+      0.28494,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A2",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "8d406d11b169366df6df32f90921474a9663687b3837be84a42f7c7b1e289741",
+   "placement": {
+    "placed_xyz": [
+     -0.0552,
+     -0.1506,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0552,
+     -0.1506,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.479,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.79,
+     "grasp_2cm": 6.46
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.1823,
+      0.01057,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.0524,
+      0.11386,
+      0.43686
+     ],
+     "plate_1": [
+      -0.00328,
+      -0.31735,
+      0.43927
+     ],
+     "plate_2": [
+      0.0153,
+      0.31443,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa0_A3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "c370ea7879f4063344b9e1b6083c7ee5ac48c3f3062c0183585f7add41d2218a",
+   "placement": {
+    "placed_xyz": [
+     -0.0256,
+     -0.1509,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0256,
+     -0.1509,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.507,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.81,
+     "grasp_2cm": 6.55
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.18945,
+      0.00612,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.03081,
+      0.11846,
+      0.43686
+     ],
+     "plate_1": [
+      0.00316,
+      -0.31283,
+      0.43927
+     ],
+     "plate_2": [
+      0.01396,
+      0.31652,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "45baa79e055e32aa724e04c5d7d768460cd7ca779d2e81e1b92f6b52393546c1",
+   "placement": {
+    "placed_xyz": [
+     -0.0258,
+     -0.1504,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0258,
+     -0.1504,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.507,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.81,
+     "grasp_2cm": 6.56
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.19224,
+      0.01076,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.06908,
+      0.07632,
+      0.43686
+     ],
+     "plate_1": [
+      -1e-05,
+      -0.28688,
+      0.43927
+     ],
+     "plate_2": [
+      0.00055,
+      0.29775,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "50d71fe65961004116f14ee873c7d0f7bc37a70f9681bd2188b593a0639cd0de",
+   "placement": {
+    "placed_xyz": [
+     -0.0246,
+     -0.1493,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0246,
+     -0.1493,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.508,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.83,
+     "grasp_2cm": 6.59
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21748,
+      0.01206,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.02994,
+      0.11716,
+      0.43686
+     ],
+     "plate_1": [
+      -0.01126,
+      -0.2814,
+      0.43927
+     ],
+     "plate_2": [
+      0.02411,
+      0.29966,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "2949db5d30a99a38b728a936f4821d5bf428b6ca523b560dff83ecf169fee356",
+   "placement": {
+    "placed_xyz": [
+     -0.0247,
+     -0.1506,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0247,
+     -0.1506,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.508,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.81,
+     "grasp_2cm": 6.56
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21917,
+      0.01741,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.04474,
+      0.11925,
+      0.43686
+     ],
+     "plate_1": [
+      -0.0022,
+      -0.2759,
+      0.43927
+     ],
+     "plate_2": [
+      -0.02305,
+      0.28494,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A3",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "b45ef9c959b88f59858cfc61a9130289758ec1df7066cb18d9b4158ca2ee9128",
+   "placement": {
+    "placed_xyz": [
+     -0.0252,
+     -0.1506,
+     0.4344
+    ],
+    "settled_xyz": [
+     -0.0252,
+     -0.1506,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.508,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.81,
+     "grasp_2cm": 6.56
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.1823,
+      0.01057,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.0524,
+      0.11386,
+      0.43686
+     ],
+     "plate_1": [
+      -0.00328,
+      -0.31735,
+      0.43927
+     ],
+     "plate_2": [
+      0.0153,
+      0.31443,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa0_A4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "2365d97ef4707b8ee8dcd25c65f8b56bc874d558a13e76d6296c570b3a7efa0b",
+   "placement": {
+    "placed_xyz": [
+     0.0244,
+     -0.1509,
+     0.4344
+    ],
+    "settled_xyz": [
+     0.0244,
+     -0.1509,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.555,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.91,
+     "grasp_2cm": 6.57
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.18945,
+      0.00612,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.03081,
+      0.11846,
+      0.43686
+     ],
+     "plate_1": [
+      0.00316,
+      -0.31283,
+      0.43927
+     ],
+     "plate_2": [
+      0.01396,
+      0.31652,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa1_A4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "12b8accb5f2385271a14bfd5a9a9984653e08474a68d5ba085f5049814b237b1",
+   "placement": {
+    "placed_xyz": [
+     0.0242,
+     -0.1504,
+     0.4344
+    ],
+    "settled_xyz": [
+     0.0242,
+     -0.1504,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.555,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.92,
+     "grasp_2cm": 6.59
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.19224,
+      0.01076,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.06908,
+      0.07632,
+      0.43686
+     ],
+     "plate_1": [
+      -1e-05,
+      -0.28688,
+      0.43927
+     ],
+     "plate_2": [
+      0.00055,
+      0.29775,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa2_A4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "a843b12ba3c32ecce94022c72043c33aa1973e428f33b75072dd135ddfc6e622",
+   "placement": {
+    "placed_xyz": [
+     0.0254,
+     -0.1493,
+     0.4344
+    ],
+    "settled_xyz": [
+     0.0254,
+     -0.1493,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.556,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.94,
+     "grasp_2cm": 6.62
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21748,
+      0.01206,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.02994,
+      0.11716,
+      0.43686
+     ],
+     "plate_1": [
+      -0.01126,
+      -0.2814,
+      0.43927
+     ],
+     "plate_2": [
+      0.02411,
+      0.29966,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa3_A4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "a05b3ec2e7ad25f31eecbf6a55a8fb677324355a363a87592f2e72f3466d82cd",
+   "placement": {
+    "placed_xyz": [
+     0.0253,
+     -0.1506,
+     0.4344
+    ],
+    "settled_xyz": [
+     0.0253,
+     -0.1506,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.556,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.92,
+     "grasp_2cm": 6.58
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.21917,
+      0.01741,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.04474,
+      0.11925,
+      0.43686
+     ],
+     "plate_1": [
+      -0.0022,
+      -0.2759,
+      0.43927
+     ],
+     "plate_2": [
+      -0.02305,
+      0.28494,
+      0.43927
+     ]
+    }
+   }
+  },
+  {
+   "anchor_id": "libero10_t4_fa4_A4",
+   "pass_": true,
+   "fresh_vs_fresh": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "after_other_anchor": {
+    "phys": 0.0,
+    "body_pos": 0.0,
+    "body_quat": 0.0,
+    "warm": 0.0,
+    "grip": 0.0,
+    "goal_pos": 0.0,
+    "succ": 0.0,
+    "img1": 0.0,
+    "img2": 0.0
+   },
+   "init_success": false,
+   "trajectory_sha256": "bea607fd72a0145dcbb6ee83b02b3a3e4dafb5ca17c87dcab8bbe69c7f6565b3",
+   "placement": {
+    "placed_xyz": [
+     0.0248,
+     -0.1506,
+     0.4344
+    ],
+    "settled_xyz": [
+     0.0248,
+     -0.1506,
+     0.4344
+    ],
+    "drift_cm": 0.0,
+    "planar_dist_to_base_m": 0.556,
+    "other_contacts": [],
+    "reach_min_dist_cm": {
+     "pre_grasp_6cm": 2.92,
+     "grasp_2cm": 6.58
+    },
+    "others_initial": {
+     "red_coffee_mug_1": [
+      -0.1823,
+      0.01057,
+      0.4386
+     ],
+     "white_yellow_mug_1": [
+      -0.0524,
+      0.11386,
+      0.43686
+     ],
+     "plate_1": [
+      -0.00328,
+      -0.31735,
+      0.43927
+     ],
+     "plate_2": [
+      0.0153,
+      0.31443,
+      0.43927
+     ]
+    }
+   }
+  }
+ ],
+ "bank_sha256": "7f1351f5bf443ff4573f91bc10a5dcf1b67a815d41df93b350a92942c65f9799"
+}

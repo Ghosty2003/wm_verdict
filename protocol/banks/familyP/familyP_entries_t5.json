@@ -1,0 +1,22 @@
+{
+ "note": "family P base anchor ids (s0_id); the level is the setting",
+ "source": "libero/out/bank/familyP/familyP_anchors.json",
+ "source_sha256": "64fa63cc9c02fa9dadcb621de44d21661993b5157867abc5a948c2c911208e95",
+ "entries": [
+  {
+   "s0_id": "libero10_t5_fp0"
+  },
+  {
+   "s0_id": "libero10_t5_fp1"
+  },
+  {
+   "s0_id": "libero10_t5_fp2"
+  },
+  {
+   "s0_id": "libero10_t5_fp3"
+  },
+  {
+   "s0_id": "libero10_t5_fp4"
+  }
+ ]
+}

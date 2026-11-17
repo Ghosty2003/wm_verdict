@@ -1,0 +1,1317 @@
+# WM-Verdict protocol file: single authoritative source for every judgement parameter of a run.
+# Scripts (step5_baseline.py, step7_perturbed.py, verify_run.py) read these values; nothing is hard-coded.
+# Paths are relative to the run directory (--run-dir).
+protocol_version: 1
+H_env: 100                     # protocol horizon in env steps; both branches are judged at step H_env
+
+tasks:
+  wall:                       # Wall (DINO-WM DotWall)
+    success_tol: 4.5             # truth predicate: ||xy_final - xy_goal|| < success_tol
+    threshold: 0.19651249796152115   # model predicate: feat_dist < threshold (step-4 calibrated, ~0.197)
+    holdout_agreement_floor: 0.985   # check 3 lower bound (= measured step-4 holdout agreement)
+    bank:
+      path: bank/bank_wall.pkl
+      sha256: 4770dd8ae1fca58383a9242637bc2590c16fb6daac793d16be9c1e1b53787de3
+      summary_path: bank/bank_wall.json
+      summary_sha256: 7eec61461af666097c96d1f41c8ce1fb2311dc52bfad1a3f17b3b3eee4d165ae
+    calibration:
+      summary_path: step4_calibration_wall.json
+      summary_sha256: 3eb2500ebb4303a92d946aef85b91ea4eadb8b2382e468d93cdb79dff9a12bba
+      pairs_path: step4_calibration_wall.jsonl
+      pairs_sha256: 8ad87b588befe01941eef8a9ab3de05949ece002bc35bf8d2e5a532312f5fae7
+  point_maze:                       # PointMaze (DINO-WM MuJoCo U-maze)
+    success_tol: 0.5             # truth predicate: ||xy_final - xy_goal|| < success_tol
+    threshold: 0.10575883463025093   # model predicate: feat_dist < threshold (step-4 calibrated, ~0.106)
+    holdout_agreement_floor: 0.915   # check 3 lower bound (= measured step-4 holdout agreement)
+    bank:
+      path: bank/bank_point_maze.pkl
+      sha256: 7c35066d14360adedc2e5f4db917cdf0a744cb2b390d431ae37f937144797f5d
+      summary_path: bank/bank_point_maze.json
+      summary_sha256: b9f324a9aada1609ebf92eb87eed7a15bf6dfe22a54f4b3159c8eb2b19e5651e
+    calibration:
+      summary_path: step4_calibration_point_maze.json
+      summary_sha256: dbc14564510a34dcff75b386c64fd9c3d9260df9867f6c267353cb5dc8d866d8
+      pairs_path: step4_calibration_point_maze.jsonl
+      pairs_sha256: b2054203d01709f5048b2e0f338de79348541c6efe1512cc56dfdb872b8b04ed
+
+# Perturbation settings: id -> family, severity (0 = none/sham), truth-branch parameter overrides.
+# "none" is the unperturbed baseline (step 5). Sham = all defaults, re-run (step 7).
+perturbations:
+  wall:
+    none:        {family: null, severity: 0, spec: {}}
+    wall-sham:   {family: null, severity: 0, spec: {}, sham: true}
+    wall-gain-1: {family: wall-gain, severity: 1, spec: {speed_gain: 1.6}}
+    wall-gain-2: {family: wall-gain, severity: 2, spec: {speed_gain: 1.2}}
+    wall-gain-3: {family: wall-gain, severity: 3, spec: {speed_gain: 0.8}}
+    wall-rot-1:  {family: wall-rot, severity: 1, spec: {action_rotation_deg: 5.0}}
+    wall-rot-2:  {family: wall-rot, severity: 2, spec: {action_rotation_deg: 10.0}}
+    wall-rot-3:  {family: wall-rot, severity: 3, spec: {action_rotation_deg: 20.0}}
+    # stage 2 (2026-10-09): 5 levels per family, light end densified, heavy end kept as a saturation anchor
+    s2-wall-gain-1: {family: s2-wall-gain, severity: 1, spec: {speed_gain: 1.8}}
+    s2-wall-gain-2: {family: s2-wall-gain, severity: 2, spec: {speed_gain: 1.6}}
+    s2-wall-gain-3: {family: s2-wall-gain, severity: 3, spec: {speed_gain: 1.4}}
+    s2-wall-gain-4: {family: s2-wall-gain, severity: 4, spec: {speed_gain: 1.2}}
+    s2-wall-gain-5: {family: s2-wall-gain, severity: 5, spec: {speed_gain: 0.8}}
+    s2-wall-rot-1:  {family: s2-wall-rot, severity: 1, spec: {action_rotation_deg: 3.0}}
+    s2-wall-rot-2:  {family: s2-wall-rot, severity: 2, spec: {action_rotation_deg: 5.0}}
+    s2-wall-rot-3:  {family: s2-wall-rot, severity: 3, spec: {action_rotation_deg: 8.0}}
+    s2-wall-rot-4:  {family: s2-wall-rot, severity: 4, spec: {action_rotation_deg: 12.0}}
+    s2-wall-rot-5:  {family: s2-wall-rot, severity: 5, spec: {action_rotation_deg: 20.0}}
+  point_maze:
+    none:        {family: null, severity: 0, spec: {}}
+    pm-sham:     {family: null, severity: 0, spec: {}, sham: true}
+    pm-act-1:    {family: pm-act, severity: 1, spec: {gear_scale: 0.8}}
+    pm-act-2:    {family: pm-act, severity: 2, spec: {gear_scale: 0.6}}
+    pm-act-3:    {family: pm-act, severity: 3, spec: {gear_scale: 0.4}}
+    pm-dt-1:     {family: pm-dt, severity: 1, spec: {timestep: 0.011}}
+    pm-dt-2:     {family: pm-dt, severity: 2, spec: {timestep: 0.013}}
+    pm-dt-3:     {family: pm-dt, severity: 3, spec: {timestep: 0.015}}
+    # stage 2 (2026-10-09)
+    s2-pm-act-1:    {family: s2-pm-act, severity: 1, spec: {gear_scale: 0.9}}
+    s2-pm-act-2:    {family: s2-pm-act, severity: 2, spec: {gear_scale: 0.8}}
+    s2-pm-act-3:    {family: s2-pm-act, severity: 3, spec: {gear_scale: 0.7}}
+    s2-pm-act-4:    {family: s2-pm-act, severity: 4, spec: {gear_scale: 0.6}}
+    s2-pm-act-5:    {family: s2-pm-act, severity: 5, spec: {gear_scale: 0.4}}
+    s2-pm-dt-1:     {family: s2-pm-dt, severity: 1, spec: {timestep: 0.0105}}
+    s2-pm-dt-2:     {family: s2-pm-dt, severity: 2, spec: {timestep: 0.011}}
+    s2-pm-dt-3:     {family: s2-pm-dt, severity: 3, spec: {timestep: 0.012}}
+    s2-pm-dt-4:     {family: s2-pm-dt, severity: 4, spec: {timestep: 0.013}}
+    s2-pm-dt-5:     {family: s2-pm-dt, severity: 5, spec: {timestep: 0.015}}
+
+# Runs that live in a run directory. baseline_run: the run sham / dose checks are compared against.
+runs:
+  step5:
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "step5_records_{task}.jsonl"
+    summary: step5_summary.json
+    settings: [none]
+    baseline_run: null
+  step7:
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "step7_records_{task}.jsonl"
+    summary: step7_summary.json
+    settings: [wall-gain-1, wall-gain-2, wall-gain-3, wall-rot-1, wall-rot-2, wall-rot-3, wall-sham,
+               pm-act-1, pm-act-2, pm-act-3, pm-dt-1, pm-dt-2, pm-dt-3, pm-sham]
+    baseline_run: step5
+  step5h:                       # 2026-10-09: Wall hard-start baseline (same protocol as step5, other bank)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "step5h_records_{task}.jsonl"
+    summary: step5h_summary.json
+    settings: [none]
+    baseline_run: null
+    tasks: [wall]
+    banks: {wall: wall_hard}     # -> banks.wall_hard (instead of tasks.wall.bank)
+  step7h:                       # 2026-10-09: hard-start bank x the Wall step-7 perturbations (truth branch only)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "step7h_records_{task}.jsonl"
+    summary: step7h_summary.json
+    settings: [wall-gain-1, wall-gain-2, wall-gain-3, wall-rot-1, wall-rot-2, wall-rot-3, wall-sham]
+    baseline_run: step5h          # model branch reused from step5h; sham compared against step5h
+    tasks: [wall]
+    banks: {wall: wall_hard}
+  stage2_base:                  # 2026-10-09: stage 2 baseline: K planner seeds per start, unperturbed truth
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "stage2_base_records_{task}.jsonl"
+    summary: stage2_base_summary.json
+    settings: [none]
+    baseline_run: null
+    banks: {wall: s2_wall, point_maze: s2_point_maze}
+    seeds_per_start: 5
+  stage2_pert:                  # 2026-10-09: stage 2 perturbations (truth branch only; model branch from stage2_base)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "stage2_pert_records_{task}.jsonl"
+    summary: stage2_pert_summary.json
+    settings: [s2-wall-gain-1, s2-wall-gain-2, s2-wall-gain-3, s2-wall-gain-4, s2-wall-gain-5, s2-wall-rot-1, s2-wall-rot-2, s2-wall-rot-3, s2-wall-rot-4, s2-wall-rot-5, wall-sham,
+               s2-pm-act-1, s2-pm-act-2, s2-pm-act-3, s2-pm-act-4, s2-pm-act-5, s2-pm-dt-1, s2-pm-dt-2, s2-pm-dt-3, s2-pm-dt-4, s2-pm-dt-5, pm-sham]
+    baseline_run: stage2_base
+    banks: {wall: s2_wall, point_maze: s2_point_maze}
+    seeds_per_start: 5
+
+  mmb_min:                      # 2026-10-11 MMBench2 reacher-easy minimal pairing (2 starts x 5 noise seeds)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_min_records_{task}.jsonl"
+    summary: mmb_min_summary.json
+    settings: [none]
+    baseline_run: null
+    task_section: mmbench2       # tasks / banks / predicate come from the `mmbench2:` section
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    max_starts: 2
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+  mmb_base:                     # 2026-10-11 MMBench2 reacher-easy baseline (100 starts x 5 noise seeds)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_base_records_{task}.jsonl"
+    summary: mmb_base_summary.json
+    settings: [none]
+    baseline_run: null
+    task_section: mmbench2
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+  mmb_dose:                     # 2026-10-12 dose check: first 2 starts x 5 seeds x 10 non-sham settings
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_dose_records_{task}.jsonl"
+    settings: [mm-act-1, mm-act-2, mm-act-3, mm-act-4, mm-act-5, mm-rot-1, mm-rot-2, mm-rot-3, mm-rot-4, mm-rot-5]
+    baseline_run: mmb_base
+    task_section: mmbench2
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    max_starts: 2
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+  mmb_pert:                     # 2026-10-12 perturbations: 100 starts x 5 seeds x 11 settings (truth only; model from mmb_base)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_pert_records_{task}.jsonl"
+    summary: mmb_pert_summary.json
+    settings: [mm-act-1, mm-act-2, mm-act-3, mm-act-4, mm-act-5, mm-rot-1, mm-rot-2, mm-rot-3, mm-rot-4, mm-rot-5, mm-sham]
+    baseline_run: mmb_base
+    task_section: mmbench2
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    chunking: "identical to mmb_base (unit order (start, seed), chunks of 40) so GPU policy batches are bit-identical"
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+  mmb_og_cal:                   # 2026-10-12 og-point-maze calibration tier: 20 starts x 5 noise seeds, both branches
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_og_cal_records_{task}.jsonl"
+    settings: [none]
+    baseline_run: null
+    task_section: mmbench2
+    tasks: [og-point-maze]
+    seeds_per_start: 5
+    max_starts: 20
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+  indep_stage2_base:            # 2026-10-12 independent-predicate re-read of stage2_base (no re-planning, no new truth)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "indep/indep_records_stage2_base_{task}.jsonl"
+    settings: [none]
+    baseline_run: null
+    task_section: dino_wm_indep
+    banks: {wall: s2_wall, point_maze: s2_point_maze}
+    seeds_per_start: 5
+  indep_stage2_pert:            # 2026-10-12 independent-predicate re-read of stage2_pert (truth fields copied unchanged)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "indep/indep_records_stage2_pert_{task}.jsonl"
+    settings: [s2-wall-gain-1, s2-wall-gain-2, s2-wall-gain-3, s2-wall-gain-4, s2-wall-gain-5, s2-wall-rot-1, s2-wall-rot-2, s2-wall-rot-3, s2-wall-rot-4, s2-wall-rot-5, wall-sham,
+               s2-pm-act-1, s2-pm-act-2, s2-pm-act-3, s2-pm-act-4, s2-pm-act-5, s2-pm-dt-1, s2-pm-dt-2, s2-pm-dt-3, s2-pm-dt-4, s2-pm-dt-5, pm-sham]
+    baseline_run: indep_stage2_base
+    task_section: dino_wm_indep
+    banks: {wall: s2_wall, point_maze: s2_point_maze}
+    seeds_per_start: 5
+  indep_step5h:                 # 2026-10-12 independent-predicate re-read of step5h (Wall hard starts)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "indep/indep_records_step5h_{task}.jsonl"
+    settings: [none]
+    baseline_run: null
+    task_section: dino_wm_indep
+    tasks: [wall]
+    banks: {wall: wall_hard}
+  indep_step7h:                 # 2026-10-12 independent-predicate re-read of step7h
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "indep/indep_records_step7h_{task}.jsonl"
+    settings: [wall-gain-1, wall-gain-2, wall-gain-3, wall-rot-1, wall-rot-2, wall-rot-3, wall-sham]
+    baseline_run: indep_step5h
+    task_section: dino_wm_indep
+    tasks: [wall]
+    banks: {wall: wall_hard}
+  wall_rand_ctrl:               # 2026-10-12 random-action control (TODO 14, optimisation-pressure hypothesis); Wall only
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "rand_ctrl/wall_rand_ctrl_records_{task}.jsonl"
+    settings: [none]
+    baseline_run: null
+    task_section: dino_wm_indep  # judge: the Wall red-dot detector (dino_wm_indep.tasks.wall.predicate)
+    tasks: [wall]
+    banks: {wall: s2_wall}
+    seeds_per_start: 5
+    actions:
+      source: "uniform random, NOT optimised; 100 env steps (= 20 macro actions x frameskip 5), same length as CEM plans"
+      distribution: "uniform (by area) in the disk |a| <= 1.8 per env step (support of the training-data action
+                     generator: step length truncnorm on [0.2, 1.8], any direction; the env itself is unbounded)"
+      master_seed: 20261020      # seeds = RandomState(m).randint(0, 2**31-1, 250); start i, sequence k -> seeds[5i+k]
+    empty_frame_rule: "a frame with no red pixel (redness R-(G+B)/2 > 40) is read as distance = inf (never inside);
+                       first pre-registered instance of formal-phase TODO 15"
+    readout: {primary: reach_anytime (any of 21 imagined frames), also: final frame}
+  wall_selpress_p025:           # 2026-10-12 selection-pressure dose curve, CEM population x0.25 (DINO-WM closing experiment)
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "selpress/wall_selpress_p025_records_{task}.jsonl"
+    cem: {topk: 8, num_samples: 75, var_scale: 1, opt_steps: 30, eval_every: 1}    # elites 30 x 0.25 = 7.5 -> 8
+    settings: [none]
+    baseline_run: null
+    task_section: dino_wm_indep  # judge: Wall red-dot detector; empty-frame rule as wall_rand_ctrl (no red pixel -> inf)
+    tasks: [wall]
+    banks: {wall: s2_wall}
+    max_starts: 10               # s2_wall_n00..n09, fixed in advance (not chosen by outcome)
+    seeds_per_start: 5
+    planner_master_seed: 20261021   # seeds = RandomState(m).randint(0, 2**31-1, (2, 10, 5)); [0] x0.25, [1] x4
+    empty_frame_rule: "no red pixel (redness > 40) -> distance inf (as wall_rand_ctrl)"
+    x1_reference: "x1 level = stage2_base CEM (topk 30, num_samples 300) for the same 10 starts x 5 seeds, re-read in
+                   rand_ctrl/cem_reread_wall.jsonl (planning does not use the judge; re-read verdicts 250/250 identical)"
+  wall_selpress_p4:             # 2026-10-12 selection-pressure dose curve, CEM population x4
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "selpress/wall_selpress_p4_records_{task}.jsonl"
+    cem: {topk: 120, num_samples: 1200, var_scale: 1, opt_steps: 30, eval_every: 1}
+    settings: [none]
+    baseline_run: null
+    task_section: dino_wm_indep  # judge: Wall red-dot detector; empty-frame rule as wall_rand_ctrl (no red pixel -> inf)
+    tasks: [wall]
+    banks: {wall: s2_wall}
+    max_starts: 10               # s2_wall_n00..n09, fixed in advance (not chosen by outcome)
+    seeds_per_start: 5
+    planner_master_seed: 20261021   # seeds = RandomState(m).randint(0, 2**31-1, (2, 10, 5)); [0] x0.25, [1] x4
+    empty_frame_rule: "no red pixel (redness > 40) -> distance inf (as wall_rand_ctrl)"
+    x1_reference: "x1 level = stage2_base CEM (topk 30, num_samples 300) for the same 10 starts x 5 seeds, re-read in
+                   rand_ctrl/cem_reread_wall.jsonl (planning does not use the judge; re-read verdicts 250/250 identical)"
+  mmb_cem:                      # 2026-10-13 MMBench2 action-source replacement (TODO 18): open-loop CEM arm, reacher-easy
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_cem_records_{task}.jsonl"
+    settings: [none]
+    baseline_run: null
+    task_section: mmbench2       # same model, task, starts, H, predicate as mmb_base; only the action source changes
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    max_starts: 100              # cost gate may reduce to 50 (first 50 of the bank); recorded in the report
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+    planner_master_seed: 20261022   # seeds = RandomState(m).randint(0, 2**31-1, (100, 5))[i, k]
+    cem: {n_samples: 256, n_elites: 32, n_iters: 4, init_std: 1.0, min_std: 0.05, noise_beta: 0.0, rollout_batch: 128}
+                                 # = repo plan_cem.py CLI defaults; returns the single best sample seen (repo semantics)
+    cost: "minus the sum over the H planned steps of the reward head's predicted reward (repo plan_cem.reward_cost);
+           the frame predicate is NOT used as the cost"
+    horizon: 500                 # open loop over the full H_env
+    model_readout: {scored: "the imagined rollout CEM scored when selecting the plan (primary, as DINO-WM)",
+                    fresh: "an independent re-imagination of the selected plan (reported alongside)"}
+    bc_reference: mmb_base       # BC policy head, sigma 0.1, 5 noise seeds; existing records, not re-run
+  mmb_bon_n1:                 # 2026-10-13 MMBench2 best-of-N selection (TODO 18 + 17; replaces mmb_cem), N = 1
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_bon_n1_records_{task}.jsonl"
+    N: 1
+    settings: [none]
+    baseline_run: null
+    task_section: mmbench2       # model, task, starts, H, predicate, policy (sigma 0.1), inference as mmb_base
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    max_starts: 50               # first 50 frozen starts (s000..s049)
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+    candidates: 64               # per (start, seed): 64 candidates imagined once, shared by all N levels
+    noise_master_seed: 20261023  # seeds = RandomState(m).randint(0, 2**31-1, (50, 5, 64)); eps = RandomState(seed).randn(500, A)
+    candidate_definition: "one noise sequence eps of the protocol policy (BC head + 0.1 eps); imagined closed loop in the
+                           world model (mmb_run rollout); executing it = the protocol policy closed loop in the REAL env
+                           with the same eps (as mmb_base truth)"
+    selection_rule: "argmax of the reward head's predicted return (sum over the 500 imagined steps, plan_cem.reward_cost
+                     convention) over candidates 0..N-1 (nested prefixes); ties -> lowest index; N = 1 -> candidate 0"
+    model_readout: {scored: "the selected candidate's own imagined rollout (the one it was selected on; primary)",
+                    fresh: "independent re-imagination of the selected eps (out/bon/fresh.jsonl)"}
+    bc_reference: mmb_base       # N = 1 internal consistency check against mmb_base starts 0..49 (pre-registered)
+    budget_files: {budgets: bon/budgets.jsonl, candidates: "bon/candidates/<s0>__k<k>.npz"}
+  mmb_bon_n4:                 # 2026-10-13 MMBench2 best-of-N selection (TODO 18 + 17; replaces mmb_cem), N = 4
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_bon_n4_records_{task}.jsonl"
+    N: 4
+    settings: [none]
+    baseline_run: null
+    task_section: mmbench2       # model, task, starts, H, predicate, policy (sigma 0.1), inference as mmb_base
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    max_starts: 50               # first 50 frozen starts (s000..s049)
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+    candidates: 64               # per (start, seed): 64 candidates imagined once, shared by all N levels
+    noise_master_seed: 20261023  # seeds = RandomState(m).randint(0, 2**31-1, (50, 5, 64)); eps = RandomState(seed).randn(500, A)
+    candidate_definition: "one noise sequence eps of the protocol policy (BC head + 0.1 eps); imagined closed loop in the
+                           world model (mmb_run rollout); executing it = the protocol policy closed loop in the REAL env
+                           with the same eps (as mmb_base truth)"
+    selection_rule: "argmax of the reward head's predicted return (sum over the 500 imagined steps, plan_cem.reward_cost
+                     convention) over candidates 0..N-1 (nested prefixes); ties -> lowest index; N = 1 -> candidate 0"
+    model_readout: {scored: "the selected candidate's own imagined rollout (the one it was selected on; primary)",
+                    fresh: "independent re-imagination of the selected eps (out/bon/fresh.jsonl)"}
+    bc_reference: mmb_base       # N = 1 internal consistency check against mmb_base starts 0..49 (pre-registered)
+    budget_files: {budgets: bon/budgets.jsonl, candidates: "bon/candidates/<s0>__k<k>.npz"}
+  mmb_bon_n16:                # 2026-10-13 MMBench2 best-of-N selection (TODO 18 + 17; replaces mmb_cem), N = 16
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_bon_n16_records_{task}.jsonl"
+    N: 16
+    settings: [none]
+    baseline_run: null
+    task_section: mmbench2       # model, task, starts, H, predicate, policy (sigma 0.1), inference as mmb_base
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    max_starts: 50               # first 50 frozen starts (s000..s049)
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+    candidates: 64               # per (start, seed): 64 candidates imagined once, shared by all N levels
+    noise_master_seed: 20261023  # seeds = RandomState(m).randint(0, 2**31-1, (50, 5, 64)); eps = RandomState(seed).randn(500, A)
+    candidate_definition: "one noise sequence eps of the protocol policy (BC head + 0.1 eps); imagined closed loop in the
+                           world model (mmb_run rollout); executing it = the protocol policy closed loop in the REAL env
+                           with the same eps (as mmb_base truth)"
+    selection_rule: "argmax of the reward head's predicted return (sum over the 500 imagined steps, plan_cem.reward_cost
+                     convention) over candidates 0..N-1 (nested prefixes); ties -> lowest index; N = 1 -> candidate 0"
+    model_readout: {scored: "the selected candidate's own imagined rollout (the one it was selected on; primary)",
+                    fresh: "independent re-imagination of the selected eps (out/bon/fresh.jsonl)"}
+    bc_reference: mmb_base       # N = 1 internal consistency check against mmb_base starts 0..49 (pre-registered)
+    budget_files: {budgets: bon/budgets.jsonl, candidates: "bon/candidates/<s0>__k<k>.npz"}
+  mmb_bon_n64:                # 2026-10-13 MMBench2 best-of-N selection (TODO 18 + 17; replaces mmb_cem), N = 64
+    machine: "$NODE_D (presumed; not probed -- the 2026-10-20 probe covered the LIBERO banks only)"
+    records: "mmb_bon_n64_records_{task}.jsonl"
+    N: 64
+    settings: [none]
+    baseline_run: null
+    task_section: mmbench2       # model, task, starts, H, predicate, policy (sigma 0.1), inference as mmb_base
+    tasks: [reacher-easy]
+    seeds_per_start: 5
+    max_starts: 50               # first 50 frozen starts (s000..s049)
+    run_dir_hint: $MMBENCH2_ROOT/out
+    env_adapter: "mmb_env_adapter:replay_unit"
+    candidates: 64               # per (start, seed): 64 candidates imagined once, shared by all N levels
+    noise_master_seed: 20261023  # seeds = RandomState(m).randint(0, 2**31-1, (50, 5, 64)); eps = RandomState(seed).randn(500, A)
+    candidate_definition: "one noise sequence eps of the protocol policy (BC head + 0.1 eps); imagined closed loop in the
+                           world model (mmb_run rollout); executing it = the protocol policy closed loop in the REAL env
+                           with the same eps (as mmb_base truth)"
+    selection_rule: "argmax of the reward head's predicted return (sum over the 500 imagined steps, plan_cem.reward_cost
+                     convention) over candidates 0..N-1 (nested prefixes); ties -> lowest index; N = 1 -> candidate 0"
+    model_readout: {scored: "the selected candidate's own imagined rollout (the one it was selected on; primary)",
+                    fresh: "independent re-imagination of the selected eps (out/bon/fresh.jsonl)"}
+    bc_reference: mmb_base       # N = 1 internal consistency check against mmb_base starts 0..49 (pre-registered)
+    budget_files: {budgets: bon/budgets.jsonl, candidates: "bon/candidates/<s0>__k<k>.npz"}
+  lingbot_base:                # 2026-10-15 LIBERO baseline, LingBot-VA (lerobot/lingbot_va_libero_long), no perturbation
+    machine: "$NODE_D (confirmed: machine probe 2026-10-20, 60/60 anchor trajectory SHA match; libero/out/machine_probe/probe_$NODE_D.json)"
+    records: "libero/out/runs/lingbot_base/records_{task}.jsonl"     # run-dir = wm_verdict root
+    settings: [none]
+    baseline_run: null
+    task_section: libero_lingbot   # bank entries, predicate, H per task (LingBot-VA model-view predicate)
+    tasks: [t5, t3]
+    seeds_per_start: 10            # imagination seed = RandomState(20261026).randint(0, 2**31-1, (10 anchors, 10))[anchor, k]
+    env_adapter: "libero_env_adapter:replay_unit"
+    model_branch: "pure imagination to H = 520 (real-keyframe feedback skipped), full decoding (eval_design section 12)"
+    truth_a: "open-loop replay of the same post-processed env actions, twice (primary, paired)"
+    truth_b: "closed-loop deployment, same anchor + torch seed (reference column, not paired; records.closed_loop)"
+    criterion: reach_anytime       # model: predicate on any decoded frame 1..H; real: check_success at any step 1..H
+    secondary_criterion: final_step  # records.model_verdict_final / real_verdict_final
+    check7_rule: v2                # spec revision #2 (2026-10-15): two-layer false-safe attribution
+    content_attribution: libero/out/runs/lingbot_base/content_attribution.json   # layer 1, manual frame review
+    content_attribution_sha256: a3a980fad16559d03e0c75e8f616f6df3e8340a02c3ec3a26a6145738c60048f
+
+  lingbot_famA_obj:            # 2026-10-15 LIBERO family A (object displacement, batch 1), LingBot-VA; A0 = family baseline
+    machine: "$NODE_D (confirmed: verify_run check 2 on $NODE_D, 2026-10-20, stepwise replay vs recorded trajectories max diff 0; the family-A bank was not part of the machine probe)"
+    records: "libero/out/runs/lingbot_famA/records_{task}.jsonl"
+    settings: [A0, A1, A2, A3, A4]
+    baseline_run: null           # A0 is the family baseline; the sham is asserted by check 8 (sham_hook)
+    task_section: libero_lingbot_v3
+    tasks: [t5, t3]
+    banks: {t5: famA_obj_t5, t3: famA_obj_t3}
+    seeds_per_start: 10          # imagination seed = RandomState(20261031).randint(0, 2**31-1, (10 base anchors, 10))[base, k], shared by levels
+    env_adapter: "libero_env_adapter:replay_unit"
+    check7_rule: v2
+    directions: {t5: "+y (book; away from caddy and mug)", t3: "+x (bowl; away from the robot)"}
+    a4_note: "t3 A4 = 7 cm beyond the boundary (downgraded from 10 cm: at the Panda reach limit); t5 A4 = 10 cm"
+    table_note: "family-A anchors are native samples (init_states=False), not the frozen main-bank anchors; compare within the family against A0"
+
+  lingbot_famP_pose:           # 2026-10-15 LIBERO family P (robot initial pose, batch 2), LingBot-VA; P0 = family baseline
+    machine: "$NODE_D (confirmed: machine probe 2026-10-20, 60/60 anchor trajectory SHA match; libero/out/machine_probe/probe_$NODE_D.json)"
+    records: "libero/out/runs/lingbot_famP/records_{task}.jsonl"
+    settings: [P0, P1, P2, P3, P4]
+    baseline_run: null
+    task_section: libero_lingbot_v3
+    tasks: [t5, t3]
+    banks: {t5: famP_pose_t5, t3: famP_pose_t3}
+    seeds_per_start: 10          # imagination seed = RandomState(20261033).randint(0, 2**31-1, (10 base anchors, 10))[base, k], shared by levels
+    env_adapter: "libero_env_adapter:replay_unit"
+    check7_rule: v2
+    table_note: "family-P anchors are native samples (init_states=False, uniform initialization_noise); not the main-bank or family-A anchors; compare within the family against P0"
+
+  worldvla_base:               # 2026-10-15/17 LIBERO baseline, WorldVLA (Alibaba-DAMO-Academy/WorldVLA, model_256/libero_10); exclusion E4
+    machine: "$NODE_D (presumed: run before the machine probe; units on disk from the original home of that node)"
+    units: "libero/out/worldvla/libero10_t{5,3}_a{0..4}/s1/{imagined,replay}.{json,npz}"
+    settings: [none]
+    tasks: [t5, t3]
+    seeds_per_start: 1            # greedy decoding = official usage (eval_design section 15); n = 5 per cell
+    bank: libero/out/bank/libero_anchors.json
+    wm_prompt: helper
+    instr: name
+    decoding: "greedy; constrained retry (ActionStructure / ImageStructure) on malformed outputs, cap 5 per step (eval_design section 17 ruling 4)"
+    truth_a: "open-loop replay of the imagined env actions, twice (bit-identical in all 10 units)"
+    status: "excluded from the main verdict table (E4; model_exclusions.md); appendix only, free-output share per unit"
+    e4_analysis: {path: libero/out/worldvla/e4_analysis.json, sha256: 1111352d9d087d6e7149f001082ad1107cd67ed1dd2a924ef8c5e437dc70f613,
+                  recomputed: "2026-10-21, all 10 units", clean_subset: [libero10_t3_a0, libero10_t3_a3, libero10_t3_a4]}
+    appendix_verdict: "pending: WorldVLA view predicate (libero/out/predicate_wv) has real and VQGAN round-trip rows only; the generated-frame row (+ trajectory-level rule) is a pass condition and has not been run"
+
+  openwam_base:
+    records: libero/out/runs/openwam_base/records_{task}.jsonl
+    settings:
+    - none
+    baseline_run: null
+    tasks: &id001
+    - t3
+    seeds_per_start: 10
+    env_adapter: libero_env_adapter:replay_unit
+    check7_rule: v2
+    task_section: libero_openwam
+    model: OpenWAM/OpenWAM-Alpha-Sim-LIBERO
+    chaining: calibrated controller (injected component; libero.openwam_alpha.chaining)
+    closed_loop: eval_design section 28 protocol (reference column; never in the paired verdict table)
+    machine: $NODE_D
+  openwam_famA_obj:
+    records: libero/out/runs/openwam_famA/records_{task}.jsonl
+    settings:
+    - A0
+    - A1
+    - A2
+    - A3
+    - A4
+    baseline_run: null
+    banks:
+      t5: famA_obj_t5
+      t3: famA_obj_t3
+    tasks: *id001
+    seeds_per_start: 10
+    env_adapter: libero_env_adapter:replay_unit
+    check7_rule: v2
+    task_section: libero_openwam
+    model: OpenWAM/OpenWAM-Alpha-Sim-LIBERO
+    chaining: calibrated controller (injected component; libero.openwam_alpha.chaining)
+    closed_loop: eval_design section 28 protocol (reference column; never in the paired verdict table)
+    machine: $NODE_D
+  openwam_famP_pose:
+    records: libero/out/runs/openwam_famP/records_{task}.jsonl
+    settings:
+    - P0
+    - P1
+    - P2
+    - P3
+    - P4
+    baseline_run: null
+    banks:
+      t5: famP_pose_t5
+      t3: famP_pose_t3
+    tasks: *id001
+    seeds_per_start: 10
+    env_adapter: libero_env_adapter:replay_unit
+    check7_rule: v2
+    task_section: libero_openwam
+    model: OpenWAM/OpenWAM-Alpha-Sim-LIBERO
+    chaining: calibrated controller (injected component; libero.openwam_alpha.chaining)
+    closed_loop: eval_design section 28 protocol (reference column; never in the paired verdict table)
+    machine: $NODE_D
+  lingbot_tx_closed_full_rerun:          # 2026-11-14 登记：LingBot T2–T4 闭环全量重跑（补存当时未存的闭环动作/逐步画面/想象 latent）
+    code: libero/rerun/lb_rerun.py       # 与原 runner 同函数、同锚点、同种子、同扰动、H=400，×2 遍；原记录一个字节不动
+    job_script: libero/rerun/lb_rerun_array.sh
+    slurm: "array 2236_[0-5]%3（分片 = crc32(tid/src/unit_id) % 6），每卡一个进程，--exclude 621/622；首片 2236_0 于 2026-11-14 05:03 PST 在 $NODE_E 启动"
+    scope: "gen_closed_main SPEC 中 LingBot T2–T4 全部闭环记录 7950 行（egn 4200、K 1350、famA/famO/famP 各 750、base 150）；
+            其中 795 个标注卡片单元已于 2026-11-12 单遍完成（WMV_CARD_ONLY/ONE_PASS），本作业补其余 7155 个单元、两遍；已有 npz 的单元自动跳过"
+    outputs: "libero/out/runs/lingbot_t{2,4,6}/rerun_closed/<src>/<unit_id>.npz + <src>.<shard>.jsonl（含与原记录逐项比对）"
+    estimate: "约 145 s/单元（两遍，RTX 5090 单进程）→ 约 290 GPU·h；约 400 GB"
+    deferred: "2026-11-14 用户裁决 NLw 先不跑：NLw 档（T2–T4 × NLw1–5 × 50 = 750 单元）从本作业剔除（lb_rerun.py 默认跳过，设 WMV_INCLUDE_NLW=1 才恢复），剩余 7200 行；当日已重启分片使之生效，此前没有跑过任何 NLw 单元"
+    authorization: "用户 2026-11-14 指示开跑（\"先跑 lingbot 的我们的任务，在空的跑\"）；Jasmine 2026-11-14 口头同意恢复、继续跑不停"
+    priority: "最低。Jasmine 或论文需要插任何新任务时先让路：对本阵列执行 scontrol hold / 释放 GPU，新任务跑完再 release；作业 Nice=10000"
+    node_627_yield: "2026-11-14 用户要求把 $NODE_E 让给队友：在 627 上的分片 2236_1 已 requeuehold 后重新排队（已完成单元有 npz 自动跳过，不重跑），全部分片 ExcNodeList 加入 627（现排除 621/622/627）"
+    paused: "2026-11-14 用户要求暂停、GPU 留给队友：全部分片 scontrol hold / requeuehold（2236_[0-5] JobHeldUser），暂停时已完成 1401 个单元（npz 保留，恢复后自动跳过）。暂停前核对：r2/r3 标注卡片用到的 LingBot T2–T4 单元帧全部在盘（r3 lb_rerun 398 + famB 156；r2 中 135 个 B 族单元来自 famB），标注不受影响。恢复：scontrol release 2236_[0-5]"
+    resumed: "2026-11-15 06:27 用户要求“集群任务结束后接上我们的 LingBot 闭环跑（乐观率需要想象帧，不能再缺数据/不存数据）”：scontrol release 2236_[0-5]，排在同卷标注补跑 lb_fill（作业 2879/2880，109 单元）之后自动开始；节点排除 621/622；627 由用户 11-15 收回给我们用（“627跑我们的，现在加上”，ExcNodeList 已去掉 627），实际用 620、585、627 三卡。剩余 5860 单元（不含 NLw）×2 遍；落盘不变：逐步主视角+腕部画面、commanded/executed 动作、逐块想象 latent 与对应读入画面、逐步 success，两遍都存。"
+    samecase_fill: "2026-11-15 同卷标注补跑：WMV_UNITS=annotation/samecase_20261115/lbfill_units.json（T2 只缺 LingBot 的 109 单元），同一脚本同一落盘，作业 2879（620）/2880（585）"
+    min_artifacts: "不追溯：启动于 11-13 存档规矩之前定下的重跑方案（11-12 裁决），记录字段沿用原脚本"
+
+verify:
+  env_adapter: "env_adapter:replay_unit"   # module:function used only by check 2 (truth replay spot-check)
+  restore_spot_check: {n_states: 2, seed: 20261008, atol: 0.0}
+
+# Archive minimum per unit (user rule 2026-11-13, effective immediately, forward only: F family, open-loop supplement,
+# 4090 and every later run; existing data is not retroactive). Enforced at three points:
+#   1. runner: libero/min_artifacts.py assert_unit() after the unit npz is written and BEFORE its records row is written;
+#      any missing item raises -> the job stops, no row is written;
+#   2. verify_run.py check 10 (and `python libero/min_artifacts.py verify ...`): sample completed units, reopen the npz,
+#      check keys / lengths; out/artifact_verify/<name>.json is the per-cell result;
+#   3. out/task2/make_snapshot.py: a cell from a covered source file is "complete" only if n >= 50 AND its artifact
+#      verification passed (otherwise complete = "artifacts_unverified").
+# A key list "a|b" means any one of the alternatives satisfies the item. Pass-2 keys of the paired protocol carry the
+# prefix run2_ and must satisfy the same list.
+min_artifacts:
+  version: 1
+  effective: 2026-11-13
+  record_fields:                       # every records row
+    - unit_id
+    - setting_id
+    - perturbation                     # full perturbation spec (dict)
+    - imagination_seed|seed            # seed(s) of the unit
+    - machine
+    - gpu
+    - closed_loop.success|real_verdict # outcome
+    - closed_loop.first_success_step|real_first_success_step   # key must exist (value may be null on failure)
+    - closed_loop_file|trajectory_file # path (relative to repo root) of the unit npz
+  closed_loop:                         # npz keys, per pass (pass 2 = run2_ prefix)
+    actions_commanded: [commanded]
+    actions_executed: [executed]
+    success_per_step: [success]
+    imagined_per_planning_call: [imag_latents_00, imagined, latents_00]       # latent or frames, at least one
+    observations_read_per_call: [imag_real_00__observation_images_image, read_agentview]
+    checks:
+      - len(executed) == len(commanded) == len(success) == closed_loop.steps (pass 1; pass 2 against rerun.steps when recorded)
+      - any(success) == closed_loop.success; first True index + 1 == closed_loop.first_success_step
+  open_loop:
+    imagined_full_sequence: [latents, imagined_canvas, imagined]
+    judge_input_frames: [judge_frames]
+    actions_imagined: [env, imagined_actions]
+    actions_executed_truth_replay: [replay1]
+  verify_sample_per_cell: 5            # verify_run check 10 / min_artifacts.py verify default
+  applies_to:                          # closed_main source files whose cells need artifact verification to be "complete"
+    - lingbot_famF.jsonl
+    - openwam_famF.jsonl
+  storage_per_unit_estimate_MB:        # measured on 2026-11-13 files (zip compressed sizes); 2 passes per unit
+    lingbot_closed_minimum: 28         # read obs 13.2 + imagined latents 0.56 + actions/success 0.02, per pass
+    openwam_closed_minimum: 40         # imagined frames 17.8 + read obs 2.2 + actions/success/states 0.2, per pass
+    lingbot_closed_current_runner: 45  # + per-step agentview/wrist 8.8 per pass (store-all rule)
+  derived_local_only:                  # 2026-11-14：由存档派生、只留 NAS 不传 Dropbox 的数据（可由脚本从存档逐位重建）
+    - path: libero/out/f_family/cases/cache/
+      content: "OpenWAM-α F 族失败单元（T1 F160 17 个、T3 F60 19 个）的逐步主视角真实帧回放 + 置黑调用/前一调用想象帧（正视）"
+      files: 36
+      bytes: 1139309906
+      source: "存档 commanded 动作在同一锚点重放（不调模型）；逐步 full-physics state 与存档 states、调用步画面与 read_agentview 均逐位相同（36/36）"
+      rebuild: "libero/ffam/f_cases.py prep（lerobot_libero，需 EGL）"
+      dropbox: false
+      used_by: libero/out/f_family/cases/README.md
+
+# Additional frozen banks (referenced by runs.<run>.banks). 2026-10-09.
+banks:
+  famP_pose_t5:                     # 2026-10-15 LIBERO family P native anchors (5 base seeds x P0..P4)
+    path: libero/out/bank/familyP/familyP_anchors.json
+    sha256: 64fa63cc9c02fa9dadcb621de44d21661993b5157867abc5a948c2c911208e95
+    summary_path: libero/out/bank/familyP/familyP_entries_t5.json
+    summary_sha256: ffa6b450e04221bbf8997f16d2a74846599756d335fb75af94fbec1b81dfa3ad
+    verify: {path: libero/out/bank/familyP/familyP_verify.json, all_pass: true, tolerance: 0.0, coverage_all_inside: true}
+  famP_pose_t3:                     # 2026-10-15 LIBERO family P native anchors (5 base seeds x P0..P4)
+    path: libero/out/bank/familyP/familyP_anchors.json
+    sha256: 64fa63cc9c02fa9dadcb621de44d21661993b5157867abc5a948c2c911208e95
+    summary_path: libero/out/bank/familyP/familyP_entries_t3.json
+    summary_sha256: 3b987d4f247c15814fc8485b251678f53537b304113292c7777929f7b601e3ab
+    verify: {path: libero/out/bank/familyP/familyP_verify.json, all_pass: true, tolerance: 0.0, coverage_all_inside: true}
+  famA_obj_t5:                      # 2026-10-15 LIBERO family A native anchors (5 base seeds x 5 levels)
+    path: libero/out/bank/familyA/familyA_anchors.json
+    sha256: 06c861441398d96ab9e2860f037d4a0294b9bf946f2196c26eb9ae0ea5558d28
+    summary_path: libero/out/bank/familyA/familyA_entries_t5.json
+    summary_sha256: 41879091864bdc7ddd8f80cc719513c829f8a09a394d3bef4cfeeb6fa0b60d33
+    verify: {path: libero/out/bank/familyA/familyA_verify.json, all_pass: true, tolerance: 0.0}
+  famA_obj_t3:                      # 2026-10-15 LIBERO family A native anchors (5 base seeds x 5 levels)
+    path: libero/out/bank/familyA/familyA_anchors.json
+    sha256: 06c861441398d96ab9e2860f037d4a0294b9bf946f2196c26eb9ae0ea5558d28
+    summary_path: libero/out/bank/familyA/familyA_entries_t3.json
+    summary_sha256: 7fb792dda5c67b5479f4f788a08ebe1a58336db941aba356bb806553c6580d11
+    verify: {path: libero/out/bank/familyA/familyA_verify.json, all_pass: true, tolerance: 0.0}
+  wall_hard:                   # door_path_len >= q95 of the env reset sampler; master seed 20261009
+    path: bank/bank_wall_hard.pkl
+    sha256: 5de65ed78ae5b193bf944b597f5a5c366f432c7d858490349114f5e10a11a205
+    summary_path: bank/bank_wall_hard.json
+    summary_sha256: a240ae2c73322361e69305ff5aaa80789a4ce49e13758e5daa93520e40f479d8
+  s2_wall:                     # stage 2: 40 natural + 10 hard (door-routed length >= q95); master seed 20261011
+    path: bank/bank_s2_wall.pkl
+    sha256: be1869ba9cf27c14076c3c81c893dfe02aa9a7f3f511d8c74d62d06ea730cdc7
+    summary_path: bank/bank_s2_wall.json
+    summary_sha256: 48d5396a951ff65dab626300f390867809ef5c2b7f4edb78684e1b0eae91a1dd
+  s2_point_maze:               # stage 2: 40 natural + 10 hard (U-maze geodesic >= q95); master seed 20261012
+    path: bank/bank_s2_point_maze.pkl
+    sha256: 88dbadbae9396042e6a9acf498f0282ff3b69a2bf9b71ffd0db9cbbb4f699e5a
+    summary_path: bank/bank_s2_point_maze.json
+    summary_sha256: ba94d17699e48c15bd5924bcca493a8f65fc14fdb42fb0b365a9a8e0ba316215
+
+# Stage 2 (2026-10-09): multi-seed verdict.
+stage2:
+  seeds_per_start: 5
+  planner_master_seeds: {wall: 20261013, point_maze: 20261014}   # RandomState(m).randint(0, 2**31-1, size=N*K), start-major
+  verdict_rule:
+    model_accept_min: 4        # start-level ACCEPT iff >= 4 of 5 seeds' imagined endpoints satisfy feat_dist < threshold
+    truth_success_min: 4       # start-level real success iff >= 4 of the same 5 plans succeed when executed
+  calibration_range_monitor: true   # list every unit whose feature distance falls outside the step-4 calibration range
+
+# ======================================================================================================================
+# MMBench2 batch 1 (2026-10-11). Own task section so the DINO-WM runs above are unaffected (their runs list no tasks
+# and default to the `tasks:` section). Paths are relative to the MMBench2 run directory $MMBENCH2_ROOT/out.
+mmbench2:
+  checkpoint: {variant: base, hf_repo: nicklashansen/mmbench2-models, hf_revision: b7f7b222526d557f80bf3bcf84ab824cb14f94b0,
+               dynamics_sha256: ec28ba7dd40113d1b0e0debfc37df42de0616b39f62dcb01d7ce7431c8803b59,
+               tokenizer_sha256: 95e521d36cba21bb47b14e4df4f1d626161c3f8f9955b75443f6b9b0b08fe323}
+  inference: {schedule: shortcut, eval_d: 0.125, tau_ctx: 0.0, tau_init: 0.0, ctx_window: 24, kv_cache: true}  # official eval sampler, training-length window
+  tasks:
+    reacher-easy:
+      H_env: 500                 # native episode length (tasks.json max_episode_steps = dataset trajectory length)
+      tier: full                 # 2026-10-12: per-state verdict layer + task-level calibration layer
+      truth: "fingertip-target distance <= target radius + finger radius (state); reach_anytime primary, final_step logged"
+      bank: {path: bank/bank_reacher-easy.pkl, sha256: 36e0aaec806908eb22a28f1d37673c87626fba5a5eb52407322cf7261fd40bb6,
+             summary_path: bank/bank_reacher-easy.json, summary_sha256: 644d1654c20803a9e4f2e181c660f3d66604224b1e9a2ee2be959bf09e06919c,
+             master_seed: 20261016, n: 100}
+      predicate:                 # model-side judge: reads the frame only (no goal image, no planner objective)
+        model: "CNN regressor of log fingertip-target distance, trained on real simulator frames only"
+        path: predicates/reacher-easy_predicate.pt
+        sha256: f90232b5efe5c6e5c849d6b49560bd2b81deecf087bf23a5bb945ff550a3b44b
+        calibration_path: predicates/reacher-easy_calibration.json
+        calibration_sha256: f9f50624a9d302289f3c6fb9da4bf449fb3cdcbc32e51c502ef2a730a7d3d99d
+        threshold_m: 0.05871233149974762    # predicted distance < threshold -> success
+        gate: {min_tpr: 0.85, min_tnr: 0.85, evaluations: [holdout_real, holdout_tokenizer_roundtrip, model_generated_1step]}
+        measured:                # balanced 50/50 holdouts
+          holdout_real: {agreement: 0.955, tpr: 0.979, tnr: 0.931}
+          holdout_tokenizer_roundtrip: {agreement: 0.946, tpr: 0.985, tnr: 0.906}
+          model_generated_1step: {agreement: 0.950, tpr: 0.983, tnr: 0.916}
+        monitor_generated_drift:  # NOT a gate: labels are the simulator's true state, so this mixes predicate error
+                                  # with 10-step model drift; used as an upper-bound reference for the predicate-error
+                                  # term in false-safe attribution
+          model_generated_10step: {agreement: 0.895, tpr: 0.949, tnr: 0.844}
+    og-point-maze:
+      H_env: 100
+      tier: calibration_only     # 2026-10-12: policy-head success 10-15% under both checkpoints -> no room for per-state evaluation
+      predicate:                 # 2026-10-12, same recipe as reacher-easy (calibration tier)
+        model: "CNN regressor of log ball-goal distance, trained on real simulator frames only"
+        path: predicates/og-point-maze_predicate.pt
+        sha256: 03767a747a5e682549d32848175971ffdfcfa03b8d048ff2e628829e836f61f2
+        calibration_path: predicates/og-point-maze_calibration.json
+        calibration_sha256: 63b368a2c029b395c16218e441ecd6b47094c70dbe0496ef40f8ed6f4e1e62bf
+        threshold_m: 0.8743599116921663
+        gate: {min_tpr: 0.85, min_tnr: 0.85, evaluations: [holdout_real, holdout_tokenizer_roundtrip, model_generated_1step]}
+        measured:
+          holdout_real: {agreement: 0.968, tpr: 0.979, tnr: 0.957}
+          holdout_tokenizer_roundtrip: {agreement: 0.903, tpr: 0.956, tnr: 0.850}   # TNR exactly at the 0.85 line (borderline)
+          model_generated_1step: {agreement: 0.978, tpr: 0.997, tnr: 0.959}
+        monitor_generated_drift:
+          model_generated_10step: {agreement: 0.953, tpr: 0.997, tnr: 0.909}
+      bank: {path: bank/bank_og-point-maze.pkl, sha256: ebe4961dc4af24fefd79b6866476f01902157a304123c19306c06fb06e492ade,
+             summary_path: bank/bank_og-point-maze.json, summary_sha256: 7e5d1e957cbb78ad72b0122225e4b5fa92f1a5ce2ab18e4dab563e4c86c534cb,
+             master_seed: 20261017, n: 100}
+      status: "not in batch 1 (base policy head 10% < 20%); combined-checkpoint retest pending"
+    mw-reach:
+      H_env: 100
+      tier: candidate            # 2026-10-12: not in batch 1; decided in batch 2 (base 25% / combined 20% at sigma 0.1)
+      bank: {path: bank/bank_mw-reach.pkl, sha256: 43aef6f74d01c7f1ddfe289e777b9691dca09ba94bbf5ae8bba52bfaa5721e09,
+             summary_path: bank/bank_mw-reach.json, summary_sha256: 8d9c828531c3347046dde6b24fed049eb70f3cd9a801f5fd8ef342fd0cb86dee,
+             master_seed: 20261018, n: 100}
+      status: "not in batch 1 (base policy head 15% < 20%); combined-checkpoint retest pending"
+  policy:                       # 2026-10-11: the evaluated object is this stochastic policy (both branches)
+    source: "checkpoint behaviour-cloning policy head (base), closed loop; real branch: context = encodings of real
+             frames; imagined branch: context = generated latents; 24-frame window"
+    sigma: 0.1                   # action = clip(head(h_t) + sigma * eps_t, -1, 1), eps identical in both branches
+    sigma_selection_rule: "pre-registered: sigma > 0 from {0.05,0.1,0.15,0.2,0.3} whose reach_anytime success on the
+                           first 20 frozen starts (noise seed k=0) is closest to 50% (ties -> smaller sigma)"
+    sigma_sweep: {0.0: 0.25, 0.05: 0.35, 0.1: 0.55, 0.15: 0.60, 0.2: 0.70, 0.3: 0.60}   # out/step2b_sigma_sweep.json
+    deterministic_reference: "sigma = 0 (head only) is kept in the analysis as the K=1 degenerate case: it makes the
+                              real branch deterministic, so truth cannot be expressed as a proportion"
+    noise_master_seed: 20261019  # seed_ik = RandomState(m).randint(0, 2**31-1, (N=100, K=5))[i, k]; eps_ik = RandomState(seed_ik).randn(H, A)
+    seeds_per_start: 5
+  verdict_rule: {model_accept_min: 4, truth_success_min: 4, criterion: reach_anytime, also_logged: final_step}
+  perturbations:                # MMBench2 settings; perturbation families to be added after step-5 values are fixed
+    reacher-easy:
+      none: {family: null, severity: 0, spec: {}}
+      mm-act-1: {family: mm-act, severity: 1, spec: {gear_scale: 0.9}}    # 2026-10-12, levels as DINO-WM stage-2 s2-pm-act
+      mm-act-2: {family: mm-act, severity: 2, spec: {gear_scale: 0.8}}
+      mm-act-3: {family: mm-act, severity: 3, spec: {gear_scale: 0.7}}
+      mm-act-4: {family: mm-act, severity: 4, spec: {gear_scale: 0.6}}
+      mm-act-5: {family: mm-act, severity: 5, spec: {gear_scale: 0.4}}
+      mm-rot-1: {family: mm-rot, severity: 1, spec: {action_rotation_deg: 3.0}}   # joint-space rotation; levels as s2-wall-rot
+      mm-rot-2: {family: mm-rot, severity: 2, spec: {action_rotation_deg: 5.0}}
+      mm-rot-3: {family: mm-rot, severity: 3, spec: {action_rotation_deg: 8.0}}
+      mm-rot-4: {family: mm-rot, severity: 4, spec: {action_rotation_deg: 12.0}}
+      mm-rot-5: {family: mm-rot, severity: 5, spec: {action_rotation_deg: 20.0}}
+      mm-sham: {family: null, severity: 0, spec: {}, sham: true}
+  tier_definitions:              # 2026-10-12 (also a formal-spec TODO)
+    full: "per-state verdict layer (2x2, false-safe rate, REJECT hit rate, AUROC) + task-level calibration layer;
+           requires the policy's real success rate in [20%, 95%]"
+    calibration_only: "task-level calibration layer only (real success rate vs model-estimated success rate =
+                       ACCEPT proportion); no success-rate band required"
+    candidate: "not yet assigned"
+
+# 2026-10-12 DINO-WM independent-predicate experiment (out/indep/analysis_indep_predicate.md). Replaces the planner
+# self-scoring judge (feat_dist < tasks.<t>.threshold) by a pixel judge independent of the planning objective, applied
+# to decoded imagined frames (VQ-VAE decoder of the checkpoint); goal frame = the real bank goal observation.
+# Pre-registered A/B rule in the report. Existing entries above are unchanged. Perturbations: the top-level ones.
+dino_wm_indep:
+  readout: {primary: "reach_anytime: any of the 21 imagined frames (env steps 0,5,..,100) judged inside",
+            also: "last imagined frame (same read-out as the self-scoring judge; verify_run model_verdict field)"}
+  tasks:
+    wall:
+      success_tol: 4.5
+      H_env: 100
+      predicate:
+        kind: detector             # step-1 ruling 2026-10-12: the Wall CNN failed the gate (precedent #4)
+        model: "non-learned red-dot detector: redness-weighted pixel centroid (R-(G+B)/2 > 40) -> affine map to
+                world xy (fitted on 2000 real frames); distance = ||xy(imagined frame) - xy(real goal frame)||"
+        path: indep/predicates/wall_detector_params.json
+        sha256: 9b60e9ebbb4ab06feee8228176b81d517ea7eeeb7ce66e28034dacd405d87782
+        calibration_path: indep/predicates/wall_detector_calibration.json
+        calibration_sha256: 46b19725d60f4f3f96f34332475ef7bdea6628d21b8be2c9aa8d5ee31d6e1360
+        threshold_m: 4.449309056225771       # detector distance < threshold -> inside (truth tol 4.5)
+        gate: {min_tpr: 0.85, min_tnr: 0.85, evaluations: [holdout_real, holdout_wm_roundtrip, model_generated_1step]}
+        measured:                  # 1 step = 1 macro step = 5 env steps (MMBench2: 1 env step)
+          holdout_real: {agreement: 0.993, tpr: 0.986, tnr: 1.000}
+          holdout_wm_roundtrip: {agreement: 0.995, tpr: 0.990, tnr: 1.000}
+          model_generated_1step: {agreement: 0.980, tpr: 0.973, tnr: 0.987}
+        monitor_generated_drift:   # NOT a gate; upper bound for the predicate-error term in attribution
+          model_generated_10step: {agreement: 0.843, tpr: 0.718, tnr: 0.970}
+          model_generated_20step: {agreement: 0.798, tpr: 0.640, tnr: 0.957}
+        rejected_candidate: "localiser CNN (indep/predicates/wall_indep_predicate.pt, sha256 7adde8db...): model_generated_1step
+                             TPR 0.800 < 0.85 -- misreads faint/blurred decoded dots (wall_gate_diagnostic.json)"
+    point_maze:
+      success_tol: 0.5
+      H_env: 100
+      predicate:
+        kind: cnn
+        model: "CNN agent localiser (xy) on single real frames (+2 coordinate channels); distance =
+                ||xy(imagined frame) - xy(real goal frame)||; trained on real simulator frames only"
+        path: indep/predicates/point_maze_indep_predicate.pt
+        sha256: 9dea2d6c36293bf9193ec17e92e3cdb7eed6c656f60c70e7a764b1c205e61a48
+        calibration_path: indep/predicates/point_maze_indep_calibration.json
+        calibration_sha256: bda8414bac5d95b4b0a71ec8a510aaf7eca8c45fae95682f8df8c785481ec167
+        threshold_m: 0.4999811098666373      # truth tol 0.5
+        gate: {min_tpr: 0.85, min_tnr: 0.85, evaluations: [holdout_real, holdout_wm_roundtrip, model_generated_1step]}
+        measured:
+          holdout_real: {agreement: 0.9965, tpr: 0.998, tnr: 0.995}
+          holdout_wm_roundtrip: {agreement: 0.9925, tpr: 0.995, tnr: 0.989}
+          model_generated_1step: {agreement: 0.890, tpr: 0.863, tnr: 0.919}
+        monitor_generated_drift:
+          model_generated_10step: {agreement: 0.773, tpr: 0.709, tnr: 0.845}
+          model_generated_20step: {agreement: 0.932, tpr: 0.910, tnr: 0.955}
+
+# 2026-10-14 LIBERO batch (virtual only: "real" = the LIBERO simulator truth branch). Design: libero/eval_design.md.
+# Shared by all models; perturbation settings are added here after the dose plan is approved.
+libero:
+  scope: "virtual environment only; real = LIBERO simulator truth branch; transfer = imagined verdict -> simulator execution"
+  env: {conda_env: lerobot_libero, hf_libero: 0.1.4, robosuite: 1.4.0, mujoco: 3.8.1, wrapper: "lerobot.envs.libero.LiberoEnv"}
+  suite: libero_10
+  H_env: 520                    # LeRobot libero_10 TASK_SUITE_MAX_STEPS; truth branch for every model
+  success: "LIBERO native check_success (BDDL goal conjunction), reach_anytime (diamond class): success at any step <= H"
+  tasks:
+    t5: {task_id: 5, name: STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy, stage_kind: single-stage}
+    t3: {task_id: 3, name: KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it, stage_kind: multi-stage}
+  anchors:
+    path: libero/out/bank/libero_anchors.json
+    sha256: 4c4cc503e692b35bf710fe25b08d85ff916e9fee78a584094a0c1dfb7e9ac5d7
+    verify: {path: libero/out/bank/anchor_verify.json, all_pass: true, tolerance: 0.0, replay_steps: 120,
+             cross_process: "identical trajectory sha256 in two separate processes"}
+    master_seed: 20261025       # rs = RandomState(m); per task in order (3, 5): idx = rs.choice(50, 5, replace=False); seeds = rs.randint(0, 2**31-1, 5)
+    per_task: 5
+    settle_steps: 10
+    resolution: 128
+    restore: "a NEW LiberoEnv(hard_reset=True, init_states=True) per restore -> reset(seed); a reused env drifts fixture
+              poses (LIBERO appends to object_property_initializers on every hard reset; libero_native_hooks.md section 8)"
+  worldvla:                     # 2026-10-15 frozen per eval_design section 16 (worldvla_unit.py refuses other values)
+    wm_prompt: helper           # "Generate the image based on the current image and the action." + <|image|><|action|>
+    instr: name                 # 2026-10-15 ruling 3: official 10-task comparison closer to the paper with the training-folder
+                                #   instruction (task.name, "_" -> " "): 0.53 vs 0.52 (task.language); paper suite mean 0.59
+    official_comparison: {variant: name, suite_mean: 0.53, n: 100, wilson95: [0.433, 0.625], other_variant: {language: 0.52}}
+    wm_prompt_selection: {file: libero/out/worldvla/prompt_select/onestep_official_task5.json,
+                          sha256: 6eee765542e4045e1f11db2f11e57df28c24297878c4fdd2cc939911adc18ffc,
+                          rule: "max mean one-step PSNR on 60 recorded official-eval transitions (task 5, seed 20261015)",
+                          mean_psnr: {helper: 24.266, paper: 24.246, train: 24.154}, structural_fallbacks: {helper: 0, paper: 0, train: 56}}
+
+  openwam_alpha:                # 2026-10-23 ruling: precheck closed, formal integration; chaining = calibrated controller
+    checkpoint: {hf_repo: OpenWAM/OpenWAM-Alpha-Sim-LIBERO, file: checkpoint_step_10690.safetensors, repo: OpenWAM-Official/OpenWAM,
+                 commit: 1e103e1, conda_env: openwam, machine: $NODE_D,
+                 # 2026-11-14 补记：集群在用那份的 HF revision 与 SHA256（作业 1974 逐文件计算；与 HF 下载 etag 相同）。全目录清单 env_setup/weights_sha256.txt
+                 hf_revision: 110b07e4d5581c81520a77419cbb0e9371df231b,
+                 sha256: 34c9a6c9af67dda9aaffa2edc0efa29b28eeee1c26dea419f98065c80508c96a,
+                 local_path: libero/openwam/third_party/OpenWAM/assets/openwam_ckpt/openwam_alpha/OpenWAM-Alpha-Sim-LIBERO,
+                 sha256_manifest: env_setup/weights_sha256.txt}
+    video_backbone:             # 2026-11-14 补记：OpenWAM 配置 wan22_ti2v_5b.yaml 的 model_path 指向这里；SHA256 与 HF 下载 etag 相同
+      {hf_repo: Wan-AI/Wan2.2-TI2V-5B, hf_revision: 921dbaf3f1674a56f47e83fb80a34bac8a8f203e,
+       local_path: libero/openwam/third_party/OpenWAM/assets/video_backbone_ckpt/Wan2.2-TI2V-5B, sha256_manifest: env_setup/weights_sha256.txt,
+       sha256: {diffusion_pytorch_model-00001-of-00003.safetensors: 720b06c4ade5e87c1246bba8ac95b664c638749cd9b102cf84d823bb44c026a1,
+                diffusion_pytorch_model-00002-of-00003.safetensors: 09ec5ef720d8396f6cfa51fbdcbdb2327e37722afd6e89fd38f1e7e5e782c283,
+                diffusion_pytorch_model-00003-of-00003.safetensors: 6306f7894c345de9093ad588771c2abfaeb668a81f7a6d9a918bd26ba3568e49,
+                diffusion_pytorch_model.safetensors.index.json: bfa2337f1163e195d24151a72298daf34a620543898109be47e414c8daa5b3fe,
+                Wan2.2_VAE.pth: 20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36,
+                models_t5_umt5-xxl-enc-bf16.pth: 7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d}}
+    node_runtime_caches:        # 2026-11-14 补记：节点 home 下的 LIBERO 资源 + HF 缓存元数据打包（node_sync/pack_on4.sh，2026-10-26，从 $NODE_D）
+      {file: node_sync/caches.tar, dropbox: "$DROPBOX_REMOTE:wm_verdict/env_setup/caches.tar", bytes: 425410560,
+       sha256: c072f2dc4ff18e889143437d01159ed1b0134d9bf7a788f21f6728c8a341676a,
+       note: "不含 LingBot-VA 权重本体（tar 内为悬空符号链接），新机器需另从 HF 下载"}
+    inference: {denoise_steps: 10, decode_video: true, dit_cache: false, torch_compile: false, attention: sdpa,
+                seed_rule: "base seed + call index", actions_per_call: 32, frames_per_call: 9, video_stride: 4}
+    chaining:                   # INJECTED COMPONENT -- table footnote: "block-to-block proprio from our calibrated controller model"
+      rule: "call c+1 starts from call c's last generated frame and from the imagined proprio obtained by rolling the
+             calibrated controller model over call c's own 32 actions; all 32 actions of every call are used"
+      reason: "the model does not predict proprio (proprio is an input token only); chaining-option comparison on 3 anchors:
+               truth (a) success calibrated 3/3, integrate 0/3, reuse 0/3 (libero/openwam/precheck_report.md section 2)"
+      controller_model: {script: libero/openwam/fit_controller.py, script_sha256: 327ad3255f9ff813a46f95a771a50d2b3d93bd2c8706a3154ae22501e03365ff,
+                         params: libero/openwam/controller/params.json, params_sha256: 47db550a6f068711a49d21d256135efc9241e0edfdd7b78d019fdf17e6cf231c,
+                         fit_data: libero/openwam/controller/data.npz, fit_data_sha256: 8a610e5b69eeb2306af738c1ab4d697cb8a5eda5329afcb530c643bcad596bfb,
+                         fit_data_source: "REAL truth replays only: 100 lingbot_base units (main bank), split 70 fit / 30 held out (seed 20261036)",
+                         validation: libero/openwam/controller/validation.json,
+                         validation_sha256: 7866213f41944d6504959f7826e5c36240622ca1d19f6c697f5c16bd688a0947,
+                         held_out_error_32_steps: {pos_m: {median: 0.050, p90: 0.099}, rot_deg: {median: 3.15, p90: 8.45}}}
+    unit_script: {path: libero/openwam/openwam_unit.py, sha256: 497dcbe811627c822a63f99c05b3b115789879ed0c041422880575c1399de97a}
+
+# 2026-10-15 LIBERO verify config for LingBot-VA runs (task_section of runs.lingbot_base). Additive; libero.tasks unchanged.
+libero_lingbot:
+  tasks:
+    t5:
+      task_id: 5
+      H_env: 520
+      bank: {path: libero/out/bank/libero_anchors.json, sha256: 4c4cc503e692b35bf710fe25b08d85ff916e9fee78a584094a0c1dfb7e9ac5d7,
+             summary_path: libero/out/bank/libero_anchors_entries_t5.json, summary_sha256: aaff187e4ae90ff146361b937d9dddc4d73ce0ae207df33679beba1996a93430}
+      predicate:
+        kind: "CNN success classifier on the LingBot-VA model-view frame (128x256, agentview + wrist); p >= threshold = success"
+        path: libero/out/predicate/t5/predicate.pt
+        sha256: d46bbc864bfa6721019476d6dc287beb02227bd6c9e04f61af258f7bc0ec9485
+        calibration_path: libero/out/predicate/t5/calibration.json
+        calibration_sha256: 7aa9337b72e828d6e8fbd8f9d06cf6cb1e61e56cb9014083ee3476b3fd31e9a1
+        threshold_m: 0.05314751252307859            # probability threshold (chosen on the real val split only)
+        feat_dist_threshold: 0.9468524874769214     # records: feat_dist = 1 - max p; success iff feat_dist <= this
+        gate: {evaluations: [holdout_real, holdout_vae_roundtrip, model_generated_1chunk], min_tpr: 0.85, min_tnr: 0.85}
+        monitor_generated_drift: "model_generated_full_rollout (labels = replay of the imagined actions; disagreement mixes predicate error with imagined-success error)"
+    t3:
+      task_id: 3
+      H_env: 520
+      bank: {path: libero/out/bank/libero_anchors.json, sha256: 4c4cc503e692b35bf710fe25b08d85ff916e9fee78a584094a0c1dfb7e9ac5d7,
+             summary_path: libero/out/bank/libero_anchors_entries_t3.json, summary_sha256: 8eaf951640bd01cafc49566f53f566165c8c04b051fed5e1a1b16ea93d4dc82a}
+      predicate:
+        kind: "CNN success classifier on the LingBot-VA model-view frame (128x256, agentview + wrist); p >= threshold = success"
+        path: libero/out/predicate/t3/predicate.pt
+        sha256: 069524b23dfadf24a288bc458e8fd375cf2f509a9d98b68cd67fc97ded46fec0
+        calibration_path: libero/out/predicate/t3/calibration.json
+        calibration_sha256: dadcf671615593eef2574379ad07dd13af04ef96a8b31cf462f2a24ccde8d14f
+        threshold_m: 0.00026625779407499044
+        feat_dist_threshold: 0.999733742205925
+        gate: {evaluations: [holdout_real, holdout_vae_roundtrip, model_generated_1chunk], min_tpr: 0.85, min_tnr: 0.85}
+        monitor_generated_drift: "model_generated_full_rollout (labels = replay of the imagined actions; disagreement mixes predicate error with imagined-success error)"
+
+# 2026-10-15 LIBERO predicate v3 for LingBot-VA (recalibration ruling, option 4 + timing-window ruling). Add-only: the
+# v1 references in libero_lingbot stay as they are (runs.lingbot_base keeps using them; baseline not recomputed; the
+# baseline report notes "old predicate, manual frame review found the verdicts unaffected"). Every run created from now
+# on (family A onwards) uses task_section libero_lingbot_v3.
+libero_lingbot_v3:
+  perturbations:                       # 2026-10-15 family A, object displacement (batch 1); native hooks
+    t5:
+      P0: {family: P_pose, severity: 0, sham_hook: true, sham_rule: "self-consistency (P0 twice, same seed, bit-identical); P0 vs the native path differs by a known RNG-order artifact", coverage: "known (family baseline)", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P0", "initialization_noise": {"type": "uniform", "magnitude": 0.0}}}
+      P1: {family: P_pose, severity: 1, coverage: "known", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P1", "initialization_noise": {"type": "uniform", "magnitude": 0.02}}}
+      P2: {family: P_pose, severity: 2, coverage: "known (boundary)", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P2", "initialization_noise": {"type": "uniform", "magnitude": 0.06}}}
+      P3: {family: P_pose, severity: 3, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P3", "initialization_noise": {"type": "uniform", "magnitude": 0.12}}}
+      P4: {family: P_pose, severity: 4, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P4", "initialization_noise": {"type": "uniform", "magnitude": 0.24}}}
+      A0: {family: A_obj, severity: 0, sham_hook: true, coverage: "known (native region, sham)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A0", "object": "black_book_1", "direction": "+y", "beyond_boundary_m": null, "bddl_sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f"}}
+      A1: {family: A_obj, severity: 1, coverage: "known (native region boundary)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A1", "object": "black_book_1", "direction": "+y", "beyond_boundary_m": 0.0, "bddl_sha256": "697d9ade9ab3c23a2d54f7e97b00508109aa66cb054b7c6cfdedc54485262f6d"}}
+      A2: {family: A_obj, severity: 2, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A2", "object": "black_book_1", "direction": "+y", "beyond_boundary_m": 0.02, "bddl_sha256": "ad6e46b8c140e617e710f98eff07094839e2092b59cc11a0c665c7c8e9f10181"}}
+      A3: {family: A_obj, severity: 3, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A3", "object": "black_book_1", "direction": "+y", "beyond_boundary_m": 0.05, "bddl_sha256": "31cb4a6a0c684ed659a70371015a7af7283735a8749a94ada1e139a87fdd499b"}}
+      A4: {family: A_obj, severity: 4, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A4", "object": "black_book_1", "direction": "+y", "beyond_boundary_m": 0.1, "bddl_sha256": "f1a91db8f02e908d77408681c54a8f4d23b9fab64824d07b44ec696f4fc9ede4"}}
+    t3:
+      P0: {family: P_pose, severity: 0, sham_hook: true, sham_rule: "self-consistency (P0 twice, same seed, bit-identical); P0 vs the native path differs by a known RNG-order artifact", coverage: "known (family baseline)", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P0", "initialization_noise": {"type": "uniform", "magnitude": 0.0}}}
+      P1: {family: P_pose, severity: 1, coverage: "known", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P1", "initialization_noise": {"type": "uniform", "magnitude": 0.02}}}
+      P2: {family: P_pose, severity: 2, coverage: "known (boundary)", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P2", "initialization_noise": {"type": "uniform", "magnitude": 0.06}}}
+      P3: {family: P_pose, severity: 3, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P3", "initialization_noise": {"type": "uniform", "magnitude": 0.12}}}
+      P4: {family: P_pose, severity: 4, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv",
+           spec: {"familyP_level": "P4", "initialization_noise": {"type": "uniform", "magnitude": 0.24}}}
+      A0: {family: A_obj, severity: 0, sham_hook: true, coverage: "known (native region, sham)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A0", "object": "akita_black_bowl_1", "direction": "+x", "beyond_boundary_m": null, "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8"}}
+      A1: {family: A_obj, severity: 1, coverage: "known (native region boundary)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A1", "object": "akita_black_bowl_1", "direction": "+x", "beyond_boundary_m": 0.0, "bddl_sha256": "abef9aa4d40d96ce22dc28fad121e48e55ab7ddce405fa7555ec02ca4a393fb1"}}
+      A2: {family: A_obj, severity: 2, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A2", "object": "akita_black_bowl_1", "direction": "+x", "beyond_boundary_m": 0.02, "bddl_sha256": "6791650f82701a2a00bd0800713fb20620a56456e7a25d133afb061aacb4ca9e"}}
+      A3: {family: A_obj, severity: 3, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A3", "object": "akita_black_bowl_1", "direction": "+x", "beyond_boundary_m": 0.05, "bddl_sha256": "5b55aa2bbc8bf9c47027df34293c91f72bcdf95154cfb9ecfb49bd3513a6f385"}}
+      A4: {family: A_obj, severity: 4, coverage: "out-of-fine-tuning (pre-training coverage not excluded)", hook: "BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)",
+           spec: {"familyA_level": "A4", "object": "akita_black_bowl_1", "direction": "+x", "beyond_boundary_m": 0.07, "bddl_sha256": "2a734a7e586b6ecb5ce1173316249a149d3dbe3a12ef9c44ecfb2908219e111f"}}
+  calibration:
+    script: libero/recal_v3.py            # + libero/gen_timing_rule.py (generated-row timing window)
+    master_seed: 20261029                 # near-miss rollouts / replays (v2 failure episodes: 20261028; v1 rollouts: 20261027)
+    near_miss: {source: "NEW LingBot closed-loop rollouts from non-anchor inits (isolated from the frozen bank)",
+                base_rollouts_per_task: 12, replays_per_rollout: 3, displacement_m: [0.02, 0.04],
+                direction: "uniform random", object: "obj_of_interest[0] (t5 black_book_1, t3 akita_black_bowl_1)",
+                settle_noop_steps: 10, provenance: "calibration.json composition.provenance_nearmiss"}
+    failure_terminal: "second half of episodes in which the simulator never reports success"
+    k_fold: {k: 5, unit: episode, stratified_by: source, derived_frames: "follow their source episode's fold"}
+    threshold_rule: "out-of-fold real predictions: feasible iff TPR, TNR and failure-terminal TNR >= 0.85; logit midpoint
+                     of the largest contiguous feasible run on p = sigmoid(z), z in [-12, 12] step 0.05; none -> predicate failure"
+    generated_row_timing_rule: {window_steps: 12, definition: "negative generated frames within one action chunk of the
+                                reference real success step are excluded from the generated-row TNR and reported separately",
+                                raw_and_rule_both_reported: true}
+    deployed_model: "refit on all episodes with the same recipe; gate numbers are out-of-fold"
+  trajectory_rule_v2:                  # 2026-10-20 spec revision #4: trajectory-level decision rule (model and real predicate readouts)
+    definition: "success iff p >= threshold_m on k CONSECUTIVE frames within 1..H (k = 1 is rule v1, single-frame reach-anytime)"
+    gate: {level: trajectory, min_tpr: 0.85, min_tnr: 0.85, data: "REAL trajectories only (v3 calibration episodes out-of-fold + famA/famP truth (a) replays); imagined data not read for the choice"}
+    k: {t5: 24, t3: 1}                 # t3: rule on the predicate-v4 conjunction (spec revision #6); 2026-10-21
+    t5: {grid_first: [1, 2, 3, 5, 8], grid_first_result: "none feasible (pooled TNR 0.399-0.668)",
+         grid_ext: [16, 24, 36, 48], grid_ext_reason: "guided by the false-alarm run-length diagnostic (median 9.5, q90 36 frames)",
+         holdout: {split: "half by episode, stratified by source x label", seed: 20261020, n_A: 323, n_B: 325,
+                   A: {tpr: 0.934, tnr: 0.892}, B: {tpr: 0.934, tnr: 0.857}}}
+    t3: {grid_first: [1, 2, 3, 5, 8], grid_first_result: "none feasible (pooled TNR 0.508-0.542)", status: "pending sub-goal diagnosis / redesign (ruling 3)"}
+    script: libero/traj_rule_v2.py
+    eval_path: libero/out/rule_v2/rule_v2_eval.json
+    eval_sha256: 4dd509dec660a1155b867d69a26ce4d0a06c3ed34d63ed01b394eb8c3ec1a8a4
+    eval_ext_path: libero/out/rule_v2/rule_v2_eval_t5_ext.json
+    eval_ext_sha256: eb3e91252052f01ef3e22cb65affc4e406fa58ba7229cc6490d062ab5b5f5c1c
+  predicate_v4_t3:                     # 2026-10-21 spec revisions #5/#6: t3 success frame = Close AND NOT bowl-outside-visible
+    definition: "success frame iff p_close >= thr_close AND p_bowl_out < thr_bowl_out; trajectory: k consecutive success frames (k = 1)"
+    script: libero/recal_v4_t3.py
+    script_sha256: 34eccd88d201195a8bbbdbcb2417e45e2bab9d7705e0baf388bf482a65d2757c
+    training_pool: {v1_rollout: 60, syn_success: 10, syn_close_empty: 40, syn_in_open: 10, master_seed: 20261034,
+                    excluded: "every lingbot_famA / lingbot_famP frame (validation only); v2/v3 perturbation episodes"}
+    vis_min: {value: 203, rule: "1 % quantile of bowl pixels on not-In, unoccluded (frame, camera) pairs", path: libero/out/predicate_v4_t3/vis_min.json,
+              sha256: ac7c5360c7cdf62b30902031b51eab3f97f779a7cfa96920e0e75c2775b8c434}
+    close: {path: libero/out/predicate_v4_t3/close.pt, sha256: 63b442cb14815f79e7883338272dc8d59f5678d4bf10f688caf429c9b0ad0e14,
+            threshold: 0.1218528507696333, calibration_path: libero/out/predicate_v4_t3/calibration_close.json,
+            calibration_sha256: 2f9394fc5995a435858efdd3e03a4be43b9c5837837342ac7a5e10bf58b24fdd}
+    bowl_out: {path: libero/out/predicate_v4_t3/bowl_out.pt, sha256: 176b0f64239dcb5ab0e2b115b065b3566c5fc463e9de3d6bf05f3862c3c5470b,
+               threshold: 0.05468131721594748, calibration_path: libero/out/predicate_v4_t3/calibration_bowl_out.json,
+               calibration_sha256: c9a4ae33511855223ad5a619f3cb4c07af42ae2c0d363cf14ad14bf26338d9cc,
+               training: "drawer-closed bowl-outside positives sampled as their own stratum (1000 of 3000 per epoch)",
+               drawer_closed_subset: {holdout_real: {tpr: 0.900, tnr: 0.965, gated: true}, vae_roundtrip: {tpr: 0.901, tnr: 0.969},
+                                      generated_1chunk: {tpr: 0.830, tnr: 0.969, note: "below 0.85, reported not gated; misses push imagined t3 verdicts toward success"}}}
+    trajectory_eval: {path: libero/out/predicate_v4_t3/trajectory_eval.json, sha256: c4ecbcb4741e4fbb8a738eca84806180cc684f9339df260932750928a5bae089,
+                      data: "lingbot_famA/famP t3 real replays only, halves by episode stratified by type (seed 20261021)",
+                      selected_k: 1, A: {tpr: 0.972, tnr: 0.973}, B: {tpr: 0.966, tnr: 0.944},
+                      undecidable_end_trajectories: {n: 29, fired: 0}}
+    imagination_rescoring: {script: libero/rescore_t3_v4.py, machine: $NODE_D, rule: "same-seed deterministic recomputation; action gate + frame gate per unit; 3 failures -> stop"}
+  tasks:
+    t5:
+      task_id: 5
+      H_env: 520
+      bank: {path: libero/out/bank/libero_anchors.json, sha256: 4c4cc503e692b35bf710fe25b08d85ff916e9fee78a584094a0c1dfb7e9ac5d7,
+             summary_path: libero/out/bank/libero_anchors_entries_t5.json, summary_sha256: aaff187e4ae90ff146361b937d9dddc4d73ce0ae207df33679beba1996a93430}
+      predicate:
+        kind: "v3 CNN success classifier on the LingBot-VA model-view frame (128x256, agentview + wrist); p >= threshold = success"
+        path: libero/out/predicate_v3/t5/predicate.pt
+        sha256: 9eb1e56156da82e51d99820e82b8eaf16bae537b13ca816b2f76ed76714b2913
+        calibration_path: libero/out/predicate_v3/t5/calibration.json
+        calibration_sha256: 427dc81c0a12a1a5a5260843adaa329db37d5de14122d94ec099bffeccf75251
+        threshold_m: 0.14804719803170785
+        feat_dist_threshold: 0.8519528019682922
+        gate: {evaluations: [holdout_real, holdout_vae_roundtrip, model_generated_1chunk_timing_rule], min_tpr: 0.85,
+               min_tnr: 0.85, min_fail_terminal_tnr: 0.85}
+        generated_row_raw: {tpr: 0.891, tnr: 0.831, fail_terminal_tnr: 0.894}     # without the timing rule (reported, not gated)
+        early_success_chunks: {path: libero/out/predicate_v3/t5/early_success_chunks.json,
+                               sha256: 097bb5cabcb4c0640f82178ccafec621442743a8f8e58bd949e26016ffa07448, n_chunks: 95}
+        monitor_generated_drift: "model_generated_full_rollout_monitor in calibration.json (labels = replay of the imagined actions)"
+    t3:
+      task_id: 3
+      H_env: 520
+      bank: {path: libero/out/bank/libero_anchors.json, sha256: 4c4cc503e692b35bf710fe25b08d85ff916e9fee78a584094a0c1dfb7e9ac5d7,
+             summary_path: libero/out/bank/libero_anchors_entries_t3.json, summary_sha256: 8eaf951640bd01cafc49566f53f566165c8c04b051fed5e1a1b16ea93d4dc82a}
+      predicate:
+        kind: "v3 CNN success classifier on the LingBot-VA model-view frame (128x256, agentview + wrist); p >= threshold = success"
+        path: libero/out/predicate_v3/t3/predicate.pt
+        sha256: 900b63a7abebc1e9c759226902369275fdf0bc9223ef3f2fe72215cc29306e5d
+        calibration_path: libero/out/predicate_v3/t3/calibration.json
+        calibration_sha256: dd49af965c099e2c0aefb1bfadaf06cab18b6d94cdf7695567b8dcbb6c29b5ce
+        threshold_m: 0.2544533858736268
+        feat_dist_threshold: 0.7455466141263731
+        gate: {evaluations: [holdout_real, holdout_vae_roundtrip, model_generated_1chunk_timing_rule], min_tpr: 0.85,
+               min_tnr: 0.85, min_fail_terminal_tnr: 0.85}
+        generated_row_raw: {tpr: 0.985, tnr: 0.964, fail_terminal_tnr: 0.878}
+        early_success_chunks: {path: libero/out/predicate_v3/t3/early_success_chunks.json,
+                               sha256: d55208c10149f360c57e87f69d213c621fb3879231031679c5b9ebbfa757b99c, n_chunks: 1}
+        monitor_generated_drift: "model_generated_full_rollout_monitor in calibration.json (labels = replay of the imagined actions)"
+
+# 2026-10-24 OpenWAM-alpha-view predicate (frozen by libero/openwam/ow_freeze.py after the gate check) and the
+# OpenWAM-alpha runs. Add-only.
+libero_openwam:
+  tasks:
+    t3:
+      task_id: 3
+      H_env: 400
+      bank:
+        path: libero/out/bank/libero_anchors.json
+        sha256: 4c4cc503e692b35bf710fe25b08d85ff916e9fee78a584094a0c1dfb7e9ac5d7
+        summary_path: libero/out/bank/libero_anchors_entries_t3.json
+        summary_sha256: 8eaf951640bd01cafc49566f53f566165c8c04b051fed5e1a1b16ea93d4dc82a
+      predicate:
+        kind: OpenWAM-view v4 conjunction (manifest) on ow_view.pred_view of the OpenWAM canvas (agentview | wrist, 128 x 256)
+        path: libero/openwam/predicate/t3/predicate_manifest.json
+        sha256: 2fced43159f30388e32fa40bcd57b80d8928c10339003e7535750660b6a046dd
+        calibration_path: libero/openwam/predicate/t3/calibration_verify.json
+        calibration_sha256: 41d309a6e39a7e875e20056e1c9900865f492b50d281e2e5c0b434c5daf21c9e
+        threshold_m:
+          close: 0.3100255188724216
+          bowl_out: 0.14492163148784085
+        feat_dist_threshold: 0.0
+        gate:
+          evaluations:
+          - holdout_real
+          - holdout_vae_roundtrip
+          - generated_timing_rule
+          min_tpr: 0.85
+          min_tnr: 0.85
+          min_fail_terminal_tnr: 0.85
+        trajectory_rule:
+          k_steps: 1
+          k_imagined_frames: 1
+          note: 'imagined frames are 4 env steps apart (video stride 4): k steps -> ceil(k/4) consecutive imagined frames'
+          eval: libero/openwam/predicate/t3/trajectory_eval.json
+          eval_sha256: 7cf9989291ade06a1bb9398e1487f669c44f2528d9b736a0259de81514cd08b4
+  perturbations:
+    t5:
+      none:
+        family: null
+        severity: 0
+        spec: {}
+      P0:
+        family: P_pose
+        severity: 0
+        sham_hook: true
+        sham_rule: self-consistency (P0 twice, same seed, bit-identical); P0 vs the native path differs by a known RNG-order artifact
+        coverage: known (family baseline)
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P0
+          initialization_noise:
+            type: uniform
+            magnitude: 0.0
+      P1:
+        family: P_pose
+        severity: 1
+        coverage: known
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P1
+          initialization_noise:
+            type: uniform
+            magnitude: 0.02
+      P2:
+        family: P_pose
+        severity: 2
+        coverage: known (boundary)
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P2
+          initialization_noise:
+            type: uniform
+            magnitude: 0.06
+      P3:
+        family: P_pose
+        severity: 3
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P3
+          initialization_noise:
+            type: uniform
+            magnitude: 0.12
+      P4:
+        family: P_pose
+        severity: 4
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P4
+          initialization_noise:
+            type: uniform
+            magnitude: 0.24
+      A0:
+        family: A_obj
+        severity: 0
+        sham_hook: true
+        coverage: known (native region, sham)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A0
+          object: black_book_1
+          direction: +y
+          beyond_boundary_m: null
+          bddl_sha256: 07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f
+      A1:
+        family: A_obj
+        severity: 1
+        coverage: known (native region boundary)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A1
+          object: black_book_1
+          direction: +y
+          beyond_boundary_m: 0.0
+          bddl_sha256: 697d9ade9ab3c23a2d54f7e97b00508109aa66cb054b7c6cfdedc54485262f6d
+      A2:
+        family: A_obj
+        severity: 2
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A2
+          object: black_book_1
+          direction: +y
+          beyond_boundary_m: 0.02
+          bddl_sha256: ad6e46b8c140e617e710f98eff07094839e2092b59cc11a0c665c7c8e9f10181
+      A3:
+        family: A_obj
+        severity: 3
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A3
+          object: black_book_1
+          direction: +y
+          beyond_boundary_m: 0.05
+          bddl_sha256: 31cb4a6a0c684ed659a70371015a7af7283735a8749a94ada1e139a87fdd499b
+      A4:
+        family: A_obj
+        severity: 4
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A4
+          object: black_book_1
+          direction: +y
+          beyond_boundary_m: 0.1
+          bddl_sha256: f1a91db8f02e908d77408681c54a8f4d23b9fab64824d07b44ec696f4fc9ede4
+    t3:
+      none:
+        family: null
+        severity: 0
+        spec: {}
+      P0:
+        family: P_pose
+        severity: 0
+        sham_hook: true
+        sham_rule: self-consistency (P0 twice, same seed, bit-identical); P0 vs the native path differs by a known RNG-order artifact
+        coverage: known (family baseline)
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P0
+          initialization_noise:
+            type: uniform
+            magnitude: 0.0
+      P1:
+        family: P_pose
+        severity: 1
+        coverage: known
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P1
+          initialization_noise:
+            type: uniform
+            magnitude: 0.02
+      P2:
+        family: P_pose
+        severity: 2
+        coverage: known (boundary)
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P2
+          initialization_noise:
+            type: uniform
+            magnitude: 0.06
+      P3:
+        family: P_pose
+        severity: 3
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P3
+          initialization_noise:
+            type: uniform
+            magnitude: 0.12
+      P4:
+        family: P_pose
+        severity: 4
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: robosuite initialization_noise (robots/robot.py:129-141) passed to OffScreenRenderEnv
+        spec:
+          familyP_level: P4
+          initialization_noise:
+            type: uniform
+            magnitude: 0.24
+      A0:
+        family: A_obj
+        severity: 0
+        sham_hook: true
+        coverage: known (native region, sham)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A0
+          object: akita_black_bowl_1
+          direction: +x
+          beyond_boundary_m: null
+          bddl_sha256: 5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8
+      A1:
+        family: A_obj
+        severity: 1
+        coverage: known (native region boundary)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A1
+          object: akita_black_bowl_1
+          direction: +x
+          beyond_boundary_m: 0.0
+          bddl_sha256: abef9aa4d40d96ce22dc28fad121e48e55ab7ddce405fa7555ec02ca4a393fb1
+      A2:
+        family: A_obj
+        severity: 2
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A2
+          object: akita_black_bowl_1
+          direction: +x
+          beyond_boundary_m: 0.02
+          bddl_sha256: 6791650f82701a2a00bd0800713fb20620a56456e7a25d133afb061aacb4ca9e
+      A3:
+        family: A_obj
+        severity: 3
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A3
+          object: akita_black_bowl_1
+          direction: +x
+          beyond_boundary_m: 0.05
+          bddl_sha256: 5b55aa2bbc8bf9c47027df34293c91f72bcdf95154cfb9ecfb49bd3513a6f385
+      A4:
+        family: A_obj
+        severity: 4
+        coverage: out-of-fine-tuning (pre-training coverage not excluded)
+        hook: BDDL :regions :ranges rewrite -> native TableRegionSampler (bddl_base_domain._add_placement_initializer)
+        spec:
+          familyA_level: A4
+          object: akita_black_bowl_1
+          direction: +x
+          beyond_boundary_m: 0.07
+          bddl_sha256: 2a734a7e586b6ecb5ce1173316249a149d3dbe3a12ef9c44ecfb2908219e111f
+  perturbations_note: family A / P settings shared with libero_lingbot_v3 (same anchors, same specs); 'none' = main bank
+
+# ---- T2 / T3 / T4 onboarding (rulings 2026-11-01..03): frozen banks and run registrations ----
+banks_new_tasks:            # all verified bit-exact (anchor_verify_t*.json / family*_t*_verify.json, all_pass true)
+  main_t2: {path: libero/out/bank/libero_anchors_t2.json, sha256: 9b08fd490e23f4cc6b918ba4092d452c91f8b32a2b6c87f8f01818a4e3b50b3f, master_seed: 20261103, anchors: 5, verify: libero/out/bank/anchor_verify_t2.json}
+  main_t4: {path: libero/out/bank/libero_anchors_t4.json, sha256: 7eeca711468aafaa8f5b55c04ac7a0964ac82440ad83f474ecb3489c1b27ed4f, master_seed: 20261107, anchors: 5, verify: libero/out/bank/anchor_verify_t4.json}
+  main_t6: {path: libero/out/bank/libero_anchors_t6.json, sha256: 554de53792aa89b88eb9d70813559709d42bf8df5921a7a7222fc503ab54b702, master_seed: 20261108, anchors: 5, verify: libero/out/bank/anchor_verify_t6.json}
+  famA_t2: {path: libero/out/bank/familyA_t2/familyA_t2_anchors.json, sha256: a725d91ad6303e6e0dde3d39bbffede462a4d059984cf0e4ce03478708bb2f62, master_seed: 20261105, direction: "+x", object: porcelain_mug_1_or_task_object, verify: libero/out/bank/familyA_t2/familyA_t2_verify.json}
+  famP_t2: {path: libero/out/bank/familyP_t2/familyP_t2_anchors.json, sha256: a4c2a03473b4f676d3a1649a3af090ecb572cf6c771e2e2ee4c22269f6ecd555, master_seed: 20261106, verify: libero/out/bank/familyP_t2/familyP_t2_verify.json}
+  famA_t4: {path: libero/out/bank/familyA_t4/familyA_t4_anchors.json, sha256: 7f1351f5bf443ff4573f91bc10a5dcf1b67a815d41df93b350a92942c65f9799, master_seed: 20261113, direction: "+x", object: porcelain_mug_1_or_task_object, verify: libero/out/bank/familyA_t4/familyA_t4_verify.json}
+  famP_t4: {path: libero/out/bank/familyP_t4/familyP_t4_anchors.json, sha256: bd0b49ff747fd7053d5f213d739540c3f7823d9ee38ccbe159134c4bc14c291e, master_seed: 20261109, verify: libero/out/bank/familyP_t4/familyP_t4_verify.json}
+  famA_t6: {path: libero/out/bank/familyA_t6/familyA_t6_anchors.json, sha256: a6dbb1ba47822a93616d19f10704a174c4114950c1ba7a61651c69d36b08083a, master_seed: 20261114, direction: "-y", object: porcelain_mug_1_or_task_object, verify: libero/out/bank/familyA_t6/familyA_t6_verify.json}
+  famP_t6: {path: libero/out/bank/familyP_t6/familyP_t6_anchors.json, sha256: a8ee3292d1ea7d161a6184b306ef882e85826600df237e6b466b520eb961e027, master_seed: 20261110, verify: libero/out/bank/familyP_t6/familyP_t6_verify.json}
+runs_new_tasks:
+  # imagination seed = RandomState(master).randint(0, 2**31-1, (n_anchors_slots, 10))[anchor_index, k]; levels share
+  # the base anchor's seeds; LingBot imagination stops at H = 400 (ruling 2026-11-01; t5/t3 keep 520); judgement H = 400.
+  lingbot_t2: {records: "libero/out/runs/lingbot_t2/{base,famO,famP,famA}/records.*.jsonl", truth: "same dirs truth.*.jsonl",
+               closed: "same dirs closed.*.jsonl + phys/{truth,closed_K,closed_egn}.*.jsonl", seed_master: 20261104,
+               machines: "imagination+truth $NODE_CLOUD (4x A100 80GB, terminated 2026-11-02); closed loops RTX 5090 cluster; E/G/N truth 5090"}
+  lingbot_t4: {records: "libero/out/runs/lingbot_t4/...", seed_master: 20261111, machines: "RTX 5090 cluster (585/627)"}
+  lingbot_t6: {records: "libero/out/runs/lingbot_t6/...", seed_master: 20261112, machines: "RTX 5090 cluster (585/627)"}
+  openwam_t2: {records: "libero/out/runs/openwam_t2/...", seed_master: 20261104, note: "reinstated 2026-11-03; downgrade history in perturbation_registry.md"}
+  openwam_t4: {records: "libero/out/runs/openwam_t4/records_{base,famO,famP,famA}.jsonl", seed_master: 20261111}
+  openwam_t6: {records: "libero/out/runs/openwam_t6/records_{base,famO,famP,famA}.jsonl", seed_master: 20261112}
+  verdict_note: "no deployed T2/T4/T6 predicate yet: model verdict columns pending until per-task calibration passes the 85% gates"
+  # 2026-11-12 perturbation family F (registry v2): single full-frame blackout, information x one-shot, closed loop only.
+  # Rule (a): at the first planning call at or after nominal t in {60,160,260}, the agentview obs read by that call is set
+  # to RGB 0 before any model preprocessing (wrist untouched, imagined frames untouched). Levels named by nominal t;
+  # actual blackout step per model recorded per unit (LingBot 60/172/268, OpenWAM 64/160/288). F0 = sham, same hook.
+  # Paired with the base unit (same anchor + imagination seed), 2 passes, hard requirement = same success verdict.
+  lingbot_famF: {status: approved, approved_on: 2026-11-13, code: libero/ffam/lingbot_famF.py, family: F, settings: [F60, F160, F260], sham: F0,
+                 tasks: [t5, t3, t2, t4, t6], units_per_setting: 50, passes: 2, H_env: 400, protocol: paired,
+                 base_units: "t5/t3: libero/out/runs/lingbot_base/records_t{5,3}.jsonl; t2/t4/t6: libero/out/runs/lingbot_t{tid}/base/records.*.jsonl",
+                 banks: "t5/t3: libero/out/bank/libero_anchors.json; t2/t4/t6: libero/out/bank/libero_anchors_t{tid}.json",
+                 actual_blackout_step: {F60: 60, F160: 172, F260: 268},
+                 records: "libero/out/runs/lingbot_famF/closed_t{tid}.<shard>.jsonl", arrays: "libero/out/runs/lingbot_famF/closed/<uid>.npz",
+                 healthcheck: libero/out/f_family/healthcheck/report.md, job: libero/ffam/famF_job.sh}
+  openwam_famF: {status: approved, approved_on: 2026-11-13, code: libero/ffam/ow_famF.py, family: F, settings: [F60, F160, F260], sham: F0,
+                 tasks: [t5, t3, t2, t4, t6], units_per_setting: 50, passes: 2, H_env: 400, protocol: paired, n_calls: 13, block: 32,
+                 base_units: "t5/t3: libero/out/runs/openwam_base/records_t{5,3}.jsonl; t2/t4/t6: libero/out/runs/openwam_t{tid}/records_base.jsonl",
+                 banks: "t5/t3: libero/out/bank/libero_anchors.json; t2/t4/t6: libero/out/bank/libero_anchors_t{tid}.json (resolution 256)",
+                 actual_blackout_step: {F60: 64, F160: 160, F260: 288},
+                 records: "libero/out/runs/openwam_famF/closed_t{tid}.<shard>.jsonl", arrays: "libero/out/runs/openwam_famF/closed/<uid>.npz",
+                 healthcheck: libero/out/f_family/healthcheck/report.md, job: libero/ffam/famF_job.sh}

@@ -1,0 +1,43 @@
+<section class="gloss" id="glossary">
+<h2>缩写注释</h2>
+<h3>任务（T0–T4）</h3>
+<table class="gt"><thead><tr><th>缩写</th><th>LIBERO-10 编号</th><th>任务内容</th><th>扰动作用的目标物体（Em/Ef/K）</th></tr></thead><tbody>
+<tr><td>T0</td><td>t5</td><td>把黑色书放进收纳盒的后格</td><td>黑色书</td></tr>
+<tr><td>T1</td><td>t3</td><td>把黑碗放进柜子底层抽屉，并把抽屉关上</td><td>黑碗</td></tr>
+<tr><td>T2</td><td>t2</td><td>打开炉灶，把摩卡壶放到炉灶上</td><td>摩卡壶</td></tr>
+<tr><td>T3</td><td>t4</td><td>白色杯子放左盘，黄白杯子放右盘</td><td>白色杯子</td></tr>
+<tr><td>T4</td><td>t6</td><td>白色杯子放到盘子上，巧克力布丁放到盘子右边</td><td>白色杯子</td></tr>
+</tbody></table>
+
+<h3>扰动族与档位</h3>
+<table class="gt"><thead><tr><th>缩写</th><th>全称</th><th>具体做法</th><th>各档数值</th></tr></thead><tbody>
+<tr><td>none</td><td>无扰动基线</td><td>主锚库起点，不加任何扰动</td><td>—</td></tr>
+<tr><td>A</td><td>物体初始位置偏移（Anchor / displacement）</td><td>把目标物体的初始摆放区域改成边界外的一个点再采样；A 族用自己的一套原生采样起点，表内与 A0 比较。偏移方向：T0 书 +y，T1 碗 +x，T2 摩卡壶 +x，T3 白杯 +x，T4 白杯 −y</td><td>A0 = 原生区域（零偏移，A 族自身基线）；A1 = 正好在原生区域边界；A2 / A3 / A4 = 超出边界 2 / 5 / 10 cm（T1 的 A4 降为 7 cm：10 cm 已到机械臂可达极限）</td></tr>
+<tr><td>P</td><td>机器人初始位姿（Pose）</td><td>机器人初始关节角加均匀噪声；P 族用自己的起点，表内与 P0 比较。原生分布约 ±0.06 rad</td><td>每个关节噪声幅度 P0 / P1 / P2 / P3 / P4 = 0 / 0.02 / 0.06 / 0.12 / 0.24 rad（P0 = P 族自身基线；P1、P2 在原生范围内，P3、P4 超出）</td></tr>
+<tr><td>O</td><td>遮挡（Occlusion）</td><td>在模型读入的第一帧主视角画面中央贴一个黑色正方形（腕部相机不动）；只改模型输入，不改物理</td><td>正方形边长占画面边长 O1 / O2 / O3 / O4 / O5 = 1/16、1/8、3/16、1/4、5/16</td></tr>
+<tr><td>Em</td><td>目标物体质量（Mass）</td><td>目标物体及其子部件的质量、惯量同乘系数</td><td>Em1 / Em2 / Em3 / Em4 = ×1.5 / ×2 / ×4 / ×8</td></tr>
+<tr><td>Ef</td><td>接触摩擦（Friction）</td><td>目标物体、夹爪指垫、桌面三者的摩擦系数同乘系数（MuJoCo 取接触双方较大值，所以三者一起缩放）</td><td>Ef1 / Ef2 / Ef3 / Ef4 = ×0.8 / ×0.6 / ×0.4 / ×0.2</td></tr>
+<tr><td>G</td><td>机械臂控制器增益（Gain）</td><td>操作空间控制器刚度 kp 乘系数 f、阻尼 kd 乘 √f（阻尼比不变）；机械臂跟随指令变软、变慢</td><td>G1 / G2 / G3 / G4 = f 取 0.9 / 0.75 / 0.55 / 0.4</td></tr>
+<tr><td>K</td><td>外力推动（Kick / push）</td><td>在第 t 个环境步之后，把目标物体沿 A 族的方向推开 d；只在闭环中做</td><td>K1–K3：t = 60，d = 2 / 5 / 10 cm；K4–K6：t = 160，d = 2 / 5 / 10 cm；K7–K9：t = 260，d = 2 / 5 / 10 cm</td></tr>
+<tr><td>N1</td><td>单次丢动作</td><td>第 50 个环境步执行零动作（保持不动），之后恢复</td><td>只有一档</td></tr>
+<tr><td>NR</td><td>随机丢动作（Random drop）</td><td>每一步独立以概率 p 被替换为零动作；同一单元两遍用同一掩码</td><td>NR1–NR5：p = 5% / 10% / 20% / 30% / 40%</td></tr>
+<tr><td>NL</td><td>短延迟（Latency）</td><td>每一步执行的是 d 步之前发出的指令；历史不够时执行零动作</td><td>NL1–NL5：d = 1 / 2 / 3 / 4 / 5 步（0.05–0.25 秒）</td></tr>
+<tr><td>NLw</td><td>长延迟（Latency, wide）</td><td>同 NL，延迟更长，跨过两个模型的重规划间隔（LingBot-VA 每 16 步、OpenWAM-α 每 32 步重规划一次）</td><td>NLw1–NLw5：d = 4 / 8 / 16 / 32 / 64 步（0.2–3.2 秒）</td></tr>
+<tr><td>B0</td><td>图像腐蚀族的对照</td><td>走 B 族的 128 px 渲染路径，但不加腐蚀；B 族的基线</td><td>—</td></tr>
+<tr><td>Bg</td><td>高斯模糊（gaussian blur）</td><td rowspan="3">闭环中模型读入的每一帧主视角画面都被腐蚀（腕部不动），用 LIBERO-plus 的原版腐蚀函数，只改模型输入</td><td rowspan="3">数字是 LIBERO-plus 的强度参数：2 / 5 / 9，越大越重（例：Bf5 = 雾，强度 5）</td></tr>
+<tr><td>Bf</td><td>雾（fog）</td></tr>
+<tr><td>Bz</td><td>缩放模糊（zoom blur）</td></tr>
+</tbody></table>
+<p class="gnote">环境步频 20 Hz：1 步 = 0.05 秒。上面的档位定义对四个模型相同；Cosmos Policy 与 UVA 的原始档位值已按同一张表换算成这里的缩写。</p>
+
+<h3>表中的其他符号</h3>
+<table class="gt"><tbody>
+<tr><td>n</td><td>该格的单元数；目标 50 = 5 个起点 × 10 个随机种子</td></tr>
+<tr><td>95%CI</td><td>成功率的 Wilson 95% 置信区间</td></tr>
+<tr><td>步数中位</td><td>成功单元第一次达成任务时的环境步数的中位数</td></tr>
+<tr><td>H = 400</td><td>闭环预算：每个单元最多 400 个环境步（20 秒），超过即算失败</td></tr>
+<tr><td>famO</td><td>O 族的修正批次：修好了"第一帧没加遮挡"的缺陷后重跑的那一批，表中 O 族只用这一批</td></tr>
+<tr><td>待出 / 无</td><td>待出 = 我们的模型这一档还在跑；无 = 队友的模型没有跑这一档</td></tr>
+<tr><td>虚线框 / 斜纹</td><td>虚线框 = 样本未满 50；斜纹 = 该格数据有口径说明（悬停或见上面的模型说明）</td></tr>
+</tbody></table>
+</section>

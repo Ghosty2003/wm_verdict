@@ -1,0 +1,48 @@
+<section class="cat" id="six-cat">
+<h2>六类扰动汇总 <small>· 每个模型在每个任务上，按六类扰动（环境 / 物理 / 信息 × 一次性 / 持续）合并的闭环成功率</small></h2>
+<p class="gnote">分类：环境 · 一次性 = A、K；环境 · 持续 = Em、Ef；物理 · 一次性 = N1；物理 · 持续 = P、G、NR、NL、NLw；信息 · 一次性 = F（单次全帧置黑）；信息 · 持续 = O、Bg/Bf/Bz。<br>每格 = 这一类所有扰动档（不含基线 / 对照档 none、A0、P0、B0）的闭环成功单元数 ÷ 单元数合并计算，下方小字为 k/n。
+<b>带斜纹的格子缺档或有裁决排除的档</b>（格内“缺”= 该模型没跑；“排除”= 有数据但按裁决不进合并，例如 UVA T0/T1 的 Ef 是旧版摩擦实现），与其他模型不完全可比；悬停看 95%CI 与所含档位。</p>
+<div class="scroll"><table class="ct" id="catTable"></table><div class="tip" hidden></div></div>
+</section>
+<script>
+(function(){
+const CAT=__CAT__;
+const GROUPS=[["基线",["base"]],["环境",["env_once","env_always"]],["物理",["phys_once","phys_always"]],["信息",["info_once","info_always"]]];
+const SUB={base:"无扰动",env_once:"一次性",env_always:"持续",phys_once:"一次性",phys_always:"持续",info_once:"一次性",info_always:"持续"};
+const DESC=Object.fromEntries(CAT.cats.map(c=>[c.key,c]));
+const TN={T0:"t5 书入收纳盒",T1:"t3 碗入抽屉并关",T2:"t2 开炉灶放壶",T3:"t4 双杯上盘",T4:"t6 杯子与布丁"};
+const mix=(a,b,t)=>{const p=i=>Math.round(a[i]+(b[i]-a[i])*t);return `rgb(${p(0)},${p(1)},${p(2)})`};
+const ramp=t=>t<0.5?mix([192,57,43],[217,161,6],t*2):mix([217,161,6],[31,138,76],(t-0.5)*2);
+const txt=c=>{const m=c.match(/\d+/g);return (0.299*m[0]+0.587*m[1]+0.114*m[2])<140?"#fff":"#111"};
+const esc=s=>String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+let h='<thead><tr><th class="model" rowspan="2">任务</th><th class="model" rowspan="2">模型</th>';
+GROUPS.forEach(([g,ks])=>h+='<th class="fam" colspan="'+ks.length+'">'+g+'</th>');
+h+='</tr><tr>';GROUPS.forEach(([,ks])=>ks.forEach(k=>h+='<th title="'+esc(DESC[k].desc)+'">'+SUB[k]+'</th>'));h+='</tr></thead><tbody>';
+const tasks=[...new Set(CAT.rows.map(r=>r.task))].sort();
+tasks.forEach(T=>{
+ const ms=[...new Set(CAT.rows.filter(r=>r.task===T).map(r=>r.model))];
+ ms.forEach((m,i)=>{
+  h+='<tr class="'+(i===0?'tfirst':'')+'">'+(i===0?'<th class="tk" rowspan="'+ms.length+'">'+T+'<br><small>'+TN[T]+'</small></th>':'')+'<th class="model">'+esc(m)+'</th>';
+  GROUPS.forEach(([,ks])=>ks.forEach(k=>{
+   const r=CAT.rows.find(x=>x.task===T&&x.model===m&&x.category===k);
+   if(!r||!r.n){h+='<td class="pending">'+'无<br><small>未跑</small>'+'</td>';return}
+   const v=+r.success_rate,bg=ramp(v),miss=r.levels_missing?'缺 '+[...new Set(r.levels_missing.split(" ").map(l=>l.replace(/\d+$/,"")))].join("/"):'';const ex=r.levels_excluded?'排除 '+[...new Set(r.levels_excluded.split(" ").map(l=>l.replace(/\d+$/,"")))].join("/"):'';
+   h+='<td class="'+(miss||ex?'noted':'')+'" style="background:'+bg+';color:'+txt(bg)+'" data-t="'+T+'" data-m="'+esc(m)+'" data-k="'+k+'"><b>'+Math.round(v*100)+'%</b><br><small>'+r.n_success+'/'+r.n+(miss?' · '+miss:'')+(ex?' · '+ex:'')+'</small></td>'}));
+  h+='</tr>'})});
+h+='</tbody>';
+const tb=document.getElementById("catTable");tb.innerHTML=h;
+const box=tb.closest(".scroll"),tip=box.querySelector(".tip");
+tb.querySelectorAll("td[data-k]").forEach(td=>{
+ td.onpointerenter=()=>{
+  const r=CAT.rows.find(x=>x.task===td.dataset.t&&x.model===td.dataset.m&&x.category===td.dataset.k);
+  tip.innerHTML='<b>'+esc(r.model)+' · '+r.task+' · '+esc(r.category_name)+'</b><br><span class="k">成功率</span> '+Math.round(r.success_rate*100)+'% ('+r.n_success+'/'+r.n+')'+
+   '<br><span class="k">95%CI</span> '+Math.round(r.ci95_lo*100)+'–'+Math.round(r.ci95_hi*100)+'%'+
+   '<br><span class="k">包含档位</span> '+esc(r.levels_used)+(r.levels_missing?'<br><span class="k">缺档</span> '+esc(r.levels_missing):'')+(r.levels_excluded?'<br><span class="k">裁决排除</span> '+esc(r.levels_excluded)+'（旧版摩擦实现，不进跨模型对比）':'')+
+   (r.noted?'<br><span class="k">口径</span> 该模型数据带口径说明（见页底模型说明）':'');
+  tip.hidden=false;const er=box.getBoundingClientRect(),tr=td.getBoundingClientRect();
+  tip.style.top=(tr.top-er.top-8)+"px";tip.style.transform="translate(-50%,-100%)";
+  tip.style.left=Math.max(110,(tr.left-er.left+box.scrollLeft+tr.width/2))+"px"};
+ td.onpointerleave=()=>{tip.hidden=true}});
+})();
+</script>
+<h2 style="margin-top:28px">逐档明细</h2>
