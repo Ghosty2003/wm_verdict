@@ -1,0 +1,114 @@
+model	task	level	group	n	accepted	replay_fail	accepted_replay_fail	n_dep	dep_fail	n_paired	accepted_paired	accepted_dep_fail_paired
+LingBot-VA	T0	A0	Sham	50	50	14	14	50	0	50	50	0
+LingBot-VA	T0	A1	Vis. in-range	50	50	9	9	50	0	50	50	0
+LingBot-VA	T0	A2	Vis. OOD	50	50	6	6	50	0	50	50	0
+LingBot-VA	T0	A3	Vis. OOD	50	50	39	39	50	0	50	50	0
+LingBot-VA	T0	A4	Vis. OOD	50	50	50	50	50	3	50	50	3
+LingBot-VA	T0	Bf5	Vis. in-range	50	50	9	9	50	17	50	50	17
+LingBot-VA	T0	Bg2	Vis. in-range	50	50	10	10	50	4	50	50	4
+LingBot-VA	T0	Bg5	Vis. in-range	50	50	12	12	50	13	50	50	13
+LingBot-VA	T0	Bg9	Vis. in-range	50	50	9	9	50	37	50	50	37
+LingBot-VA	T0	Ef1	Hidden	50	50	10	10	50	1	50	50	1
+LingBot-VA	T0	Ef2	Hidden	50	50	11	11	50	1	50	50	1
+LingBot-VA	T0	Ef3	Hidden	50	50	9	9	50	1	50	50	1
+LingBot-VA	T0	Ef4	Hidden	50	50	10	10	50	1	50	50	1
+LingBot-VA	T0	Em1	Hidden	50	50	9	9	50	1	50	50	1
+LingBot-VA	T0	Em2	Hidden	50	50	9	9	50	2	50	50	2
+LingBot-VA	T0	Em3	Hidden	50	50	4	4	50	1	50	50	1
+LingBot-VA	T0	Em4	Hidden	50	50	2	2	50	1	50	50	1
+LingBot-VA	T0	G1	Hidden	50	50	5	5	50	1	50	50	1
+LingBot-VA	T0	G2	Hidden	50	50	9	9	50	0	50	50	0
+LingBot-VA	T0	G3	Hidden	50	50	50	50	50	0	50	50	0
+LingBot-VA	T0	G4	Hidden	50	50	50	50	50	0	50	50	0
+LingBot-VA	T0	N1_1	Hidden	50	50	9	9	50	1	50	50	1
+LingBot-VA	T0	NR1	Hidden	50	50	8	8	50	0	50	50	0
+LingBot-VA	T0	NR2	Hidden	50	50	18	18	50	0	50	50	0
+LingBot-VA	T0	NR3	Hidden	50	50	41	41	50	0	50	50	0
+LingBot-VA	T0	NR4	Hidden	50	50	48	48	50	1	50	50	1
+LingBot-VA	T0	NR5	Hidden	50	50	50	50	50	4	50	50	4
+LingBot-VA	T0	O1	Vis. in-range	50	50	7	7	50	1	50	50	1
+LingBot-VA	T0	O2	Vis. in-range	50	50	7	7	50	2	50	50	2
+LingBot-VA	T0	O3	Vis. in-range	50	50	7	7	50	1	50	50	1
+LingBot-VA	T0	O4	Vis. in-range	50	50	11	11	50	2	50	50	2
+LingBot-VA	T0	O5	Vis. in-range	50	50	6	6	50	1	50	50	1
+LingBot-VA	T0	P0	Sham	50	50	8	8	50	2	50	50	2
+LingBot-VA	T0	P1	Vis. in-range	50	50	9	9	50	0	50	50	0
+LingBot-VA	T0	P2	Vis. in-range	50	50	8	8	50	0	50	50	0
+LingBot-VA	T0	P3	Vis. OOD	50	50	10	10	50	0	50	50	0
+LingBot-VA	T0	P4	Vis. OOD	50	50	36	36	50	10	50	50	10
+LingBot-VA	T0	none	Nominal	50	50	9	9	50	1	50	50	1
+LingBot-VA	T1	A0	Sham	50	49	9	9	50	1	50	49	1
+LingBot-VA	T1	A1	Vis. in-range	50	50	6	6	50	0	50	50	0
+LingBot-VA	T1	A2	Vis. OOD	50	50	3	3	50	1	50	50	1
+LingBot-VA	T1	A3	Vis. OOD	50	50	23	23	50	3	50	50	3
+LingBot-VA	T1	A4	Vis. OOD	50	50	45	45	50	11	50	50	11
+LingBot-VA	T1	Bf2	Vis. in-range	50	50	7	7	50	1	50	50	1
+LingBot-VA	T1	Bg2	Vis. in-range	50	50	4	4	50	1	50	50	1
+LingBot-VA	T1	Bz2	Vis. in-range	50	50	4	4	50	0	50	50	0
+LingBot-VA	T1	Ef1	Hidden	50	50	6	6	50	0	50	50	0
+LingBot-VA	T1	Ef2	Hidden	50	50	7	7	50	0	50	50	0
+LingBot-VA	T1	Ef3	Hidden	50	50	6	6	50	0	50	50	0
+LingBot-VA	T1	Ef4	Hidden	50	50	9	9	50	1	50	50	1
+LingBot-VA	T1	Em1	Hidden	50	50	7	7	50	0	50	50	0
+LingBot-VA	T1	Em2	Hidden	50	50	6	6	50	0	50	50	0
+LingBot-VA	T1	Em3	Hidden	50	50	7	7	50	1	50	50	1
+LingBot-VA	T1	Em4	Hidden	50	50	9	9	50	1	50	50	1
+LingBot-VA	T1	G1	Hidden	50	50	11	11	50	0	50	50	0
+LingBot-VA	T1	G2	Hidden	50	50	46	46	50	0	50	50	0
+LingBot-VA	T1	G3	Hidden	50	50	50	50	50	0	50	50	0
+LingBot-VA	T1	G4	Hidden	50	50	50	50	50	2	50	50	2
+LingBot-VA	T1	N1_1	Hidden	50	50	8	8	50	1	50	50	1
+LingBot-VA	T1	NR1	Hidden	50	50	18	18	50	1	50	50	1
+LingBot-VA	T1	NR2	Hidden	50	50	36	36	50	3	50	50	3
+LingBot-VA	T1	NR3	Hidden	50	50	50	50	50	0	50	50	0
+LingBot-VA	T1	NR4	Hidden	50	50	50	50	50	7	50	50	7
+LingBot-VA	T1	NR5	Hidden	50	50	50	50	50	11	50	50	11
+LingBot-VA	T1	O1	Vis. in-range	50	50	11	11	50	0	50	50	0
+LingBot-VA	T1	O2	Vis. in-range	50	50	10	10	50	0	50	50	0
+LingBot-VA	T1	O3	Vis. in-range	50	50	10	10	50	0	50	50	0
+LingBot-VA	T1	O4	Vis. in-range	50	50	9	9	50	0	50	50	0
+LingBot-VA	T1	O5	Vis. in-range	50	50	10	10	50	0	50	50	0
+LingBot-VA	T1	P0	Sham	50	50	4	4	50	0	50	50	0
+LingBot-VA	T1	P1	Vis. in-range	50	50	7	7	50	0	50	50	0
+LingBot-VA	T1	P2	Vis. in-range	50	50	6	6	50	3	50	50	3
+LingBot-VA	T1	P3	Vis. OOD	50	50	15	15	50	1	50	50	1
+LingBot-VA	T1	P4	Vis. OOD	50	45	32	27	50	10	50	45	6
+LingBot-VA	T1	none	Nominal	50	50	6	6	50	0	50	50	0
+OpenWAM-α	T1	A0	Sham	50	49	26	26	50	2	50	49	2
+OpenWAM-α	T1	A1	Vis. in-range	50	50	32	32	50	1	50	50	1
+OpenWAM-α	T1	A2	Vis. OOD	50	50	32	32	50	0	50	50	0
+OpenWAM-α	T1	A3	Vis. OOD	50	50	44	44	50	0	50	50	0
+OpenWAM-α	T1	A4	Vis. OOD	50	50	36	36	50	1	50	50	1
+OpenWAM-α	T1	B0	Sham	50	50	17	17	50	0	50	50	0
+OpenWAM-α	T1	Bf2	Vis. in-range	50	50	21	21	50	0	50	50	0
+OpenWAM-α	T1	Bf5	Vis. in-range	50	50	14	14	50	2	50	50	2
+OpenWAM-α	T1	Bg2	Vis. in-range	50	50	42	42	50	45	50	50	45
+OpenWAM-α	T1	Ef1	Hidden	50	50	22	22	50	0	50	50	0
+OpenWAM-α	T1	Ef2	Hidden	50	50	21	21	50	0	50	50	0
+OpenWAM-α	T1	Ef3	Hidden	50	50	19	19	50	0	50	50	0
+OpenWAM-α	T1	Ef4	Hidden	50	50	19	19	50	0	50	50	0
+OpenWAM-α	T1	Em1	Hidden	50	50	23	23	50	0	50	50	0
+OpenWAM-α	T1	Em2	Hidden	50	50	22	22	50	0	50	50	0
+OpenWAM-α	T1	Em3	Hidden	50	50	26	26	50	0	50	50	0
+OpenWAM-α	T1	Em4	Hidden	50	50	27	27	50	0	50	50	0
+OpenWAM-α	T1	G1	Hidden	50	50	27	27	50	0	50	50	0
+OpenWAM-α	T1	G2	Hidden	50	50	36	36	50	2	50	50	2
+OpenWAM-α	T1	G3	Hidden	50	50	50	50	50	22	50	50	22
+OpenWAM-α	T1	G4	Hidden	50	50	50	50	50	33	50	50	33
+OpenWAM-α	T1	N1_1	Hidden	50	50	20	20	50	0	50	50	0
+OpenWAM-α	T1	NR1	Hidden	50	50	24	24	50	0	50	50	0
+OpenWAM-α	T1	NR2	Hidden	50	50	35	35	50	2	50	50	2
+OpenWAM-α	T1	NR3	Hidden	50	50	49	49	50	10	50	50	10
+OpenWAM-α	T1	NR4	Hidden	50	50	50	50	50	18	50	50	18
+OpenWAM-α	T1	NR5	Hidden	50	50	50	50	50	42	50	50	42
+OpenWAM-α	T1	O1	Vis. in-range	50	50	16	16	50	0	50	50	0
+OpenWAM-α	T1	O2	Vis. in-range	50	50	22	22	50	0	50	50	0
+OpenWAM-α	T1	O3	Vis. in-range	50	50	17	17	50	0	50	50	0
+OpenWAM-α	T1	O4	Vis. in-range	50	50	11	11	50	0	50	50	0
+OpenWAM-α	T1	O5	Vis. in-range	50	42	7	3	50	0	50	42	0
+OpenWAM-α	T1	P0	Sham	50	50	23	23	50	0	50	50	0
+OpenWAM-α	T1	P1	Vis. in-range	50	50	21	21	50	0	50	50	0
+OpenWAM-α	T1	P2	Vis. in-range	50	50	28	28	50	1	50	50	1
+OpenWAM-α	T1	P3	Vis. OOD	50	50	24	24	50	3	50	50	3
+OpenWAM-α	T1	P4	Vis. OOD	50	50	26	26	50	0	50	50	0
+OpenWAM-α	T1	none	Nominal	50	50	20	20	50	0	50	50	0

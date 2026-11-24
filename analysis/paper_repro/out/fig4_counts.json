@@ -1,0 +1,134 @@
+{
+ "families": 12,
+ "visibility": {
+  "Visible": 4,
+  "Hidden": 6,
+  "After verdict": 2
+ },
+ "visibility_families": {
+  "Visible": [
+   "A",
+   "P",
+   "O",
+   "B"
+  ],
+  "Hidden": [
+   "Em",
+   "Ef",
+   "G",
+   "N1",
+   "NR",
+   "NL"
+  ],
+  "After verdict": [
+   "K",
+   "F"
+  ]
+ },
+ "levels": {
+  "main_nonbase": 60,
+  "main_nonsham": 57,
+  "registry_nonsham": 62,
+  "main_nonbase_plus_registry_only": 65
+ },
+ "sham_control_levels": [
+  "A0",
+  "B0",
+  "P0"
+ ],
+ "registry_only_levels": [
+  "NLw1",
+  "NLw2",
+  "NLw3",
+  "NLw4",
+  "NLw5"
+ ],
+ "per_family": {
+  "A": {
+   "main_table": 5,
+   "sham_control": [
+    "A0"
+   ],
+   "registry_only": [],
+   "counted": 4
+  },
+  "P": {
+   "main_table": 5,
+   "sham_control": [
+    "P0"
+   ],
+   "registry_only": [],
+   "counted": 4
+  },
+  "O": {
+   "main_table": 5,
+   "sham_control": [],
+   "registry_only": [],
+   "counted": 5
+  },
+  "B": {
+   "main_table": 10,
+   "sham_control": [
+    "B0"
+   ],
+   "registry_only": [],
+   "counted": 9
+  },
+  "Em": {
+   "main_table": 4,
+   "sham_control": [],
+   "registry_only": [],
+   "counted": 4
+  },
+  "Ef": {
+   "main_table": 4,
+   "sham_control": [],
+   "registry_only": [],
+   "counted": 4
+  },
+  "G": {
+   "main_table": 4,
+   "sham_control": [],
+   "registry_only": [],
+   "counted": 4
+  },
+  "N1": {
+   "main_table": 1,
+   "sham_control": [],
+   "registry_only": [],
+   "counted": 1
+  },
+  "NR": {
+   "main_table": 5,
+   "sham_control": [],
+   "registry_only": [],
+   "counted": 5
+  },
+  "NL": {
+   "main_table": 5,
+   "sham_control": [],
+   "registry_only": [
+    "NLw1",
+    "NLw2",
+    "NLw3",
+    "NLw4",
+    "NLw5"
+   ],
+   "counted": 10
+  },
+  "K": {
+   "main_table": 9,
+   "sham_control": [],
+   "registry_only": [],
+   "counted": 9
+  },
+  "F": {
+   "main_table": 3,
+   "sham_control": [],
+   "registry_only": [],
+   "counted": 3
+  }
+ },
+ "derivation_of_62": "57 non-sham main-table levels + 5 NLw levels = 62; the main table alone has 60 non-baseline levels (57 after removing A0, P0, B0)",
+ "backend": "pil"
+}

@@ -13,6 +13,9 @@ success predicates and a process-integrity gate (`protocol/core/verify_run.py`).
 | `protocol/` | `protocol.yaml` (frozen protocol), `release_hashes.yaml`, `core/` (anchor banks, `verify_run.py`, archive minimum), `runners/` (LingBot-VA, OpenWAM-alpha, WorldVLA), `rerun/`, `checks/`, `banks/` (frozen anchors + derived BDDL), `assets/` |
 | `predicates/` | success predicates, calibration and threshold selection, trajectory rule v2 (weights: release asset) |
 | `analysis/` | closed-loop main table (incl. the loaders of the Cosmos Policy / VPP2 / UVA results), per-cell analyses, terminal-imagination optimism, results page, diagnostics |
+| `analysis/judges/` | judging imagined frames: the per-frame rubrics (four-label and two-label), task reference images, the VLM judge runner, run instructions for an agent judge, the merged blind-package builder, and scoring / comparison of judges against the held-out key |
+| `analysis/human_eval/` | human evaluation from the annotation-website export (rater accuracy on real frames, human verdicts on imagined frames, inter-rater agreement, agreement with the automated judges) |
+| `analysis/paper_repro/` | scripts that regenerate the verdict-reliability table (with Wilson intervals), the plan-vs-verdict and plan-vs-deployment scatter statistics, and the shift-family / level overview; `run_all.sh` |
 | `annotation_pipeline/` | builds the cards and page tables served by the annotation website |
 | `docs/` | perturbation registry, evaluation design, alignment spec, exemptions, model cards, data formats, determinism notes |
 | `scripts/` | `make_data_root.py`, `repro_check_openwam_t1.py`, `setup_openwam.sh`, `legacy_layout.tsv` |
@@ -126,6 +129,41 @@ python scripts/repro_check_openwam_t1.py score  --units 0:50 --out out_check
 - **Code provenance**: every run used only this repository's code: no imported module and no `sys.path` entry points into the original project directory (OK; checked in the main process and, for the replays, in every worker). Data and predicate weights were read through `$WMV_ROOT`, a symlink view built by `scripts/make_data_root.py`.
 - **Not done**: the optional GPU closed-loop rerun on the H100 machine was skipped: all four GPUs were fully occupied by production runs (99 % utilisation), and the run must not disturb them.
 - Re-run: build the data root (section Paths), then `python scripts/repro_check_openwam_t1.py replay --units 0:50 --out DIR --workers 8 --no-gl`, `... score --units 0:50 --out DIR`, `... verify --out DIR --no-gl [--verify-run openwam_famA_obj]`; each exits 1 on any mismatch (on a GPU machine, drop `--no-gl`).
+
+## Judging imagined frames
+
+A verdict is a judgment, made from the imagined rollout alone, of whether the task is completed. It is scored against
+the real outcome of the same run (same start, condition and seed). Labels: `looks_success`, `borderline` (the scene looks
+complete but the image shows generation distortion, or the key part is hidden / exactly at the edge), `not_success`,
+and `uncertain` (the image is too degraded to see the key objects). *Main* counts `looks_success` as an accepted verdict;
+*wide* also counts `borderline`; `uncertain` is left out of denominators.
+
+```bash
+export WMV_ROOT=/path/to/wmv_root
+# VLM judge (OpenRouter); the key is read from the environment only and never written anywhere
+read -rsp 'OpenRouter key: ' OPENROUTER_API_KEY && export OPENROUTER_API_KEY
+python analysis/judges/package/vlm_openrouter/run_vlm_judge.py --model qwen/qwen4-max --max-tokens 2000 --tag qwen4max \
+    --items <items_blind.csv> --frames-dir <frames/>          # four-label rubric: package/prompt/judge_prompt.md
+python analysis/judges/package_binary/vlm_openrouter/run_vlm_judge.py ...   # two-label (forced choice) rubric
+unset OPENROUTER_API_KEY
+# agent judge: give prompt/run_agent_judge_all.md to a coding agent working inside the unzipped blind package
+python analysis/judges/build_merged_package.py               # blind package (shuffled neutral ids) + separate key
+python analysis/judges/score_agent_judge.py <name> <labels.csv> <selfcheck.csv> <out_dir>
+python analysis/judges/compare_judges.py                     # all judges side by side on shared frames
+python analysis/human_eval/human_eval.py                     # needs an annotation-website export under $WMV_ROOT
+```
+
+Use `--max-tokens 2000` with reasoning VLMs: the runner's default (300) can cut the answer off before the JSON label.
+Judges that never accept a task on imagined frames of real successes (true for every automated judge we ran on the
+book-into-back-compartment task, while human raters accept most of them) are reported as a finding, not re-tuned.
+
+## Verdict-reliability tables and figures
+
+`analysis/paper_repro/run_all.sh` regenerates the verdict-reliability table (per condition group, with Wilson 95%
+intervals, in a 106-level and a 113-level variant where the sham levels form their own row), the scatter statistics of
+plan success vs. verdict acceptance and plan vs. deployment success, and the shift-family / level overview, from the
+original open-loop records and the closed-loop main table under `$WMV_ROOT` (inputs and their sha256 are listed in
+`inputs.md`). Figures are drawn with matplotlib when it is installed and fall back to raster output otherwise.
 
 ## Annotation website
 

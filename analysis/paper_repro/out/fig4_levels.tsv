@@ -1,0 +1,66 @@
+family	family_name	level	parameter	channel	persistence	timing	model_input	visibility	sham_or_control	in_main_table	main_table_models	counted_in_62
+A	Object displacement	A0	0 cm (sham)	environment	one-shot	t = 0 (first frame)	yes	Visible	yes	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	no
+A	Object displacement	A1	boundary	environment	one-shot	t = 0 (first frame)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+A	Object displacement	A2	+2 cm	environment	one-shot	t = 0 (first frame)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+A	Object displacement	A3	+5 cm	environment	one-shot	t = 0 (first frame)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+A	Object displacement	A4	+10 cm	environment	one-shot	t = 0 (first frame)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+P	Initial robot pose	P0	0 rad (sham)	environment	one-shot	t = 0 (first frame)	yes	Visible	yes	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	no
+P	Initial robot pose	P1	0.02 rad	environment	one-shot	t = 0 (first frame)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+P	Initial robot pose	P2	0.06 rad	environment	one-shot	t = 0 (first frame)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+P	Initial robot pose	P3	0.12 rad	environment	one-shot	t = 0 (first frame)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+P	Initial robot pose	P4	0.24 rad	environment	one-shot	t = 0 (first frame)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+O	Occlusion patch	O1	8 px	sensing	one-shot	t = 0 first frame (policies: t = 50)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+O	Occlusion patch	O2	16 px	sensing	one-shot	t = 0 first frame (policies: t = 50)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+O	Occlusion patch	O3	24 px	sensing	one-shot	t = 0 first frame (policies: t = 50)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+O	Occlusion patch	O4	32 px	sensing	one-shot	t = 0 first frame (policies: t = 50)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+O	Occlusion patch	O5	40 px	sensing	one-shot	t = 0 first frame (policies: t = 50)	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	B0	no corr.	sensing	persistent	every real frame from t = 0	yes	Visible	yes	yes	Cosmos Policy,OpenWAM-α,UVA	no
+B	Image corruption	Bg2	sev. 2	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	Bg5	sev. 5	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	Bg9	sev. 9	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	Bf2	sev. 2	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	Bf5	sev. 5	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	Bf9	sev. 9	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	Bz2	sev. 2	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	Bz5	sev. 5	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+B	Image corruption	Bz9	sev. 9	sensing	persistent	every real frame from t = 0	yes	Visible	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+Em	Object mass	Em1	×1.5	environment	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+Em	Object mass	Em2	×2	environment	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+Em	Object mass	Em3	×4	environment	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+Em	Object mass	Em4	×8	environment	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+Ef	Object friction	Ef1	×0.8	environment	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+Ef	Object friction	Ef2	×0.6	environment	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+Ef	Object friction	Ef3	×0.4	environment	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+Ef	Object friction	Ef4	×0.2	environment	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+G	Actuator gain	G1	×0.9	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+G	Actuator gain	G2	×0.75	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+G	Actuator gain	G3	×0.55	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+G	Actuator gain	G4	×0.4	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+N1	Single action drop	N1_1	step 50	physics	one-shot	single step, t = 50	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NR	Random action drop	NR1	5%	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NR	Random action drop	NR2	10%	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NR	Random action drop	NR3	20%	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NR	Random action drop	NR4	30%	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NR	Random action drop	NR5	40%	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NL	Action latency	NL1	1 call	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NL	Action latency	NL2	2 calls	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NL	Action latency	NL3	3 calls	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NL	Action latency	NL4	4 calls	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NL	Action latency	NL5	5 calls	physics	persistent	whole episode	no	Hidden	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+NL	Action latency	NLw1	4 steps	physics	persistent	whole episode	no	Hidden	no	no		yes
+NL	Action latency	NLw2	8 steps	physics	persistent	whole episode	no	Hidden	no	no		yes
+NL	Action latency	NLw3	16 steps	physics	persistent	whole episode	no	Hidden	no	no		yes
+NL	Action latency	NLw4	32 steps	physics	persistent	whole episode	no	Hidden	no	no		yes
+NL	Action latency	NLw5	64 steps	physics	persistent	whole episode	no	Hidden	no	no		yes
+K	Mid-episode push	K1	2 cm@60	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+K	Mid-episode push	K2	5 cm@60	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+K	Mid-episode push	K3	10 cm@60	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+K	Mid-episode push	K4	2 cm@160	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+K	Mid-episode push	K5	5 cm@160	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+K	Mid-episode push	K6	10 cm@160	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+K	Mid-episode push	K7	2 cm@260	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+K	Mid-episode push	K8	5 cm@260	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+K	Mid-episode push	K9	10 cm@260	environment	one-shot	single push, t ∈ {60, 160, 260}	no	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+F	Full-frame blackout	F60	t = 60	sensing	one-shot	first replanning after t ∈ {60, 160, 260}	yes	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+F	Full-frame blackout	F160	t = 160	sensing	one-shot	first replanning after t ∈ {60, 160, 260}	yes	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes
+F	Full-frame blackout	F260	t = 260	sensing	one-shot	first replanning after t ∈ {60, 160, 260}	yes	After verdict	no	yes	Cosmos Policy,LingBot-VA,OpenWAM-α,UVA	yes

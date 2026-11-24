@@ -1,0 +1,224 @@
+section	item	paper	ours	status	note
+T3/113	LingBot-VA / T0 | Nominal | Levels	1	1	MATCH	
+T3/113	LingBot-VA / T0 | Nominal | AR	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T0 | Nominal | FRpl	18.0	18.0	MATCH	
+T3/113	LingBot-VA / T0 | Nominal | FSRpl	18.0	18.0	MATCH	
+T3/113	LingBot-VA / T0 | Nominal | MRpl	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T0 | Nominal | FRdep	2.0	2.0	MATCH	
+T3/113	LingBot-VA / T0 | Nominal | FSRdep	2.0	2.0	MATCH	
+T3/113	LingBot-VA / T0 | Vis. in-range | Levels	12	12	MATCH	
+T3/113	LingBot-VA / T0 | Vis. in-range | AR	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T0 | Vis. in-range | FRpl	17.3	17.3	MATCH	
+T3/113	LingBot-VA / T0 | Vis. in-range | FSRpl	17.3	17.3	MATCH	
+T3/113	LingBot-VA / T0 | Vis. in-range | MRpl	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T0 | Vis. in-range | FRdep	13.0	13.0	MATCH	
+T3/113	LingBot-VA / T0 | Vis. in-range | FSRdep	13.0	13.0	MATCH	
+T3/113	LingBot-VA / T0 | Vis. OOD | Levels	5	5	MATCH	
+T3/113	LingBot-VA / T0 | Vis. OOD | AR	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T0 | Vis. OOD | FRpl	56.4	56.4	MATCH	
+T3/113	LingBot-VA / T0 | Vis. OOD | FSRpl	56.4	56.4	MATCH	
+T3/113	LingBot-VA / T0 | Vis. OOD | MRpl	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T0 | Vis. OOD | FRdep	5.2	5.2	MATCH	
+T3/113	LingBot-VA / T0 | Vis. OOD | FSRdep	5.2	5.2	MATCH	
+T3/113	LingBot-VA / T0 | Hidden | Levels	18	18	MATCH	
+T3/113	LingBot-VA / T0 | Hidden | AR	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T0 | Hidden | FRpl	39.1	39.1	MATCH	
+T3/113	LingBot-VA / T0 | Hidden | FSRpl	39.1	39.1	MATCH	
+T3/113	LingBot-VA / T0 | Hidden | MRpl	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T0 | Hidden | FRdep	1.8	1.8	MATCH	
+T3/113	LingBot-VA / T0 | Hidden | FSRdep	1.8	1.8	MATCH	
+T3/113	LingBot-VA / T1 | Nominal | Levels	1	1	MATCH	
+T3/113	LingBot-VA / T1 | Nominal | AR	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T1 | Nominal | FRpl	12.0	12.0	MATCH	
+T3/113	LingBot-VA / T1 | Nominal | FSRpl	12.0	12.0	MATCH	
+T3/113	LingBot-VA / T1 | Nominal | MRpl	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T1 | Nominal | FRdep	0.0	0.0	MATCH	
+T3/113	LingBot-VA / T1 | Nominal | FSRdep	0.0	0.0	MATCH	
+T3/113	LingBot-VA / T1 | Vis. in-range | Levels	11	11	MATCH	
+T3/113	LingBot-VA / T1 | Vis. in-range | AR	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T1 | Vis. in-range | FRpl	15.3	15.3	MATCH	
+T3/113	LingBot-VA / T1 | Vis. in-range | FSRpl	15.3	15.3	MATCH	
+T3/113	LingBot-VA / T1 | Vis. in-range | MRpl	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T1 | Vis. in-range | FRdep	0.9	0.9	MATCH	
+T3/113	LingBot-VA / T1 | Vis. in-range | FSRdep	0.9	0.9	MATCH	
+T3/113	LingBot-VA / T1 | Vis. OOD | Levels	5	5	MATCH	
+T3/113	LingBot-VA / T1 | Vis. OOD | AR	98.0	98.0	MATCH	
+T3/113	LingBot-VA / T1 | Vis. OOD | FRpl	47.2	47.2	MATCH	
+T3/113	LingBot-VA / T1 | Vis. OOD | FSRpl	46.1	46.1	MATCH	
+T3/113	LingBot-VA / T1 | Vis. OOD | MRpl	95.8	95.8	MATCH	
+T3/113	LingBot-VA / T1 | Vis. OOD | FRdep	10.4	10.4	MATCH	
+T3/113	LingBot-VA / T1 | Vis. OOD | FSRdep	8.6–10.6	8.6–10.6	MATCH	
+T3/113	LingBot-VA / T1 | Hidden | Levels	18	18	MATCH	
+T3/113	LingBot-VA / T1 | Hidden | AR	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T1 | Hidden | FRpl	47.3	47.3	MATCH	
+T3/113	LingBot-VA / T1 | Hidden | FSRpl	47.3	47.3	MATCH	
+T3/113	LingBot-VA / T1 | Hidden | MRpl	100.0	100.0	MATCH	
+T3/113	LingBot-VA / T1 | Hidden | FRdep	3.1	3.1	MATCH	
+T3/113	LingBot-VA / T1 | Hidden | FSRdep	3.1	3.1	MATCH	
+T3/113	OpenWAM-α / T1 | Nominal | Levels	1	1	MATCH	
+T3/113	OpenWAM-α / T1 | Nominal | AR	100.0	100.0	MATCH	
+T3/113	OpenWAM-α / T1 | Nominal | FRpl	40.0	40.0	MATCH	
+T3/113	OpenWAM-α / T1 | Nominal | FSRpl	40.0	40.0	MATCH	
+T3/113	OpenWAM-α / T1 | Nominal | MRpl	100.0	100.0	MATCH	
+T3/113	OpenWAM-α / T1 | Nominal | FRdep	0.0	0.0	MATCH	
+T3/113	OpenWAM-α / T1 | Nominal | FSRdep	0.0	0.0	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. in-range | Levels	11	11	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. in-range | AR	98.5	98.5	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. in-range | FRpl	42.0	42.0	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. in-range | FSRpl	41.9	41.9	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. in-range | MRpl	98.3	98.3	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. in-range | FRdep	8.9	8.9	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. in-range | FSRdep	7.6–9.0	7.6–9.0	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. OOD | Levels	5	5	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. OOD | AR	100.0	100.0	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. OOD | FRpl	64.8	64.8	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. OOD | FSRpl	64.8	64.8	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. OOD | MRpl	100.0	100.0	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. OOD | FRdep	1.6	1.6	MATCH	
+T3/113	OpenWAM-α / T1 | Vis. OOD | FSRdep	1.6	1.6	MATCH	
+T3/113	OpenWAM-α / T1 | Hidden | Levels	18	18	MATCH	
+T3/113	OpenWAM-α / T1 | Hidden | AR	100.0	100.0	MATCH	
+T3/113	OpenWAM-α / T1 | Hidden | FRpl	63.3	63.3	MATCH	
+T3/113	OpenWAM-α / T1 | Hidden | FSRpl	63.3	63.3	MATCH	
+T3/113	OpenWAM-α / T1 | Hidden | MRpl	100.0	100.0	MATCH	
+T3/113	OpenWAM-α / T1 | Hidden | FRdep	14.3	14.3	MATCH	
+T3/113	OpenWAM-α / T1 | Hidden | FSRdep	14.3	14.3	MATCH	
+T3/113	All three pairs | All levels | Levels	113	113	MATCH	
+T3/113	All three pairs | All levels | AR	99.7	99.7	MATCH	
+T3/113	All three pairs | All levels | FRpl	41.1	41.1	MATCH	
+T3/113	All three pairs | All levels | FSRpl	41.1	41.1	MATCH	
+T3/113	All three pairs | All levels | MRpl	99.6	99.6	MATCH	
+T3/113	All three pairs | All levels | FRdep	6.3	6.3	MATCH	
+T3/113	All three pairs | All levels | FSRdep	6.0–6.3	6.0–6.3	MATCH	
+T3/106	LingBot-VA / T0 | Nominal | Levels	1	1	MATCH	
+T3/106	LingBot-VA / T0 | Nominal | AR	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T0 | Nominal | FRpl	18.0	18.0	MATCH	
+T3/106	LingBot-VA / T0 | Nominal | FSRpl	18.0	18.0	MATCH	
+T3/106	LingBot-VA / T0 | Nominal | MRpl	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T0 | Nominal | FRdep	2.0	2.0	MATCH	
+T3/106	LingBot-VA / T0 | Nominal | FSRdep	2.0	2.0	MATCH	
+T3/106	LingBot-VA / T0 | Vis. in-range | Levels	12	12	MATCH	
+T3/106	LingBot-VA / T0 | Vis. in-range | AR	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T0 | Vis. in-range | FRpl	17.3	17.3	MATCH	
+T3/106	LingBot-VA / T0 | Vis. in-range | FSRpl	17.3	17.3	MATCH	
+T3/106	LingBot-VA / T0 | Vis. in-range | MRpl	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T0 | Vis. in-range | FRdep	13.0	13.0	MATCH	
+T3/106	LingBot-VA / T0 | Vis. in-range | FSRdep	13.0	13.0	MATCH	
+T3/106	LingBot-VA / T0 | Vis. OOD | Levels	5	5	MATCH	
+T3/106	LingBot-VA / T0 | Vis. OOD | AR	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T0 | Vis. OOD | FRpl	56.4	56.4	MATCH	
+T3/106	LingBot-VA / T0 | Vis. OOD | FSRpl	56.4	56.4	MATCH	
+T3/106	LingBot-VA / T0 | Vis. OOD | MRpl	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T0 | Vis. OOD | FRdep	5.2	5.2	MATCH	
+T3/106	LingBot-VA / T0 | Vis. OOD | FSRdep	5.2	5.2	MATCH	
+T3/106	LingBot-VA / T0 | Hidden | Levels	18	18	MATCH	
+T3/106	LingBot-VA / T0 | Hidden | AR	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T0 | Hidden | FRpl	39.1	39.1	MATCH	
+T3/106	LingBot-VA / T0 | Hidden | FSRpl	39.1	39.1	MATCH	
+T3/106	LingBot-VA / T0 | Hidden | MRpl	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T0 | Hidden | FRdep	1.8	1.8	MATCH	
+T3/106	LingBot-VA / T0 | Hidden | FSRdep	1.8	1.8	MATCH	
+T3/106	LingBot-VA / T1 | Nominal | Levels	1	1	MATCH	
+T3/106	LingBot-VA / T1 | Nominal | AR	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T1 | Nominal | FRpl	12.0	12.0	MATCH	
+T3/106	LingBot-VA / T1 | Nominal | FSRpl	12.0	12.0	MATCH	
+T3/106	LingBot-VA / T1 | Nominal | MRpl	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T1 | Nominal | FRdep	0.0	0.0	MATCH	
+T3/106	LingBot-VA / T1 | Nominal | FSRdep	0.0	0.0	MATCH	
+T3/106	LingBot-VA / T1 | Vis. in-range | Levels	11	11	MATCH	
+T3/106	LingBot-VA / T1 | Vis. in-range | AR	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T1 | Vis. in-range | FRpl	15.3	15.3	MATCH	
+T3/106	LingBot-VA / T1 | Vis. in-range | FSRpl	15.3	15.3	MATCH	
+T3/106	LingBot-VA / T1 | Vis. in-range | MRpl	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T1 | Vis. in-range | FRdep	0.9	0.9	MATCH	
+T3/106	LingBot-VA / T1 | Vis. in-range | FSRdep	0.9	0.9	MATCH	
+T3/106	LingBot-VA / T1 | Vis. OOD | Levels	5	5	MATCH	
+T3/106	LingBot-VA / T1 | Vis. OOD | AR	98.0	98.0	MATCH	
+T3/106	LingBot-VA / T1 | Vis. OOD | FRpl	47.2	47.2	MATCH	
+T3/106	LingBot-VA / T1 | Vis. OOD | FSRpl	46.1	46.1	MATCH	
+T3/106	LingBot-VA / T1 | Vis. OOD | MRpl	95.8	95.8	MATCH	
+T3/106	LingBot-VA / T1 | Vis. OOD | FRdep	10.4	10.4	MATCH	
+T3/106	LingBot-VA / T1 | Vis. OOD | FSRdep	8.6–10.6	8.6–10.6	MATCH	
+T3/106	LingBot-VA / T1 | Hidden | Levels	18	18	MATCH	
+T3/106	LingBot-VA / T1 | Hidden | AR	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T1 | Hidden | FRpl	47.3	47.3	MATCH	
+T3/106	LingBot-VA / T1 | Hidden | FSRpl	47.3	47.3	MATCH	
+T3/106	LingBot-VA / T1 | Hidden | MRpl	100.0	100.0	MATCH	
+T3/106	LingBot-VA / T1 | Hidden | FRdep	3.1	3.1	MATCH	
+T3/106	LingBot-VA / T1 | Hidden | FSRdep	3.1	3.1	MATCH	
+T3/106	OpenWAM-α / T1 | Nominal | Levels	1	1	MATCH	
+T3/106	OpenWAM-α / T1 | Nominal | AR	100.0	100.0	MATCH	
+T3/106	OpenWAM-α / T1 | Nominal | FRpl	40.0	40.0	MATCH	
+T3/106	OpenWAM-α / T1 | Nominal | FSRpl	40.0	40.0	MATCH	
+T3/106	OpenWAM-α / T1 | Nominal | MRpl	100.0	100.0	MATCH	
+T3/106	OpenWAM-α / T1 | Nominal | FRdep	0.0	0.0	MATCH	
+T3/106	OpenWAM-α / T1 | Nominal | FSRdep	0.0	0.0	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. in-range | Levels	11	11	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. in-range | AR	98.5	98.5	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. in-range | FRpl	42.0	42.0	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. in-range | FSRpl	41.9	41.9	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. in-range | MRpl	98.3	98.3	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. in-range | FRdep	8.9	8.9	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. in-range | FSRdep	7.6–9.0	7.6–9.0	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. OOD | Levels	5	5	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. OOD | AR	100.0	100.0	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. OOD | FRpl	64.8	64.8	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. OOD | FSRpl	64.8	64.8	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. OOD | MRpl	100.0	100.0	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. OOD | FRdep	1.6	1.6	MATCH	
+T3/106	OpenWAM-α / T1 | Vis. OOD | FSRdep	1.6	1.6	MATCH	
+T3/106	OpenWAM-α / T1 | Hidden | Levels	18	18	MATCH	
+T3/106	OpenWAM-α / T1 | Hidden | AR	100.0	100.0	MATCH	
+T3/106	OpenWAM-α / T1 | Hidden | FRpl	63.3	63.3	MATCH	
+T3/106	OpenWAM-α / T1 | Hidden | FSRpl	63.3	63.3	MATCH	
+T3/106	OpenWAM-α / T1 | Hidden | MRpl	100.0	100.0	MATCH	
+T3/106	OpenWAM-α / T1 | Hidden | FRdep	14.3	14.3	MATCH	
+T3/106	OpenWAM-α / T1 | Hidden | FSRdep	14.3	14.3	MATCH	
+T3/106	All three pairs | All levels | Levels	113	106	DIFF	(106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+T3/106	All three pairs | All levels | AR	99.7	99.8	DIFF	(106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+T3/106	All three pairs | All levels | FRpl	41.1	41.9	DIFF	(106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+T3/106	All three pairs | All levels | FSRpl	41.1	41.9	DIFF	(106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+T3/106	All three pairs | All levels | MRpl	99.6	99.6	MATCH	(106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+T3/106	All three pairs | All levels | FRdep	6.3	6.6	DIFF	(106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+T3/106	All three pairs | All levels | FSRdep	6.0–6.3	6.4–6.6	DIFF	(106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+C03	verdicts	5650	5650	MATCH	
+C03	acceptance %	99.7	99.7	MATCH	
+C03	accepted	5635	5635	MATCH	
+C04	accepted plans failing on replay %	41.1	41.1	MATCH	
+C06	verdicts per level	50	50	MATCH	
+C06	levels	113	113	MATCH	
+C16	OpenWAM-α/T1 nominal accepted	50/50	50/50	MATCH	
+C16	OpenWAM-α/T1 nominal replay failures	20	20	MATCH	
+C16	OpenWAM-α/T1 nominal FSRpl	40.0	40.0	MATCH	
+C17	LingBot-VA/T0 nominal accepted	50/50	50/50	MATCH	
+C17	LingBot-VA/T0 nominal replay failures	9	9	MATCH	
+C17	LingBot-VA/T0 nominal FSRpl	18.0	18.0	MATCH	
+C17	LingBot-VA/T1 nominal accepted	50/50	50/50	MATCH	
+C17	LingBot-VA/T1 nominal replay failures	6	6	MATCH	
+C17	LingBot-VA/T1 nominal FSRpl	12.0	12.0	MATCH	
+C18	max |FSRpl - FRpl| over groups (pp)	1.1	1.1	MATCH	
+C18	MRpl range over groups	95.8–100.0	95.8–100.0	MATCH	
+C19	nominal FSRpl range	12.0–40.0	12.0–40.0	MATCH	
+C19	hidden FSRpl range	39.1–63.3	39.1–63.3	MATCH	
+C20	Vis. OOD AR range	98.0–100.0	98.0–100.0	MATCH	
+C20	Vis. OOD FSRpl range	46.1–64.8	46.1–64.8	MATCH	
+C21	LingBot-VA/T0 A2 replay successes	44	44	MATCH	
+C21	LingBot-VA/T0 A2 accepted	50	50	MATCH	
+C21	LingBot-VA/T0 A3 replay successes	11	11	MATCH	
+C21	LingBot-VA/T0 A3 accepted	50	50	MATCH	
+C21	LingBot-VA/T0 A4 replay successes	0	0	MATCH	
+C21	LingBot-VA/T0 A4 accepted	50	50	MATCH	
+C22 (Fig 3b)	Spearman rho (2 dp)	0.51	0.51	MATCH	(rho = 0.5131)
+C23 (Fig 3b)	levels	435	435	MATCH	
+C23 (Fig 3b)	deployment > plan	397	397	MATCH	
+C24 (Fig 3b)	levels with plan >= 70% and deployment <= 30%	7	7	MATCH	[LingBot-VA/T0/Bg9, LingBot-VA/T1/Bf9, LingBot-VA/T1/Bg5, LingBot-VA/T1/Bg9, LingBot-VA/T2/Bg5, LingBot-VA/T2/Bg9, OpenWAM-α/T3/Bg2]
+C24 (Fig 3b)	all of them Gaussian blur (Bg) or fog (Bf)	True	True	MATCH	
+C29 (Fig 3a)	plan success range, 113 levels	0–0.96	0–0.96	MATCH	(acceptance 0.84–1; 109/113 levels at 1.0)
+C29 (Fig 3a)	plan success range, 106 levels	0–0.96	0–0.96	MATCH	(acceptance 0.84–1; 104/106 levels at 1.0)
+C01 (Fig 4)	shift families	12	12	MATCH	
+C07 (Fig 4)	shift families	12	12	MATCH	
+C07 (Fig 4)	levels = registry non-sham levels (main-table 57 + NLw 5)	62	62	MATCH	[57 non-sham main-table levels + 5 NLw levels = 62; the main table alone has 60 non-baseline levels (57 after removing A0, P0, B0)]
+C07 (Fig 4)	levels = main-table non-baseline levels (for reference)	62	60	DIFF	(main table 2026-11-22 incl. A0/P0/B0; NLw not in the main table)
+C08 (Fig 4)	Visible families	4	4	MATCH	(A, P, O, B)
+C08 (Fig 4)	Hidden families	6	6	MATCH	(Em, Ef, G, N1, NR, NL)
+C08 (Fig 4)	After verdict families	2	2	MATCH	(K, F)

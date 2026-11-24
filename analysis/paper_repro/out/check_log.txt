@@ -1,0 +1,243 @@
+paper values: $WMV_ROOT/libero/out/paper_audit_20261123/paper_claims.md
+Table 3 cells in paper_claims.md: 13 rows x 7 = 91
+
+== Table 3, variant 113 levels ==
+MATCH  T3/113         LingBot-VA / T0 | Nominal | Levels                         paper=1            ours=1            
+MATCH  T3/113         LingBot-VA / T0 | Nominal | AR                             paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T0 | Nominal | FRpl                           paper=18.0         ours=18.0         
+MATCH  T3/113         LingBot-VA / T0 | Nominal | FSRpl                          paper=18.0         ours=18.0         
+MATCH  T3/113         LingBot-VA / T0 | Nominal | MRpl                           paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T0 | Nominal | FRdep                          paper=2.0          ours=2.0          
+MATCH  T3/113         LingBot-VA / T0 | Nominal | FSRdep                         paper=2.0          ours=2.0          
+MATCH  T3/113         LingBot-VA / T0 | Vis. in-range | Levels                   paper=12           ours=12           
+MATCH  T3/113         LingBot-VA / T0 | Vis. in-range | AR                       paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T0 | Vis. in-range | FRpl                     paper=17.3         ours=17.3         
+MATCH  T3/113         LingBot-VA / T0 | Vis. in-range | FSRpl                    paper=17.3         ours=17.3         
+MATCH  T3/113         LingBot-VA / T0 | Vis. in-range | MRpl                     paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T0 | Vis. in-range | FRdep                    paper=13.0         ours=13.0         
+MATCH  T3/113         LingBot-VA / T0 | Vis. in-range | FSRdep                   paper=13.0         ours=13.0         
+MATCH  T3/113         LingBot-VA / T0 | Vis. OOD | Levels                        paper=5            ours=5            
+MATCH  T3/113         LingBot-VA / T0 | Vis. OOD | AR                            paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T0 | Vis. OOD | FRpl                          paper=56.4         ours=56.4         
+MATCH  T3/113         LingBot-VA / T0 | Vis. OOD | FSRpl                         paper=56.4         ours=56.4         
+MATCH  T3/113         LingBot-VA / T0 | Vis. OOD | MRpl                          paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T0 | Vis. OOD | FRdep                         paper=5.2          ours=5.2          
+MATCH  T3/113         LingBot-VA / T0 | Vis. OOD | FSRdep                        paper=5.2          ours=5.2          
+MATCH  T3/113         LingBot-VA / T0 | Hidden | Levels                          paper=18           ours=18           
+MATCH  T3/113         LingBot-VA / T0 | Hidden | AR                              paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T0 | Hidden | FRpl                            paper=39.1         ours=39.1         
+MATCH  T3/113         LingBot-VA / T0 | Hidden | FSRpl                           paper=39.1         ours=39.1         
+MATCH  T3/113         LingBot-VA / T0 | Hidden | MRpl                            paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T0 | Hidden | FRdep                           paper=1.8          ours=1.8          
+MATCH  T3/113         LingBot-VA / T0 | Hidden | FSRdep                          paper=1.8          ours=1.8          
+MATCH  T3/113         LingBot-VA / T1 | Nominal | Levels                         paper=1            ours=1            
+MATCH  T3/113         LingBot-VA / T1 | Nominal | AR                             paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T1 | Nominal | FRpl                           paper=12.0         ours=12.0         
+MATCH  T3/113         LingBot-VA / T1 | Nominal | FSRpl                          paper=12.0         ours=12.0         
+MATCH  T3/113         LingBot-VA / T1 | Nominal | MRpl                           paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T1 | Nominal | FRdep                          paper=0.0          ours=0.0          
+MATCH  T3/113         LingBot-VA / T1 | Nominal | FSRdep                         paper=0.0          ours=0.0          
+MATCH  T3/113         LingBot-VA / T1 | Vis. in-range | Levels                   paper=11           ours=11           
+MATCH  T3/113         LingBot-VA / T1 | Vis. in-range | AR                       paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T1 | Vis. in-range | FRpl                     paper=15.3         ours=15.3         
+MATCH  T3/113         LingBot-VA / T1 | Vis. in-range | FSRpl                    paper=15.3         ours=15.3         
+MATCH  T3/113         LingBot-VA / T1 | Vis. in-range | MRpl                     paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T1 | Vis. in-range | FRdep                    paper=0.9          ours=0.9          
+MATCH  T3/113         LingBot-VA / T1 | Vis. in-range | FSRdep                   paper=0.9          ours=0.9          
+MATCH  T3/113         LingBot-VA / T1 | Vis. OOD | Levels                        paper=5            ours=5            
+MATCH  T3/113         LingBot-VA / T1 | Vis. OOD | AR                            paper=98.0         ours=98.0         
+MATCH  T3/113         LingBot-VA / T1 | Vis. OOD | FRpl                          paper=47.2         ours=47.2         
+MATCH  T3/113         LingBot-VA / T1 | Vis. OOD | FSRpl                         paper=46.1         ours=46.1         
+MATCH  T3/113         LingBot-VA / T1 | Vis. OOD | MRpl                          paper=95.8         ours=95.8         
+MATCH  T3/113         LingBot-VA / T1 | Vis. OOD | FRdep                         paper=10.4         ours=10.4         
+MATCH  T3/113         LingBot-VA / T1 | Vis. OOD | FSRdep                        paper=8.6–10.6     ours=8.6–10.6     
+MATCH  T3/113         LingBot-VA / T1 | Hidden | Levels                          paper=18           ours=18           
+MATCH  T3/113         LingBot-VA / T1 | Hidden | AR                              paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T1 | Hidden | FRpl                            paper=47.3         ours=47.3         
+MATCH  T3/113         LingBot-VA / T1 | Hidden | FSRpl                           paper=47.3         ours=47.3         
+MATCH  T3/113         LingBot-VA / T1 | Hidden | MRpl                            paper=100.0        ours=100.0        
+MATCH  T3/113         LingBot-VA / T1 | Hidden | FRdep                           paper=3.1          ours=3.1          
+MATCH  T3/113         LingBot-VA / T1 | Hidden | FSRdep                          paper=3.1          ours=3.1          
+MATCH  T3/113         OpenWAM-α / T1 | Nominal | Levels                          paper=1            ours=1            
+MATCH  T3/113         OpenWAM-α / T1 | Nominal | AR                              paper=100.0        ours=100.0        
+MATCH  T3/113         OpenWAM-α / T1 | Nominal | FRpl                            paper=40.0         ours=40.0         
+MATCH  T3/113         OpenWAM-α / T1 | Nominal | FSRpl                           paper=40.0         ours=40.0         
+MATCH  T3/113         OpenWAM-α / T1 | Nominal | MRpl                            paper=100.0        ours=100.0        
+MATCH  T3/113         OpenWAM-α / T1 | Nominal | FRdep                           paper=0.0          ours=0.0          
+MATCH  T3/113         OpenWAM-α / T1 | Nominal | FSRdep                          paper=0.0          ours=0.0          
+MATCH  T3/113         OpenWAM-α / T1 | Vis. in-range | Levels                    paper=11           ours=11           
+MATCH  T3/113         OpenWAM-α / T1 | Vis. in-range | AR                        paper=98.5         ours=98.5         
+MATCH  T3/113         OpenWAM-α / T1 | Vis. in-range | FRpl                      paper=42.0         ours=42.0         
+MATCH  T3/113         OpenWAM-α / T1 | Vis. in-range | FSRpl                     paper=41.9         ours=41.9         
+MATCH  T3/113         OpenWAM-α / T1 | Vis. in-range | MRpl                      paper=98.3         ours=98.3         
+MATCH  T3/113         OpenWAM-α / T1 | Vis. in-range | FRdep                     paper=8.9          ours=8.9          
+MATCH  T3/113         OpenWAM-α / T1 | Vis. in-range | FSRdep                    paper=7.6–9.0      ours=7.6–9.0      
+MATCH  T3/113         OpenWAM-α / T1 | Vis. OOD | Levels                         paper=5            ours=5            
+MATCH  T3/113         OpenWAM-α / T1 | Vis. OOD | AR                             paper=100.0        ours=100.0        
+MATCH  T3/113         OpenWAM-α / T1 | Vis. OOD | FRpl                           paper=64.8         ours=64.8         
+MATCH  T3/113         OpenWAM-α / T1 | Vis. OOD | FSRpl                          paper=64.8         ours=64.8         
+MATCH  T3/113         OpenWAM-α / T1 | Vis. OOD | MRpl                           paper=100.0        ours=100.0        
+MATCH  T3/113         OpenWAM-α / T1 | Vis. OOD | FRdep                          paper=1.6          ours=1.6          
+MATCH  T3/113         OpenWAM-α / T1 | Vis. OOD | FSRdep                         paper=1.6          ours=1.6          
+MATCH  T3/113         OpenWAM-α / T1 | Hidden | Levels                           paper=18           ours=18           
+MATCH  T3/113         OpenWAM-α / T1 | Hidden | AR                               paper=100.0        ours=100.0        
+MATCH  T3/113         OpenWAM-α / T1 | Hidden | FRpl                             paper=63.3         ours=63.3         
+MATCH  T3/113         OpenWAM-α / T1 | Hidden | FSRpl                            paper=63.3         ours=63.3         
+MATCH  T3/113         OpenWAM-α / T1 | Hidden | MRpl                             paper=100.0        ours=100.0        
+MATCH  T3/113         OpenWAM-α / T1 | Hidden | FRdep                            paper=14.3         ours=14.3         
+MATCH  T3/113         OpenWAM-α / T1 | Hidden | FSRdep                           paper=14.3         ours=14.3         
+MATCH  T3/113         All three pairs | All levels | Levels                      paper=113          ours=113          
+MATCH  T3/113         All three pairs | All levels | AR                          paper=99.7         ours=99.7         
+MATCH  T3/113         All three pairs | All levels | FRpl                        paper=41.1         ours=41.1         
+MATCH  T3/113         All three pairs | All levels | FSRpl                       paper=41.1         ours=41.1         
+MATCH  T3/113         All three pairs | All levels | MRpl                        paper=99.6         ours=99.6         
+MATCH  T3/113         All three pairs | All levels | FRdep                       paper=6.3          ours=6.3          
+MATCH  T3/113         All three pairs | All levels | FSRdep                      paper=6.0–6.3      ours=6.0–6.3      
+-- variant 113: 91/91 MATCH
+
+== Table 3, variant 106 levels ==
+MATCH  T3/106         LingBot-VA / T0 | Nominal | Levels                         paper=1            ours=1            
+MATCH  T3/106         LingBot-VA / T0 | Nominal | AR                             paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T0 | Nominal | FRpl                           paper=18.0         ours=18.0         
+MATCH  T3/106         LingBot-VA / T0 | Nominal | FSRpl                          paper=18.0         ours=18.0         
+MATCH  T3/106         LingBot-VA / T0 | Nominal | MRpl                           paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T0 | Nominal | FRdep                          paper=2.0          ours=2.0          
+MATCH  T3/106         LingBot-VA / T0 | Nominal | FSRdep                         paper=2.0          ours=2.0          
+MATCH  T3/106         LingBot-VA / T0 | Vis. in-range | Levels                   paper=12           ours=12           
+MATCH  T3/106         LingBot-VA / T0 | Vis. in-range | AR                       paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T0 | Vis. in-range | FRpl                     paper=17.3         ours=17.3         
+MATCH  T3/106         LingBot-VA / T0 | Vis. in-range | FSRpl                    paper=17.3         ours=17.3         
+MATCH  T3/106         LingBot-VA / T0 | Vis. in-range | MRpl                     paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T0 | Vis. in-range | FRdep                    paper=13.0         ours=13.0         
+MATCH  T3/106         LingBot-VA / T0 | Vis. in-range | FSRdep                   paper=13.0         ours=13.0         
+MATCH  T3/106         LingBot-VA / T0 | Vis. OOD | Levels                        paper=5            ours=5            
+MATCH  T3/106         LingBot-VA / T0 | Vis. OOD | AR                            paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T0 | Vis. OOD | FRpl                          paper=56.4         ours=56.4         
+MATCH  T3/106         LingBot-VA / T0 | Vis. OOD | FSRpl                         paper=56.4         ours=56.4         
+MATCH  T3/106         LingBot-VA / T0 | Vis. OOD | MRpl                          paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T0 | Vis. OOD | FRdep                         paper=5.2          ours=5.2          
+MATCH  T3/106         LingBot-VA / T0 | Vis. OOD | FSRdep                        paper=5.2          ours=5.2          
+MATCH  T3/106         LingBot-VA / T0 | Hidden | Levels                          paper=18           ours=18           
+MATCH  T3/106         LingBot-VA / T0 | Hidden | AR                              paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T0 | Hidden | FRpl                            paper=39.1         ours=39.1         
+MATCH  T3/106         LingBot-VA / T0 | Hidden | FSRpl                           paper=39.1         ours=39.1         
+MATCH  T3/106         LingBot-VA / T0 | Hidden | MRpl                            paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T0 | Hidden | FRdep                           paper=1.8          ours=1.8          
+MATCH  T3/106         LingBot-VA / T0 | Hidden | FSRdep                          paper=1.8          ours=1.8          
+MATCH  T3/106         LingBot-VA / T1 | Nominal | Levels                         paper=1            ours=1            
+MATCH  T3/106         LingBot-VA / T1 | Nominal | AR                             paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T1 | Nominal | FRpl                           paper=12.0         ours=12.0         
+MATCH  T3/106         LingBot-VA / T1 | Nominal | FSRpl                          paper=12.0         ours=12.0         
+MATCH  T3/106         LingBot-VA / T1 | Nominal | MRpl                           paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T1 | Nominal | FRdep                          paper=0.0          ours=0.0          
+MATCH  T3/106         LingBot-VA / T1 | Nominal | FSRdep                         paper=0.0          ours=0.0          
+MATCH  T3/106         LingBot-VA / T1 | Vis. in-range | Levels                   paper=11           ours=11           
+MATCH  T3/106         LingBot-VA / T1 | Vis. in-range | AR                       paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T1 | Vis. in-range | FRpl                     paper=15.3         ours=15.3         
+MATCH  T3/106         LingBot-VA / T1 | Vis. in-range | FSRpl                    paper=15.3         ours=15.3         
+MATCH  T3/106         LingBot-VA / T1 | Vis. in-range | MRpl                     paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T1 | Vis. in-range | FRdep                    paper=0.9          ours=0.9          
+MATCH  T3/106         LingBot-VA / T1 | Vis. in-range | FSRdep                   paper=0.9          ours=0.9          
+MATCH  T3/106         LingBot-VA / T1 | Vis. OOD | Levels                        paper=5            ours=5            
+MATCH  T3/106         LingBot-VA / T1 | Vis. OOD | AR                            paper=98.0         ours=98.0         
+MATCH  T3/106         LingBot-VA / T1 | Vis. OOD | FRpl                          paper=47.2         ours=47.2         
+MATCH  T3/106         LingBot-VA / T1 | Vis. OOD | FSRpl                         paper=46.1         ours=46.1         
+MATCH  T3/106         LingBot-VA / T1 | Vis. OOD | MRpl                          paper=95.8         ours=95.8         
+MATCH  T3/106         LingBot-VA / T1 | Vis. OOD | FRdep                         paper=10.4         ours=10.4         
+MATCH  T3/106         LingBot-VA / T1 | Vis. OOD | FSRdep                        paper=8.6–10.6     ours=8.6–10.6     
+MATCH  T3/106         LingBot-VA / T1 | Hidden | Levels                          paper=18           ours=18           
+MATCH  T3/106         LingBot-VA / T1 | Hidden | AR                              paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T1 | Hidden | FRpl                            paper=47.3         ours=47.3         
+MATCH  T3/106         LingBot-VA / T1 | Hidden | FSRpl                           paper=47.3         ours=47.3         
+MATCH  T3/106         LingBot-VA / T1 | Hidden | MRpl                            paper=100.0        ours=100.0        
+MATCH  T3/106         LingBot-VA / T1 | Hidden | FRdep                           paper=3.1          ours=3.1          
+MATCH  T3/106         LingBot-VA / T1 | Hidden | FSRdep                          paper=3.1          ours=3.1          
+MATCH  T3/106         OpenWAM-α / T1 | Nominal | Levels                          paper=1            ours=1            
+MATCH  T3/106         OpenWAM-α / T1 | Nominal | AR                              paper=100.0        ours=100.0        
+MATCH  T3/106         OpenWAM-α / T1 | Nominal | FRpl                            paper=40.0         ours=40.0         
+MATCH  T3/106         OpenWAM-α / T1 | Nominal | FSRpl                           paper=40.0         ours=40.0         
+MATCH  T3/106         OpenWAM-α / T1 | Nominal | MRpl                            paper=100.0        ours=100.0        
+MATCH  T3/106         OpenWAM-α / T1 | Nominal | FRdep                           paper=0.0          ours=0.0          
+MATCH  T3/106         OpenWAM-α / T1 | Nominal | FSRdep                          paper=0.0          ours=0.0          
+MATCH  T3/106         OpenWAM-α / T1 | Vis. in-range | Levels                    paper=11           ours=11           
+MATCH  T3/106         OpenWAM-α / T1 | Vis. in-range | AR                        paper=98.5         ours=98.5         
+MATCH  T3/106         OpenWAM-α / T1 | Vis. in-range | FRpl                      paper=42.0         ours=42.0         
+MATCH  T3/106         OpenWAM-α / T1 | Vis. in-range | FSRpl                     paper=41.9         ours=41.9         
+MATCH  T3/106         OpenWAM-α / T1 | Vis. in-range | MRpl                      paper=98.3         ours=98.3         
+MATCH  T3/106         OpenWAM-α / T1 | Vis. in-range | FRdep                     paper=8.9          ours=8.9          
+MATCH  T3/106         OpenWAM-α / T1 | Vis. in-range | FSRdep                    paper=7.6–9.0      ours=7.6–9.0      
+MATCH  T3/106         OpenWAM-α / T1 | Vis. OOD | Levels                         paper=5            ours=5            
+MATCH  T3/106         OpenWAM-α / T1 | Vis. OOD | AR                             paper=100.0        ours=100.0        
+MATCH  T3/106         OpenWAM-α / T1 | Vis. OOD | FRpl                           paper=64.8         ours=64.8         
+MATCH  T3/106         OpenWAM-α / T1 | Vis. OOD | FSRpl                          paper=64.8         ours=64.8         
+MATCH  T3/106         OpenWAM-α / T1 | Vis. OOD | MRpl                           paper=100.0        ours=100.0        
+MATCH  T3/106         OpenWAM-α / T1 | Vis. OOD | FRdep                          paper=1.6          ours=1.6          
+MATCH  T3/106         OpenWAM-α / T1 | Vis. OOD | FSRdep                         paper=1.6          ours=1.6          
+MATCH  T3/106         OpenWAM-α / T1 | Hidden | Levels                           paper=18           ours=18           
+MATCH  T3/106         OpenWAM-α / T1 | Hidden | AR                               paper=100.0        ours=100.0        
+MATCH  T3/106         OpenWAM-α / T1 | Hidden | FRpl                             paper=63.3         ours=63.3         
+MATCH  T3/106         OpenWAM-α / T1 | Hidden | FSRpl                            paper=63.3         ours=63.3         
+MATCH  T3/106         OpenWAM-α / T1 | Hidden | MRpl                             paper=100.0        ours=100.0        
+MATCH  T3/106         OpenWAM-α / T1 | Hidden | FRdep                            paper=14.3         ours=14.3         
+MATCH  T3/106         OpenWAM-α / T1 | Hidden | FSRdep                           paper=14.3         ours=14.3         
+DIFF   T3/106         All three pairs | All levels | Levels                      paper=113          ours=106          (106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+DIFF   T3/106         All three pairs | All levels | AR                          paper=99.7         ours=99.8         (106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+DIFF   T3/106         All three pairs | All levels | FRpl                        paper=41.1         ours=41.9         (106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+DIFF   T3/106         All three pairs | All levels | FSRpl                       paper=41.1         ours=41.9         (106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+MATCH  T3/106         All three pairs | All levels | MRpl                        paper=99.6         ours=99.6         (106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+DIFF   T3/106         All three pairs | All levels | FRdep                       paper=6.3          ours=6.6          (106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+DIFF   T3/106         All three pairs | All levels | FSRdep                      paper=6.0–6.3      ours=6.4–6.6      (106 variant pools only the grouped levels; the draft's All row is the 113-level pool)
+-- variant 106: 85/91 MATCH
+
+== Text claims built on Table 3 (113-level pool) ==
+MATCH  C03            verdicts                                                   paper=5650         ours=5650         
+MATCH  C03            acceptance %                                               paper=99.7         ours=99.7         
+MATCH  C03            accepted                                                   paper=5635         ours=5635         
+MATCH  C04            accepted plans failing on replay %                         paper=41.1         ours=41.1         
+MATCH  C06            verdicts per level                                         paper=50           ours=50           
+MATCH  C06            levels                                                     paper=113          ours=113          
+MATCH  C16            OpenWAM-α/T1 nominal accepted                              paper=50/50        ours=50/50        
+MATCH  C16            OpenWAM-α/T1 nominal replay failures                       paper=20           ours=20           
+MATCH  C16            OpenWAM-α/T1 nominal FSRpl                                 paper=40.0         ours=40.0         
+MATCH  C17            LingBot-VA/T0 nominal accepted                             paper=50/50        ours=50/50        
+MATCH  C17            LingBot-VA/T0 nominal replay failures                      paper=9            ours=9            
+MATCH  C17            LingBot-VA/T0 nominal FSRpl                                paper=18.0         ours=18.0         
+MATCH  C17            LingBot-VA/T1 nominal accepted                             paper=50/50        ours=50/50        
+MATCH  C17            LingBot-VA/T1 nominal replay failures                      paper=6            ours=6            
+MATCH  C17            LingBot-VA/T1 nominal FSRpl                                paper=12.0         ours=12.0         
+MATCH  C18            max |FSRpl - FRpl| over groups (pp)                        paper=1.1          ours=1.1          
+MATCH  C18            MRpl range over groups                                     paper=95.8–100.0   ours=95.8–100.0   
+MATCH  C19            nominal FSRpl range                                        paper=12.0–40.0    ours=12.0–40.0    
+MATCH  C19            hidden FSRpl range                                         paper=39.1–63.3    ours=39.1–63.3    
+MATCH  C20            Vis. OOD AR range                                          paper=98.0–100.0   ours=98.0–100.0   
+MATCH  C20            Vis. OOD FSRpl range                                       paper=46.1–64.8    ours=46.1–64.8    
+MATCH  C21            LingBot-VA/T0 A2 replay successes                          paper=44           ours=44           
+MATCH  C21            LingBot-VA/T0 A2 accepted                                  paper=50           ours=50           
+MATCH  C21            LingBot-VA/T0 A3 replay successes                          paper=11           ours=11           
+MATCH  C21            LingBot-VA/T0 A3 accepted                                  paper=50           ours=50           
+MATCH  C21            LingBot-VA/T0 A4 replay successes                          paper=0            ours=0            
+MATCH  C21            LingBot-VA/T0 A4 accepted                                  paper=50           ours=50           
+
+== Figure 3 ==
+MATCH  C22 (Fig 3b)   Spearman rho (2 dp)                                        paper=0.51         ours=0.51         (rho = 0.5131)
+MATCH  C23 (Fig 3b)   levels                                                     paper=435          ours=435          
+MATCH  C23 (Fig 3b)   deployment > plan                                          paper=397          ours=397          
+MATCH  C24 (Fig 3b)   levels with plan >= 70% and deployment <= 30%              paper=7            ours=7            [LingBot-VA/T0/Bg9, LingBot-VA/T1/Bf9, LingBot-VA/T1/Bg5, LingBot-VA/T1/Bg9, LingBot-VA/T2/Bg5, LingBot-VA/T2/Bg9, OpenWAM-α/T3/Bg2]
+MATCH  C24 (Fig 3b)   all of them Gaussian blur (Bg) or fog (Bf)                 paper=True         ours=True         
+MATCH  C29 (Fig 3a)   plan success range, 113 levels                             paper=0–0.96       ours=0–0.96       (acceptance 0.84–1; 109/113 levels at 1.0)
+MATCH  C29 (Fig 3a)   plan success range, 106 levels                             paper=0–0.96       ours=0–0.96       (acceptance 0.84–1; 104/106 levels at 1.0)
+
+== Figure 4 ==
+MATCH  C01 (Fig 4)    shift families                                             paper=12           ours=12           
+MATCH  C07 (Fig 4)    shift families                                             paper=12           ours=12           
+MATCH  C07 (Fig 4)    levels = registry non-sham levels (main-table 57 + NLw 5)  paper=62           ours=62           [57 non-sham main-table levels + 5 NLw levels = 62; the main table alone has 60 non-baseline levels (57 after removing A0, P0, B0)]
+DIFF   C07 (Fig 4)    levels = main-table non-baseline levels (for reference)    paper=62           ours=60           (main table 2026-11-22 incl. A0/P0/B0; NLw not in the main table)
+MATCH  C08 (Fig 4)    Visible families                                           paper=4            ours=4            (A, P, O, B)
+MATCH  C08 (Fig 4)    Hidden families                                            paper=6            ours=6            (Em, Ef, G, N1, NR, NL)
+MATCH  C08 (Fig 4)    After verdict families                                     paper=2            ours=2            (K, F)
+
+== Summary ==
+Table 3 variant 113: 91/91 MATCH
+Table 3 variant 106: 85/91 MATCH
+Other claims: 40/41 MATCH
+  DIFF C07 (Fig 4) levels = main-table non-baseline levels (for reference): paper 62 vs ours 60 (main table 2026-11-22 incl. A0/P0/B0; NLw not in the main table)
